@@ -51,8 +51,10 @@ interface UserInterface
      *
      * This is important if, at any given point, sensitive information like
      * the plain-text password is stored on this object.
+     *
+     * @return void
      */
-    public function eraseCredentials(): void;
+    public function eraseCredentials();
 
     /**
      * Returns the identifier for this user (e.g. username or email address).

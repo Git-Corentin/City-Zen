@@ -51,7 +51,10 @@ class NativeSessionTokenStorage implements ClearableTokenStorageInterface
         return (string) $_SESSION[$this->namespace][$tokenId];
     }
 
-    public function setToken(string $tokenId, #[\SensitiveParameter] string $token): void
+    /**
+     * @return void
+     */
+    public function setToken(string $tokenId, #[\SensitiveParameter] string $token)
     {
         if (!$this->sessionStarted) {
             $this->startSession();
@@ -90,7 +93,10 @@ class NativeSessionTokenStorage implements ClearableTokenStorageInterface
         return $token;
     }
 
-    public function clear(): void
+    /**
+     * @return void
+     */
+    public function clear()
     {
         unset($_SESSION[$this->namespace]);
     }

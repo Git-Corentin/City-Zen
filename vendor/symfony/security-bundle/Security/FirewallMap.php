@@ -46,7 +46,13 @@ class FirewallMap implements FirewallMapInterface
 
     public function getFirewallConfig(Request $request): ?FirewallConfig
     {
-        return $this->getFirewallContext($request)?->getConfig();
+        $context = $this->getFirewallContext($request);
+
+        if (null === $context) {
+            return null;
+        }
+
+        return $context->getConfig();
     }
 
     private function getFirewallContext(Request $request): ?FirewallContext

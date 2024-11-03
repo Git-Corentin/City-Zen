@@ -45,7 +45,10 @@ class DateType extends AbstractType
         'choice' => ChoiceType::class,
     ];
 
-    public function buildForm(FormBuilderInterface $builder, array $options): void
+    /**
+     * @return void
+     */
+    public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $dateFormat = \is_int($options['format']) ? $options['format'] : self::DEFAULT_FORMAT;
         $timeFormat = \IntlDateFormatter::NONE;
@@ -187,13 +190,17 @@ class DateType extends AbstractType
                 }
 
                 if ($date->getTimezone()->getName() !== $options['model_timezone']) {
-                    throw new LogicException(sprintf('Using a "%s" instance with a timezone ("%s") not matching the configured model timezone "%s" is not supported.', get_debug_type($date), $date->getTimezone()->getName(), $options['model_timezone']));
+                    trigger_deprecation('symfony/form', '6.4', sprintf('Using a "%s" instance with a timezone ("%s") not matching the configured model timezone "%s" is deprecated.', $date::class, $date->getTimezone()->getName(), $options['model_timezone']));
+                    // throw new LogicException(sprintf('Using a "%s" instance with a timezone ("%s") not matching the configured model timezone "%s" is not supported.', $date::class, $date->getTimezone()->getName(), $options['model_timezone']));
                 }
             });
         }
     }
 
-    public function finishView(FormView $view, FormInterface $form, array $options): void
+    /**
+     * @return void
+     */
+    public function finishView(FormView $view, FormInterface $form, array $options)
     {
         $view->vars['widget'] = $options['widget'];
 
@@ -230,7 +237,10 @@ class DateType extends AbstractType
         }
     }
 
-    public function configureOptions(OptionsResolver $resolver): void
+    /**
+     * @return void
+     */
+    public function configureOptions(OptionsResolver $resolver)
     {
         $compound = static fn (Options $options) => 'single_text' !== $options['widget'];
 
@@ -276,7 +286,11 @@ class DateType extends AbstractType
             'years' => range((int) date('Y') - 5, (int) date('Y') + 5),
             'months' => range(1, 12),
             'days' => range(1, 31),
-            'widget' => 'single_text',
+            'widget' => static function (Options $options) {
+                trigger_deprecation('symfony/form', '6.3', 'Not configuring the "widget" option of form type "date" is deprecated. It will default to "single_text" in Symfony 7.0.');
+
+                return 'choice';
+            },
             'input' => 'datetime',
             'format' => $format,
             'model_timezone' => null,

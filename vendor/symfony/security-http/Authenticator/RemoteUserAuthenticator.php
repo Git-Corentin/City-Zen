@@ -24,9 +24,11 @@ use Symfony\Component\Security\Core\User\UserProviderInterface;
  * @author Fabien Potencier <fabien@symfony.com>
  * @author Maxime Douailin <maxime.douailin@gmail.com>
  *
- * @internal
+ * @final
+ *
+ * @internal in Symfony 5.1
  */
-final class RemoteUserAuthenticator extends AbstractPreAuthenticatedAuthenticator
+class RemoteUserAuthenticator extends AbstractPreAuthenticatedAuthenticator
 {
     private string $userKey;
 

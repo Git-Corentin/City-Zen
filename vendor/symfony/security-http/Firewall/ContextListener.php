@@ -57,7 +57,7 @@ class ContextListener extends AbstractListener
      */
     public function __construct(TokenStorageInterface $tokenStorage, iterable $userProviders, string $contextKey, ?LoggerInterface $logger = null, ?EventDispatcherInterface $dispatcher = null, ?AuthenticationTrustResolverInterface $trustResolver = null, ?callable $sessionTrackerEnabler = null)
     {
-        if (!$contextKey) {
+        if (empty($contextKey)) {
             throw new \InvalidArgumentException('$contextKey must not be empty.');
         }
 
@@ -234,7 +234,7 @@ class ContextListener extends AbstractListener
             } catch (UnsupportedUserException) {
                 // let's try the next user provider
             } catch (UserNotFoundException $e) {
-                $this->logger?->info('Username could not be found in the selected user provider.', ['username' => $e->getUserIdentifier(), 'provider' => $provider::class]);
+                $this->logger?->warning('Username could not be found in the selected user provider.', ['username' => $e->getUserIdentifier(), 'provider' => $provider::class]);
 
                 $userNotFoundByProvider = true;
             }
@@ -283,7 +283,7 @@ class ContextListener extends AbstractListener
         $refreshedUser = $refreshedToken->getUser();
 
         if ($originalUser instanceof EquatableInterface) {
-            return !$originalUser->isEqualTo($refreshedUser);
+            return !(bool) $originalUser->isEqualTo($refreshedUser);
         }
 
         if ($originalUser instanceof PasswordAuthenticatedUserInterface || $refreshedUser instanceof PasswordAuthenticatedUserInterface) {
@@ -301,6 +301,10 @@ class ContextListener extends AbstractListener
         }
 
         $userRoles = array_map('strval', (array) $refreshedUser->getRoles());
+
+        if ($refreshedToken instanceof SwitchUserToken) {
+            $userRoles[] = 'ROLE_PREVIOUS_ADMIN';
+        }
 
         if (
             \count($userRoles) !== \count($refreshedToken->getRoleNames())

@@ -12,7 +12,6 @@ class EnvelopeConfig
 {
     private $sender;
     private $recipients;
-    private $allowedRecipients;
     private $_usedProperties = [];
 
     /**
@@ -41,19 +40,6 @@ class EnvelopeConfig
         return $this;
     }
 
-    /**
-     * @param ParamConfigurator|list<ParamConfigurator|mixed> $value
-     *
-     * @return $this
-     */
-    public function allowedRecipients(ParamConfigurator|array $value): static
-    {
-        $this->_usedProperties['allowedRecipients'] = true;
-        $this->allowedRecipients = $value;
-
-        return $this;
-    }
-
     public function __construct(array $value = [])
     {
         if (array_key_exists('sender', $value)) {
@@ -66,12 +52,6 @@ class EnvelopeConfig
             $this->_usedProperties['recipients'] = true;
             $this->recipients = $value['recipients'];
             unset($value['recipients']);
-        }
-
-        if (array_key_exists('allowed_recipients', $value)) {
-            $this->_usedProperties['allowedRecipients'] = true;
-            $this->allowedRecipients = $value['allowed_recipients'];
-            unset($value['allowed_recipients']);
         }
 
         if ([] !== $value) {
@@ -87,9 +67,6 @@ class EnvelopeConfig
         }
         if (isset($this->_usedProperties['recipients'])) {
             $output['recipients'] = $this->recipients;
-        }
-        if (isset($this->_usedProperties['allowedRecipients'])) {
-            $output['allowed_recipients'] = $this->allowedRecipients;
         }
 
         return $output;

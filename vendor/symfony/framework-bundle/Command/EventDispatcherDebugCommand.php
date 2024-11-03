@@ -37,10 +37,13 @@ class EventDispatcherDebugCommand extends Command
 {
     private const DEFAULT_DISPATCHER = 'event_dispatcher';
 
-    public function __construct(
-        private ContainerInterface $dispatchers,
-    ) {
+    private ContainerInterface $dispatchers;
+
+    public function __construct(ContainerInterface $dispatchers)
+    {
         parent::__construct();
+
+        $this->dispatchers = $dispatchers;
     }
 
     protected function configure(): void

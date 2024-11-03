@@ -30,9 +30,9 @@ abstract class AbstractTransport implements TransportInterface
 
     private ?EventDispatcherInterface $dispatcher;
 
-    protected ?HttpClientInterface $client;
-    protected ?string $host = null;
-    protected ?int $port = null;
+    protected $client;
+    protected $host;
+    protected $port;
 
     public function __construct(?HttpClientInterface $client = null, ?EventDispatcherInterface $dispatcher = null)
     {

@@ -15,7 +15,6 @@ class RetryStrategyConfig
     private $delay;
     private $multiplier;
     private $maxDelay;
-    private $jitter;
     private $_usedProperties = [];
 
     /**
@@ -87,20 +86,6 @@ class RetryStrategyConfig
         return $this;
     }
 
-    /**
-     * Randomness to apply to the delay (between 0 and 1)
-     * @default 0.1
-     * @param ParamConfigurator|float $value
-     * @return $this
-     */
-    public function jitter($value): static
-    {
-        $this->_usedProperties['jitter'] = true;
-        $this->jitter = $value;
-
-        return $this;
-    }
-
     public function __construct(array $value = [])
     {
         if (array_key_exists('service', $value)) {
@@ -133,12 +118,6 @@ class RetryStrategyConfig
             unset($value['max_delay']);
         }
 
-        if (array_key_exists('jitter', $value)) {
-            $this->_usedProperties['jitter'] = true;
-            $this->jitter = $value['jitter'];
-            unset($value['jitter']);
-        }
-
         if ([] !== $value) {
             throw new InvalidConfigurationException(sprintf('The following keys are not supported by "%s": ', __CLASS__).implode(', ', array_keys($value)));
         }
@@ -161,9 +140,6 @@ class RetryStrategyConfig
         }
         if (isset($this->_usedProperties['maxDelay'])) {
             $output['max_delay'] = $this->maxDelay;
-        }
-        if (isset($this->_usedProperties['jitter'])) {
-            $output['jitter'] = $this->jitter;
         }
 
         return $output;

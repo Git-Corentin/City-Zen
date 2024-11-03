@@ -35,6 +35,7 @@ class ChainAdapter implements AdapterInterface, CacheInterface, PruneableInterfa
 
     private array $adapters = [];
     private int $adapterCount;
+    private int $defaultLifetime;
 
     private static \Closure $syncItem;
 
@@ -42,10 +43,8 @@ class ChainAdapter implements AdapterInterface, CacheInterface, PruneableInterfa
      * @param CacheItemPoolInterface[] $adapters        The ordered list of adapters used to fetch cached items
      * @param int                      $defaultLifetime The default lifetime of items propagated from lower adapters to upper ones
      */
-    public function __construct(
-        array $adapters,
-        private int $defaultLifetime = 0,
-    ) {
+    public function __construct(array $adapters, int $defaultLifetime = 0)
+    {
         if (!$adapters) {
             throw new InvalidArgumentException('At least one adapter must be specified.');
         }
@@ -65,6 +64,7 @@ class ChainAdapter implements AdapterInterface, CacheInterface, PruneableInterfa
             }
         }
         $this->adapterCount = \count($this->adapters);
+        $this->defaultLifetime = $defaultLifetime;
 
         self::$syncItem ??= \Closure::bind(
             static function ($sourceItem, $item, $defaultLifetime, $sourceMetadata = null) {
@@ -280,7 +280,10 @@ class ChainAdapter implements AdapterInterface, CacheInterface, PruneableInterfa
         return $pruned;
     }
 
-    public function reset(): void
+    /**
+     * @return void
+     */
+    public function reset()
     {
         foreach ($this->adapters as $adapter) {
             if ($adapter instanceof ResetInterface) {

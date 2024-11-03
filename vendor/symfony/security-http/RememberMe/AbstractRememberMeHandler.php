@@ -23,11 +23,10 @@ use Symfony\Component\Security\Core\User\UserProviderInterface;
  */
 abstract class AbstractRememberMeHandler implements RememberMeHandlerInterface
 {
-    protected RequestStack $requestStack;
-    protected array $options;
-    protected ?LoggerInterface $logger;
-
     private UserProviderInterface $userProvider;
+    protected $requestStack;
+    protected $options;
+    protected $logger;
 
     public function __construct(UserProviderInterface $userProvider, RequestStack $requestStack, array $options = [], ?LoggerInterface $logger = null)
     {
@@ -88,8 +87,10 @@ abstract class AbstractRememberMeHandler implements RememberMeHandlerInterface
      * Creates the remember-me cookie using the correct configuration.
      *
      * @param RememberMeDetails|null $rememberMeDetails The details for the cookie, or null to clear the remember-me cookie
+     *
+     * @return void
      */
-    protected function createCookie(?RememberMeDetails $rememberMeDetails): void
+    protected function createCookie(?RememberMeDetails $rememberMeDetails)
     {
         $request = $this->requestStack->getMainRequest();
         if (!$request) {

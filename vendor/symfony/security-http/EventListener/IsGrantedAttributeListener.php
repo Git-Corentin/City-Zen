@@ -36,7 +36,10 @@ class IsGrantedAttributeListener implements EventSubscriberInterface
     ) {
     }
 
-    public function onKernelControllerArguments(ControllerArgumentsEvent $event): void
+    /**
+     * @return void
+     */
+    public function onKernelControllerArguments(ControllerArgumentsEvent $event)
     {
         /** @var IsGranted[] $attributes */
         if (!\is_array($attributes = $event->getAttributes()[IsGranted::class] ?? null)) {

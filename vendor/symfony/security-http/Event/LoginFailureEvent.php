@@ -66,7 +66,10 @@ class LoginFailureEvent extends Event
         return $this->request;
     }
 
-    public function setResponse(?Response $response): void
+    /**
+     * @return void
+     */
+    public function setResponse(?Response $response)
     {
         $this->response = $response;
     }

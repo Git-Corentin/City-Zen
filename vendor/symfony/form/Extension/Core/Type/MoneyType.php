@@ -22,9 +22,12 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class MoneyType extends AbstractType
 {
-    protected static array $patterns = [];
+    protected static $patterns = [];
 
-    public function buildForm(FormBuilderInterface $builder, array $options): void
+    /**
+     * @return void
+     */
+    public function buildForm(FormBuilderInterface $builder, array $options)
     {
         // Values used in HTML5 number inputs should be formatted as in "1234.5", ie. 'en' format without grouping,
         // according to https://www.w3.org/TR/html51/sec-forms.html#date-time-and-number-formats
@@ -34,13 +37,15 @@ class MoneyType extends AbstractType
                 $options['grouping'],
                 $options['rounding_mode'],
                 $options['divisor'],
-                $options['html5'] ? 'en' : null,
-                $options['input'],
+                $options['html5'] ? 'en' : null
             ))
         ;
     }
 
-    public function buildView(FormView $view, FormInterface $form, array $options): void
+    /**
+     * @return void
+     */
+    public function buildView(FormView $view, FormInterface $form, array $options)
     {
         $view->vars['money_pattern'] = self::getPattern($options['currency']);
 
@@ -49,7 +54,10 @@ class MoneyType extends AbstractType
         }
     }
 
-    public function configureOptions(OptionsResolver $resolver): void
+    /**
+     * @return void
+     */
+    public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
             'scale' => 2,
@@ -60,7 +68,6 @@ class MoneyType extends AbstractType
             'compound' => false,
             'html5' => false,
             'invalid_message' => 'Please enter a valid money amount.',
-            'input' => 'float',
         ]);
 
         $resolver->setAllowedValues('rounding_mode', [
@@ -76,8 +83,6 @@ class MoneyType extends AbstractType
         $resolver->setAllowedTypes('scale', 'int');
 
         $resolver->setAllowedTypes('html5', 'bool');
-
-        $resolver->setAllowedValues('input', ['float', 'integer']);
 
         $resolver->setNormalizer('grouping', static function (Options $options, $value) {
             if ($value && $options['html5']) {
@@ -98,8 +103,10 @@ class MoneyType extends AbstractType
      *
      * The pattern contains the placeholder "{{ widget }}" where the HTML tag should
      * be inserted
+     *
+     * @return string
      */
-    protected static function getPattern(?string $currency): string
+    protected static function getPattern(?string $currency)
     {
         if (!$currency) {
             return '{{ widget }}';

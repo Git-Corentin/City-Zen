@@ -29,7 +29,10 @@ final class TraceableFirewallListener extends FirewallListener implements ResetI
     private array $wrappedListeners = [];
     private array $authenticatorsInfo = [];
 
-    public function getWrappedListeners(): array
+    /**
+     * @return array
+     */
+    public function getWrappedListeners()
     {
         return $this->wrappedListeners;
     }

@@ -25,9 +25,11 @@ use Amp\Success;
  */
 class AmpResolver implements Dns\Resolver
 {
-    public function __construct(
-        private array &$dnsMap,
-    ) {
+    private array $dnsMap;
+
+    public function __construct(array &$dnsMap)
+    {
+        $this->dnsMap = &$dnsMap;
     }
 
     public function resolve(string $name, ?int $typeRestriction = null): Promise

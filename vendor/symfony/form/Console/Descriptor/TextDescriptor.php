@@ -15,6 +15,7 @@ use Symfony\Component\Console\Helper\Dumper;
 use Symfony\Component\Console\Helper\TableSeparator;
 use Symfony\Component\ErrorHandler\ErrorRenderer\FileLinkFormatter;
 use Symfony\Component\Form\ResolvedFormTypeInterface;
+use Symfony\Component\HttpKernel\Debug\FileLinkFormatter as LegacyFileLinkFormatter;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
@@ -24,9 +25,11 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
  */
 class TextDescriptor extends Descriptor
 {
-    public function __construct(
-        private readonly ?FileLinkFormatter $fileLinkFormatter = null,
-    ) {
+    private FileLinkFormatter|LegacyFileLinkFormatter|null $fileLinkFormatter;
+
+    public function __construct(FileLinkFormatter|LegacyFileLinkFormatter|null $fileLinkFormatter = null)
+    {
+        $this->fileLinkFormatter = $fileLinkFormatter;
     }
 
     protected function describeDefaults(array $options): void

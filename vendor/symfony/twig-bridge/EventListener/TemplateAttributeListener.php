@@ -28,7 +28,10 @@ class TemplateAttributeListener implements EventSubscriberInterface
     ) {
     }
 
-    public function onKernelView(ViewEvent $event): void
+    /**
+     * @return void
+     */
+    public function onKernelView(ViewEvent $event)
     {
         $parameters = $event->getControllerResult();
 

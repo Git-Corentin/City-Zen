@@ -38,9 +38,11 @@ use Symfony\Component\Routing\RouteCollection;
  */
 class TextDescriptor extends Descriptor
 {
-    public function __construct(
-        private ?FileLinkFormatter $fileLinkFormatter = null,
-    ) {
+    private ?FileLinkFormatter $fileLinkFormatter;
+
+    public function __construct(?FileLinkFormatter $fileLinkFormatter = null)
+    {
+        $this->fileLinkFormatter = $fileLinkFormatter;
     }
 
     protected function describeRouteCollection(RouteCollection $routes, array $options = []): void
@@ -647,10 +649,10 @@ class TextDescriptor extends Descriptor
 
         if ($callable instanceof \Closure) {
             $r = new \ReflectionFunction($callable);
-            if ($r->isAnonymous()) {
+            if (str_contains($r->name, '{closure')) {
                 return 'Closure()';
             }
-            if ($class = $r->getClosureCalledClass()) {
+            if ($class = \PHP_VERSION_ID >= 80111 ? $r->getClosureCalledClass() : $r->getClosureScopeClass()) {
                 return sprintf('%s::%s()', $class->name, $r->name);
             }
 

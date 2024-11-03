@@ -501,7 +501,7 @@ class XmlDescriptor extends Descriptor
 
     private function getEventDispatcherListenersDocument(EventDispatcherInterface $eventDispatcher, array $options): \DOMDocument
     {
-        $event = $options['event'] ?? null;
+        $event = \array_key_exists('event', $options) ? $options['event'] : null;
         $dom = new \DOMDocument('1.0', 'UTF-8');
         $dom->appendChild($eventDispatcherXML = $dom->createElement('event-dispatcher'));
 
@@ -581,12 +581,12 @@ class XmlDescriptor extends Descriptor
             $callableXML->setAttribute('type', 'closure');
 
             $r = new \ReflectionFunction($callable);
-            if ($r->isAnonymous()) {
+            if (str_contains($r->name, '{closure')) {
                 return $dom;
             }
             $callableXML->setAttribute('name', $r->name);
 
-            if ($class = $r->getClosureCalledClass()) {
+            if ($class = \PHP_VERSION_ID >= 80111 ? $r->getClosureCalledClass() : $r->getClosureScopeClass()) {
                 $callableXML->setAttribute('class', $class->name);
                 if (!$r->getClosureThis()) {
                     $callableXML->setAttribute('static', 'true');

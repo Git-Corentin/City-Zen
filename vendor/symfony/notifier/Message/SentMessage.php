@@ -16,12 +16,14 @@ namespace Symfony\Component\Notifier\Message;
  */
 class SentMessage
 {
+    private MessageInterface $original;
+    private string $transport;
     private ?string $messageId = null;
 
-    public function __construct(
-        private MessageInterface $original,
-        private string $transport,
-    ) {
+    public function __construct(MessageInterface $original, string $transport)
+    {
+        $this->original = $original;
+        $this->transport = $transport;
     }
 
     public function getOriginalMessage(): MessageInterface

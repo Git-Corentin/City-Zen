@@ -26,6 +26,7 @@ use Symfony\Component\Form\Console\Helper\DescriptorHelper;
 use Symfony\Component\Form\Extension\Core\CoreExtension;
 use Symfony\Component\Form\FormRegistryInterface;
 use Symfony\Component\Form\FormTypeInterface;
+use Symfony\Component\HttpKernel\Debug\FileLinkFormatter as LegacyFileLinkFormatter;
 
 /**
  * A console command for retrieving information about form types.
@@ -35,18 +36,29 @@ use Symfony\Component\Form\FormTypeInterface;
 #[AsCommand(name: 'debug:form', description: 'Display form type information')]
 class DebugCommand extends Command
 {
-    public function __construct(
-        private FormRegistryInterface $formRegistry,
-        private array $namespaces = ['Symfony\Component\Form\Extension\Core\Type'],
-        private array $types = [],
-        private array $extensions = [],
-        private array $guessers = [],
-        private ?FileLinkFormatter $fileLinkFormatter = null,
-    ) {
+    private FormRegistryInterface $formRegistry;
+    private array $namespaces;
+    private array $types;
+    private array $extensions;
+    private array $guessers;
+    private FileLinkFormatter|LegacyFileLinkFormatter|null $fileLinkFormatter;
+
+    public function __construct(FormRegistryInterface $formRegistry, array $namespaces = ['Symfony\Component\Form\Extension\Core\Type'], array $types = [], array $extensions = [], array $guessers = [], FileLinkFormatter|LegacyFileLinkFormatter|null $fileLinkFormatter = null)
+    {
         parent::__construct();
+
+        $this->formRegistry = $formRegistry;
+        $this->namespaces = $namespaces;
+        $this->types = $types;
+        $this->extensions = $extensions;
+        $this->guessers = $guessers;
+        $this->fileLinkFormatter = $fileLinkFormatter;
     }
 
-    protected function configure(): void
+    /**
+     * @return void
+     */
+    protected function configure()
     {
         $this
             ->setDefinition([

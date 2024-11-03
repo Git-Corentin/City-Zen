@@ -323,7 +323,7 @@ class JsonDescriptor extends Descriptor
     private function getEventDispatcherListenersData(EventDispatcherInterface $eventDispatcher, array $options): array
     {
         $data = [];
-        $event = $options['event'] ?? null;
+        $event = \array_key_exists('event', $options) ? $options['event'] : null;
 
         if (null !== $event) {
             foreach ($eventDispatcher->getListeners($event) as $listener) {
@@ -393,12 +393,12 @@ class JsonDescriptor extends Descriptor
             $data['type'] = 'closure';
 
             $r = new \ReflectionFunction($callable);
-            if ($r->isAnonymous()) {
+            if (str_contains($r->name, '{closure')) {
                 return $data;
             }
             $data['name'] = $r->name;
 
-            if ($class = $r->getClosureCalledClass()) {
+            if ($class = \PHP_VERSION_ID >= 80111 ? $r->getClosureCalledClass() : $r->getClosureScopeClass()) {
                 $data['class'] = $class->name;
                 if (!$r->getClosureThis()) {
                     $data['static'] = true;

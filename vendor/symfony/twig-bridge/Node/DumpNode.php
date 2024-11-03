@@ -23,12 +23,10 @@ use Twig\Node\Node;
 #[YieldReady]
 final class DumpNode extends Node
 {
-    public function __construct(
-        private LocalVariable|string $varPrefix,
-        ?Node $values,
-        int $lineno,
-        ?string $tag = null,
-    ) {
+    private LocalVariable|string $varPrefix;
+
+    public function __construct(LocalVariable|string $varPrefix, ?Node $values, int $lineno, ?string $tag = null)
+    {
         $nodes = [];
         if (null !== $values) {
             $nodes['values'] = $values;

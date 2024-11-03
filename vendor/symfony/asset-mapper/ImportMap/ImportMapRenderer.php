@@ -49,7 +49,7 @@ class ImportMapRenderer
         $importMap = [];
         $modulePreloads = [];
         $cssLinks = [];
-        $polyfillPath = null;
+        $polyFillPath = null;
         foreach ($importMapData as $importName => $data) {
             $path = $data['path'];
 
@@ -60,7 +60,7 @@ class ImportMapRenderer
 
             // if this represents the polyfill, hide it from the import map
             if ($importName === $this->polyfillImportName) {
-                $polyfillPath = $path;
+                $polyFillPath = $path;
                 continue;
             }
 
@@ -104,31 +104,22 @@ class ImportMapRenderer
             </script>
             HTML;
 
-        if (false !== $this->polyfillImportName && null === $polyfillPath) {
+        if (false !== $this->polyfillImportName && null === $polyFillPath) {
             if ('es-module-shims' !== $this->polyfillImportName) {
                 throw new \InvalidArgumentException(sprintf('The JavaScript module polyfill was not found in your import map. Either disable the polyfill or run "php bin/console importmap:require "%s"" to install it.', $this->polyfillImportName));
             }
 
             // a fallback for the default polyfill in case it's not in the importmap
-            $polyfillPath = self::DEFAULT_ES_MODULE_SHIMS_POLYFILL_URL;
+            $polyFillPath = self::DEFAULT_ES_MODULE_SHIMS_POLYFILL_URL;
         }
 
-        if ($polyfillPath) {
-            $url = $this->escapeAttributeValue($polyfillPath);
-            $polyfillAttributes = $scriptAttributes;
-
-            // Add security attributes for the default polyfill hosted on jspm.io
-            if (self::DEFAULT_ES_MODULE_SHIMS_POLYFILL_URL === $polyfillPath) {
-                $polyfillAttributes = $this->createAttributesString([
-                    'crossorigin' => 'anonymous',
-                    'integrity' => self::DEFAULT_ES_MODULE_SHIMS_POLYFILL_INTEGRITY,
-                ] + $attributes);
-            }
+        if ($polyFillPath) {
+            $url = $this->escapeAttributeValue($polyFillPath);
 
             $output .= <<<HTML
 
                 <!-- ES Module Shims: Import maps polyfill for modules browsers without import maps support -->
-                <script async src="$url"$polyfillAttributes></script>
+                <script async src="$url"$scriptAttributes></script>
                 HTML;
         }
 

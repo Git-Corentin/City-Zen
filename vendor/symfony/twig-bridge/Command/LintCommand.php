@@ -39,7 +39,6 @@ use Twig\Source;
 #[AsCommand(name: 'lint:twig', description: 'Lint a Twig template and outputs encountered errors')]
 class LintCommand extends Command
 {
-    private array $excludes;
     private string $format;
 
     public function __construct(
@@ -49,13 +48,15 @@ class LintCommand extends Command
         parent::__construct();
     }
 
-    protected function configure(): void
+    /**
+     * @return void
+     */
+    protected function configure()
     {
         $this
             ->addOption('format', null, InputOption::VALUE_REQUIRED, sprintf('The output format ("%s")', implode('", "', $this->getAvailableFormatOptions())))
             ->addOption('show-deprecations', null, InputOption::VALUE_NONE, 'Show deprecations as errors')
             ->addArgument('filename', InputArgument::IS_ARRAY, 'A file, a directory or "-" for reading from STDIN')
-            ->addOption('excludes', null, InputOption::VALUE_OPTIONAL | InputOption::VALUE_IS_ARRAY, 'Excluded directories', [])
             ->setHelp(<<<'EOF'
 The <info>%command.name%</info> command lints a template and outputs to STDOUT
 the first encountered syntax error.
@@ -83,7 +84,6 @@ EOF
         $io = new SymfonyStyle($input, $output);
         $filenames = $input->getArgument('filename');
         $showDeprecations = $input->getOption('show-deprecations');
-        $this->excludes = $input->getOption('excludes');
         $this->format = $input->getOption('format') ?? (GithubActionReporter::isGithubActionEnvironment() ? 'github' : 'txt');
 
         if (['-'] === $filenames) {
@@ -148,7 +148,7 @@ EOF
         if (is_file($filename)) {
             return [$filename];
         } elseif (is_dir($filename)) {
-            return Finder::create()->files()->in($filename)->name($this->namePatterns)->exclude($this->excludes);
+            return Finder::create()->files()->in($filename)->name($this->namePatterns);
         }
 
         throw new RuntimeException(sprintf('File or directory "%s" is not readable.', $filename));

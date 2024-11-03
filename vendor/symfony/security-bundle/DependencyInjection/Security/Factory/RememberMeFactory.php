@@ -32,7 +32,7 @@ class RememberMeFactory implements AuthenticatorFactoryInterface, PrependExtensi
 {
     public const PRIORITY = -50;
 
-    protected array $options = [
+    protected $options = [
         'name' => 'REMEMBERME',
         'lifetime' => 31536000,
         'path' => '/',

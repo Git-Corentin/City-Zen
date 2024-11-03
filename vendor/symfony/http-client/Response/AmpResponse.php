@@ -45,6 +45,7 @@ final class AmpResponse implements ResponseInterface, StreamableInterface
 
     private static string $nextId = 'a';
 
+    private AmpClientState $multi;
     private ?array $options;
     private \Closure $onProgress;
 
@@ -53,12 +54,9 @@ final class AmpResponse implements ResponseInterface, StreamableInterface
     /**
      * @internal
      */
-    public function __construct(
-        private AmpClientState $multi,
-        Request $request,
-        array $options,
-        ?LoggerInterface $logger,
-    ) {
+    public function __construct(AmpClientState $multi, Request $request, array $options, ?LoggerInterface $logger)
+    {
+        $this->multi = $multi;
         $this->options = &$options;
         $this->logger = $logger;
         $this->timeout = $options['timeout'];

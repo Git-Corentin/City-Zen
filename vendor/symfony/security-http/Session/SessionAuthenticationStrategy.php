@@ -43,7 +43,10 @@ class SessionAuthenticationStrategy implements SessionAuthenticationStrategyInte
         }
     }
 
-    public function onAuthentication(Request $request, TokenInterface $token): void
+    /**
+     * @return void
+     */
+    public function onAuthentication(Request $request, TokenInterface $token)
     {
         switch ($this->strategy) {
             case self::NONE:
@@ -51,7 +54,10 @@ class SessionAuthenticationStrategy implements SessionAuthenticationStrategyInte
 
             case self::MIGRATE:
                 $request->getSession()->migrate(true);
-                $this->csrfTokenStorage?->clear();
+
+                if ($this->csrfTokenStorage) {
+                    $this->csrfTokenStorage->clear();
+                }
 
                 return;
 

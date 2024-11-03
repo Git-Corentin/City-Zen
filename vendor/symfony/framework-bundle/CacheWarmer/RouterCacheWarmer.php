@@ -36,10 +36,6 @@ class RouterCacheWarmer implements CacheWarmerInterface, ServiceSubscriberInterf
 
     public function warmUp(string $cacheDir, ?string $buildDir = null): array
     {
-        if (!$buildDir) {
-            return [];
-        }
-
         $router = $this->container->get('router');
 
         if ($router instanceof WarmableInterface) {

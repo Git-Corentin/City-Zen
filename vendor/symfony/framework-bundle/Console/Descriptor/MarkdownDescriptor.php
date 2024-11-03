@@ -403,14 +403,14 @@ class MarkdownDescriptor extends Descriptor
             $string .= "\n- Type: `closure`";
 
             $r = new \ReflectionFunction($callable);
-            if ($r->isAnonymous()) {
+            if (str_contains($r->name, '{closure')) {
                 $this->write($string."\n");
 
                 return;
             }
             $string .= "\n".sprintf('- Name: `%s`', $r->name);
 
-            if ($class = $r->getClosureCalledClass()) {
+            if ($class = \PHP_VERSION_ID >= 80111 ? $r->getClosureCalledClass() : $r->getClosureScopeClass()) {
                 $string .= "\n".sprintf('- Class: `%s`', $class->name);
                 if (!$r->getClosureThis()) {
                     $string .= "\n- Static: yes";

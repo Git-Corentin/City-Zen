@@ -20,7 +20,6 @@ require_once __DIR__.\DIRECTORY_SEPARATOR.'Framework'.\DIRECTORY_SEPARATOR.'Vali
 require_once __DIR__.\DIRECTORY_SEPARATOR.'Framework'.\DIRECTORY_SEPARATOR.'AnnotationsConfig.php';
 require_once __DIR__.\DIRECTORY_SEPARATOR.'Framework'.\DIRECTORY_SEPARATOR.'SerializerConfig.php';
 require_once __DIR__.\DIRECTORY_SEPARATOR.'Framework'.\DIRECTORY_SEPARATOR.'PropertyAccessConfig.php';
-require_once __DIR__.\DIRECTORY_SEPARATOR.'Framework'.\DIRECTORY_SEPARATOR.'TypeInfoConfig.php';
 require_once __DIR__.\DIRECTORY_SEPARATOR.'Framework'.\DIRECTORY_SEPARATOR.'PropertyInfoConfig.php';
 require_once __DIR__.\DIRECTORY_SEPARATOR.'Framework'.\DIRECTORY_SEPARATOR.'CacheConfig.php';
 require_once __DIR__.\DIRECTORY_SEPARATOR.'Framework'.\DIRECTORY_SEPARATOR.'PhpErrorsConfig.php';
@@ -80,7 +79,6 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
     private $annotations;
     private $serializer;
     private $propertyAccess;
-    private $typeInfo;
     private $propertyInfo;
     private $cache;
     private $phpErrors;
@@ -117,7 +115,7 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
 
     /**
      * Set true to enable support for the '_method' request parameter to determine the intended HTTP method on POST requests. Note: When using the HttpCache, you need to call the method in your front controller instead
-     * @default false
+     * @default null
      * @param ParamConfigurator|bool $value
      * @return $this
      */
@@ -277,7 +275,7 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
 
     /**
      * HttpKernel will handle all kinds of \Throwable
-     * @default true
+     * @default null
      * @param ParamConfigurator|bool $value
      * @return $this
      */
@@ -496,7 +494,7 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
      * @template TValue
      * @param TValue $value
      * router configuration
-     * @default {"enabled":false,"cache_dir":"%kernel.build_dir%","default_uri":null,"http_port":80,"https_port":443,"strict_requirements":true,"utf8":true}
+     * @default {"enabled":false,"cache_dir":"%kernel.cache_dir%","default_uri":null,"http_port":80,"https_port":443,"strict_requirements":true,"utf8":true}
      * @return \Symfony\Config\Framework\RouterConfig|$this
      * @psalm-return (TValue is array ? \Symfony\Config\Framework\RouterConfig : static)
      */
@@ -523,7 +521,7 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
      * @template TValue
      * @param TValue $value
      * session configuration
-     * @default {"enabled":false,"storage_factory_id":"session.storage.factory.native","cookie_secure":"auto","cookie_httponly":true,"cookie_samesite":"lax","gc_probability":1,"metadata_update_threshold":0}
+     * @default {"enabled":false,"storage_factory_id":"session.storage.factory.native","cookie_httponly":true,"gc_probability":1,"metadata_update_threshold":0}
      * @return \Symfony\Config\Framework\SessionConfig|$this
      * @psalm-return (TValue is array ? \Symfony\Config\Framework\SessionConfig : static)
      */
@@ -658,11 +656,11 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
      * @template TValue
      * @param TValue $value
      * validation configuration
-     * @default {"enabled":false,"enable_attributes":true,"static_method":["loadValidatorMetadata"],"translation_domain":"validators","email_validation_mode":"html5","mapping":{"paths":[]},"not_compromised_password":{"enabled":true,"endpoint":null},"auto_mapping":[]}
+     * @default {"enabled":false,"enable_attributes":true,"static_method":["loadValidatorMetadata"],"translation_domain":"validators","mapping":{"paths":[]},"not_compromised_password":{"enabled":true,"endpoint":null},"auto_mapping":[]}
      * @return \Symfony\Config\Framework\ValidationConfig|$this
      * @psalm-return (TValue is array ? \Symfony\Config\Framework\ValidationConfig : static)
      */
-    public function validation(array $value = []): \Symfony\Config\Framework\ValidationConfig|static
+    public function validation(mixed $value = []): \Symfony\Config\Framework\ValidationConfig|static
     {
         if (!\is_array($value)) {
             $this->_usedProperties['validation'] = true;
@@ -684,7 +682,8 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
     /**
      * @template TValue
      * @param TValue $value
-     * @default {"enabled":false}
+     * annotation configuration
+     * @default {"enabled":false,"cache":"php_array","file_cache_dir":"%kernel.cache_dir%\/annotations","debug":true}
      * @return \Symfony\Config\Framework\AnnotationsConfig|$this
      * @psalm-return (TValue is array ? \Symfony\Config\Framework\AnnotationsConfig : static)
      */
@@ -715,7 +714,7 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
      * @return \Symfony\Config\Framework\SerializerConfig|$this
      * @psalm-return (TValue is array ? \Symfony\Config\Framework\SerializerConfig : static)
      */
-    public function serializer(array $value = []): \Symfony\Config\Framework\SerializerConfig|static
+    public function serializer(mixed $value = []): \Symfony\Config\Framework\SerializerConfig|static
     {
         if (!\is_array($value)) {
             $this->_usedProperties['serializer'] = true;
@@ -764,33 +763,6 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
     /**
      * @template TValue
      * @param TValue $value
-     * Type info configuration
-     * @default {"enabled":false}
-     * @return \Symfony\Config\Framework\TypeInfoConfig|$this
-     * @psalm-return (TValue is array ? \Symfony\Config\Framework\TypeInfoConfig : static)
-     */
-    public function typeInfo(array $value = []): \Symfony\Config\Framework\TypeInfoConfig|static
-    {
-        if (!\is_array($value)) {
-            $this->_usedProperties['typeInfo'] = true;
-            $this->typeInfo = $value;
-
-            return $this;
-        }
-
-        if (!$this->typeInfo instanceof \Symfony\Config\Framework\TypeInfoConfig) {
-            $this->_usedProperties['typeInfo'] = true;
-            $this->typeInfo = new \Symfony\Config\Framework\TypeInfoConfig($value);
-        } elseif (0 < \func_num_args()) {
-            throw new InvalidConfigurationException('The node created by "typeInfo()" has already been initialized. You cannot pass values the second time you call typeInfo().');
-        }
-
-        return $this->typeInfo;
-    }
-
-    /**
-     * @template TValue
-     * @param TValue $value
      * Property info configuration
      * @default {"enabled":false}
      * @return \Symfony\Config\Framework\PropertyInfoConfig|$this
@@ -833,7 +805,7 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
 
     /**
      * PHP errors handling configuration
-     * @default {"log":true,"throw":true}
+     * @default {"throw":true}
     */
     public function phpErrors(array $value = []): \Symfony\Config\Framework\PhpErrorsConfig
     {
@@ -848,11 +820,22 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
     }
 
     /**
+     * @template TValue
+     * @param TValue $value
      * Exception handling configuration
-    */
-    public function exception(string $class, array $value = []): \Symfony\Config\Framework\ExceptionConfig
+     * @return \Symfony\Config\Framework\ExceptionConfig|$this
+     * @psalm-return (TValue is array ? \Symfony\Config\Framework\ExceptionConfig : static)
+     */
+    public function exception(string $class, array $value = []): \Symfony\Config\Framework\ExceptionConfig|static
     {
-        if (!isset($this->exceptions[$class])) {
+        if (!\is_array($value)) {
+            $this->_usedProperties['exceptions'] = true;
+            $this->exceptions[$class] = $value;
+
+            return $this;
+        }
+
+        if (!isset($this->exceptions[$class]) || !$this->exceptions[$class] instanceof \Symfony\Config\Framework\ExceptionConfig) {
             $this->_usedProperties['exceptions'] = true;
             $this->exceptions[$class] = new \Symfony\Config\Framework\ExceptionConfig($value);
         } elseif (1 < \func_num_args()) {
@@ -947,7 +930,7 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
      * @template TValue
      * @param TValue $value
      * Messenger configuration
-     * @default {"enabled":false,"routing":[],"serializer":{"default_serializer":"messenger.transport.native_php_serializer","symfony_serializer":{"format":"json","context":[]}},"transports":[],"failure_transport":null,"stop_worker_on_signals":[],"default_bus":null,"buses":{"messenger.bus.default":{"default_middleware":{"enabled":true,"allow_no_handlers":false,"allow_no_senders":true},"middleware":[]}}}
+     * @default {"enabled":false,"routing":[],"serializer":{"default_serializer":"messenger.transport.native_php_serializer","symfony_serializer":{"format":"json","context":[]}},"transports":[],"failure_transport":null,"reset_on_message":true,"stop_worker_on_signals":[],"default_bus":null,"buses":{"messenger.bus.default":{"default_middleware":{"enabled":true,"allow_no_handlers":false,"allow_no_senders":true},"middleware":[]}}}
      * @return \Symfony\Config\Framework\MessengerConfig|$this
      * @psalm-return (TValue is array ? \Symfony\Config\Framework\MessengerConfig : static)
      */
@@ -1138,7 +1121,7 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
      * @template TValue
      * @param TValue $value
      * Uid configuration
-     * @default {"enabled":false,"default_uuid_version":7,"name_based_uuid_version":5,"time_based_uuid_version":7}
+     * @default {"enabled":false,"name_based_uuid_version":5}
      * @return \Symfony\Config\Framework\UidConfig|$this
      * @psalm-return (TValue is array ? \Symfony\Config\Framework\UidConfig : static)
      */
@@ -1441,12 +1424,6 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
             unset($value['property_access']);
         }
 
-        if (array_key_exists('type_info', $value)) {
-            $this->_usedProperties['typeInfo'] = true;
-            $this->typeInfo = \is_array($value['type_info']) ? new \Symfony\Config\Framework\TypeInfoConfig($value['type_info']) : $value['type_info'];
-            unset($value['type_info']);
-        }
-
         if (array_key_exists('property_info', $value)) {
             $this->_usedProperties['propertyInfo'] = true;
             $this->propertyInfo = \is_array($value['property_info']) ? new \Symfony\Config\Framework\PropertyInfoConfig($value['property_info']) : $value['property_info'];
@@ -1467,7 +1444,7 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
 
         if (array_key_exists('exceptions', $value)) {
             $this->_usedProperties['exceptions'] = true;
-            $this->exceptions = array_map(fn ($v) => new \Symfony\Config\Framework\ExceptionConfig($v), $value['exceptions']);
+            $this->exceptions = array_map(fn ($v) => \is_array($v) ? new \Symfony\Config\Framework\ExceptionConfig($v) : $v, $value['exceptions']);
             unset($value['exceptions']);
         }
 
@@ -1665,9 +1642,6 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
         if (isset($this->_usedProperties['propertyAccess'])) {
             $output['property_access'] = $this->propertyAccess instanceof \Symfony\Config\Framework\PropertyAccessConfig ? $this->propertyAccess->toArray() : $this->propertyAccess;
         }
-        if (isset($this->_usedProperties['typeInfo'])) {
-            $output['type_info'] = $this->typeInfo instanceof \Symfony\Config\Framework\TypeInfoConfig ? $this->typeInfo->toArray() : $this->typeInfo;
-        }
         if (isset($this->_usedProperties['propertyInfo'])) {
             $output['property_info'] = $this->propertyInfo instanceof \Symfony\Config\Framework\PropertyInfoConfig ? $this->propertyInfo->toArray() : $this->propertyInfo;
         }
@@ -1678,7 +1652,7 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
             $output['php_errors'] = $this->phpErrors->toArray();
         }
         if (isset($this->_usedProperties['exceptions'])) {
-            $output['exceptions'] = array_map(fn ($v) => $v->toArray(), $this->exceptions);
+            $output['exceptions'] = array_map(fn ($v) => $v instanceof \Symfony\Config\Framework\ExceptionConfig ? $v->toArray() : $v, $this->exceptions);
         }
         if (isset($this->_usedProperties['webLink'])) {
             $output['web_link'] = $this->webLink instanceof \Symfony\Config\Framework\WebLinkConfig ? $this->webLink->toArray() : $this->webLink;

@@ -16,7 +16,6 @@ use Symfony\Component\AssetMapper\Exception\CircularAssetsException;
 use Symfony\Component\AssetMapper\Exception\RuntimeException;
 use Symfony\Component\AssetMapper\MappedAsset;
 use Symfony\Component\AssetMapper\Path\PublicAssetsPathResolverInterface;
-use Symfony\Component\Filesystem\Filesystem;
 
 /**
  * Creates MappedAsset objects by reading their contents & passing it through compilers.
@@ -105,7 +104,7 @@ class MappedAssetFactory implements MappedAssetFactoryInterface
             return null;
         }
 
-        $content = (new Filesystem())->readFile($asset->sourcePath);
+        $content = file_get_contents($asset->sourcePath);
         $compiled = $this->compiler->compile($content, $asset);
 
         return $compiled !== $content ? $compiled : null;

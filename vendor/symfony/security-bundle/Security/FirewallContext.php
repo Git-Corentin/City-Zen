@@ -38,7 +38,10 @@ class FirewallContext
         $this->config = $config;
     }
 
-    public function getConfig(): ?FirewallConfig
+    /**
+     * @return FirewallConfig|null
+     */
+    public function getConfig()
     {
         return $this->config;
     }
@@ -51,12 +54,18 @@ class FirewallContext
         return $this->listeners;
     }
 
-    public function getExceptionListener(): ?ExceptionListener
+    /**
+     * @return ExceptionListener|null
+     */
+    public function getExceptionListener()
     {
         return $this->exceptionListener;
     }
 
-    public function getLogoutListener(): ?LogoutListener
+    /**
+     * @return LogoutListener|null
+     */
+    public function getLogoutListener()
     {
         return $this->logoutListener;
     }

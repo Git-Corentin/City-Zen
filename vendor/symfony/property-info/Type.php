@@ -38,7 +38,7 @@ class Type
      *
      * @var string[]
      */
-    public static array $builtinTypes = [
+    public static $builtinTypes = [
         self::BUILTIN_TYPE_INT,
         self::BUILTIN_TYPE_FLOAT,
         self::BUILTIN_TYPE_STRING,
@@ -58,7 +58,7 @@ class Type
      *
      * @var string[]
      */
-    public static array $builtinCollectionTypes = [
+    public static $builtinCollectionTypes = [
         self::BUILTIN_TYPE_ARRAY,
         self::BUILTIN_TYPE_ITERABLE,
     ];
@@ -78,7 +78,7 @@ class Type
      */
     public function __construct(string $builtinType, bool $nullable = false, ?string $class = null, bool $collection = false, array|self|null $collectionKeyType = null, array|self|null $collectionValueType = null)
     {
-        if (!\in_array($builtinType, self::$builtinTypes, true)) {
+        if (!\in_array($builtinType, self::$builtinTypes)) {
             throw new \InvalidArgumentException(sprintf('"%s" is not a valid PHP type.', $builtinType));
         }
 
