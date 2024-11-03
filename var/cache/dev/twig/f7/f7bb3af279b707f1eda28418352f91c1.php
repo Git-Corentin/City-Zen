@@ -231,6 +231,6 @@ class __TwigTemplate_7897499f19a6852915c760f3947490e9 extends Template
     word-wrap: break-word;
     word-break: break-all;
 }
-", "@WebProfiler/Profiler/open.css.twig", "/home/corentin/Documents/Projet Info/cityzen/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/open.css.twig");
+", "@WebProfiler/Profiler/open.css.twig", "/home/corentin/Documents/Projet Info/City-Zen-Git/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/open.css.twig");
     }
 }

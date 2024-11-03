@@ -85,6 +85,6 @@ class __TwigTemplate_925dbcd5c064b3dcdd082c2e3fbb2f06 extends Template
     public function getSourceContext(): Source
     {
         return new Source("{% extends \"@email/zurb_2/notification/body.txt.twig\" %}
-", "@email/default/notification/body.txt.twig", "/home/corentin/Documents/Projet Info/cityzen/vendor/symfony/twig-bridge/Resources/views/Email/default/notification/body.txt.twig");
+", "@email/default/notification/body.txt.twig", "/home/corentin/Documents/Projet Info/City-Zen-Git/vendor/symfony/twig-bridge/Resources/views/Email/default/notification/body.txt.twig");
     }
 }

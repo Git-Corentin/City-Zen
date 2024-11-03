@@ -1866,6 +1866,6 @@ class __TwigTemplate_b1a8f7092133f2f4bdde23e4e6a6d09a extends Template
         </tbody>
     </table>
 {% endmacro %}
-", "@Doctrine/Collector/db.html.twig", "/home/corentin/Documents/Projet Info/cityzen/vendor/doctrine/doctrine-bundle/templates/Collector/db.html.twig");
+", "@Doctrine/Collector/db.html.twig", "/home/corentin/Documents/Projet Info/City-Zen-Git/vendor/doctrine/doctrine-bundle/templates/Collector/db.html.twig");
     }
 }

@@ -731,6 +731,6 @@ class __TwigTemplate_1262ae66d9b334585bdf2c401bf502c8 extends Template
     });
 })();
 </script>
-", "@WebProfiler/Profiler/settings.html.twig", "/home/corentin/Documents/Projet Info/cityzen/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/settings.html.twig");
+", "@WebProfiler/Profiler/settings.html.twig", "/home/corentin/Documents/Projet Info/City-Zen-Git/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/settings.html.twig");
     }
 }

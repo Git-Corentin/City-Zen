@@ -990,6 +990,6 @@ class __TwigTemplate_453908e259714720ad8711b18c7eaf59 extends Template
         </td>
     </tr>
 {% endmacro %}
-", "@DoctrineMigrations/Collector/migrations.html.twig", "/home/corentin/Documents/Projet Info/cityzen/vendor/doctrine/doctrine-migrations-bundle/Resources/views/Collector/migrations.html.twig");
+", "@DoctrineMigrations/Collector/migrations.html.twig", "/home/corentin/Documents/Projet Info/City-Zen-Git/vendor/doctrine/doctrine-migrations-bundle/Resources/views/Collector/migrations.html.twig");
     }
 }
