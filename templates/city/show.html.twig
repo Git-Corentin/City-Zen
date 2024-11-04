@@ -3,5 +3,126 @@
 {% block title %}{{ name }}{% endblock %}
 
 {% block body %}
-<h1>Bienvenue à {{ name }}</h1>
+    <h1>Bienvenue à {{ name }}</h1>
+
+    <script>
+        // Récupération des valeurs Twig dans les variables JavaScript
+        const cityName = "{{ name|e('js') }}";
+        const latitude = {{ latitude }};
+        const longitude = {{ longitude }};
+        const apiKey = "779875b69f9002abced6c51cc13f5502";
+
+        // Fonction pour récupérer les données météo
+        async function fetchWeather() {
+            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric&lang=fr`;
+
+            try {
+                const response = await fetch(url);
+                const weatherData = await response.json();
+                console.log("Données météo :", weatherData);
+
+                // Récupération du conteneur pour afficher la météo
+                const weatherContainer = document.getElementById("weather");
+                weatherContainer.innerHTML = `<h2>Météo actuelle pour ${cityName}</h2>`;
+
+                // Création d'éléments HTML pour afficher chaque section de données
+                weatherContainer.innerHTML += `
+                <div class="weather-card">
+                    <h3>Coordonnées</h3>
+                    <p>Latitude: ${weatherData.coord.lat}</p>
+                    <p>Longitude: ${weatherData.coord.lon}</p>
+                </div>
+                <div class="weather-card">
+                    <h3>Météo</h3>
+                    <p>Main: ${weatherData.weather[0].main}</p>
+                    <p>Description: ${weatherData.weather[0].description}</p>
+                    <img src="https://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png" alt="Icone Météo">
+                </div>
+                <div class="weather-card">
+                    <h3>Températures</h3>
+                    <p>Température actuelle: ${weatherData.main.temp} °C</p>
+                    <p>Température ressentie: ${weatherData.main.feels_like} °C</p>
+                    <p>Min: ${weatherData.main.temp_min} °C, Max: ${weatherData.main.temp_max} °C</p>
+                </div>
+                <div class="weather-card">
+                    <h3>Conditions atmosphériques</h3>
+                    <p>Pression: ${weatherData.main.pressure} hPa</p>
+                    <p>Humidité: ${weatherData.main.humidity}%</p>
+                    <p>Visibilité: ${weatherData.visibility} m</p>
+                </div>
+                <div class="weather-card">
+                    <h3>Vent</h3>
+                    <p>Vitesse: ${weatherData.wind.speed} m/s</p>
+                    <p>Direction: ${weatherData.wind.deg}°</p>
+                    ${weatherData.wind.gust ? `<p>Rafales: ${weatherData.wind.gust} m/s</p>` : ''}
+                </div>
+                <div class="weather-card">
+                    <h3>Nuages</h3>
+                    <p>Couverture nuageuse: ${weatherData.clouds.all}%</p>
+                </div>
+                <div class="weather-card">
+                    <h3>Pluie</h3>
+                    ${weatherData.rain ? `<p>Précipitations (1h): ${weatherData.rain["1h"]} mm</p>` : '<p>Aucune précipitation</p>'}
+                </div>
+                <div class="weather-card">
+                    <h3>Système</h3>
+                    <p>Pays: ${weatherData.sys.country}</p>
+                    <p>Lever du soleil: ${new Date(weatherData.sys.sunrise * 1000).toLocaleTimeString()}</p>
+                    <p>Coucher du soleil: ${new Date(weatherData.sys.sunset * 1000).toLocaleTimeString()}</p>
+                </div>
+            `;
+            } catch (error) {
+                console.error("Erreur lors de la récupération des données météo :", error);
+                document.getElementById("weather").textContent = "Erreur lors de la récupération des données météo.";
+            }
+        }
+
+        // Appeler la fonction pour afficher la météo
+        fetchWeather();
+    </script>
+
+    <div id="weather">Chargement de la météo...</div>
+
+    <style>
+        /* Style CSS moderne pour la mise en page */
+        #weather {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .weather-card {
+            flex: 1 1 300px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .weather-card h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .weather-card p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .weather-card img {
+            width: 50px;
+            height: 50px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+    </style>
 {% endblock %}

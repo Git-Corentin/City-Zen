@@ -6,8 +6,10 @@ fetch('homepage/cities.json') // Chemin vers le fichier JSON
     .then(response => response.json())
     .then(data => {
         cities = data.cities.map(city => ({
-            displayName: city.city_code.toUpperCase() + " (" + city.zip_code + ")", // Nom affiché en majuscules avec le code INSEE
-            searchName: city.city_code.toLowerCase().replace(/-/g, ' ') + " " + city.zip_code // Nom de recherche (ville sans tirets et code postal)
+            displayName: city.city_code.toUpperCase() + " (" + city.zip_code + ")", // Nom affiché en majuscules avec le code postal
+            searchName: city.city_code.toLowerCase().replace(/-/g, ' ') + " " + city.zip_code, // Nom de recherche (ville sans tirets et code postal)
+            latitude: city.latitude, // Ajout de la latitude
+            longitude: city.longitude // Ajout de la longitude
         }));
     })
     .catch(error => console.error('Erreur de chargement des villes :', error));
@@ -15,9 +17,9 @@ fetch('homepage/cities.json') // Chemin vers le fichier JSON
 const inputField = document.getElementById("citySearch");
 const suggestionsDiv = document.getElementById("suggestions");
 
-// Fonction pour construire l'URL de redirection
-function getCityUrl(cityName) {
-    return `/city/${cityName.replace(/\s+/g, '-').toLowerCase()}`;
+// Fonction pour construire l'URL de redirection avec latitude et longitude
+function getCityUrl(cityName, latitude, longitude) {
+    return `/city/${cityName.replace(/\s+/g, '-').toLowerCase()}/${latitude}/${longitude}`;
 }
 
 inputField.addEventListener("input", function() {
@@ -47,12 +49,16 @@ inputField.addEventListener("input", function() {
 
     limitedSuggestions.forEach((city, index) => {
         const suggestion = document.createElement("div");
-        suggestion.textContent = city.displayName; // Afficher le nom avec INSEE en majuscules
+        suggestion.textContent = city.displayName; // Afficher le nom avec le code postal en majuscules
         suggestion.classList.add("suggestion-item");
 
         // Clic sur une suggestion avec redirection
         suggestion.addEventListener("click", () => {
-            const cityUrl = getCityUrl(city.displayName.replace(/ \(\d+\)$/, ''));
+            const cityUrl = getCityUrl(
+                city.displayName.replace(/ \(\d+\)$/, ''),
+                city.latitude,
+                city.longitude
+            );
             window.location.href = cityUrl; // Redirection vers la page de la ville
         });
 
@@ -79,15 +85,19 @@ inputField.addEventListener("keydown", function(event) {
     } else if (event.key === "Enter") {
         // Touche Entrée pour sélectionner la suggestion surlignée avec redirection
         if (selectedIndex >= 0 && selectedIndex < suggestionItems.length) {
-            const selectedCity = suggestionItems[selectedIndex].textContent;
-            const cityUrl = getCityUrl(selectedCity.replace(/ \(\d+\)$/, ''));
+            const selectedCity = limitedSuggestions[selectedIndex];
+            const cityUrl = getCityUrl(
+                selectedCity.displayName.replace(/ \(\d+\)$/, ''),
+                selectedCity.latitude,
+                selectedCity.longitude
+            );
             window.location.href = cityUrl; // Redirection vers la page de la ville
         }
         event.preventDefault();
     }
 });
 
-// Fonction pour surligner la suggestion sélectionnées
+// Fonction pour surligner la suggestion sélectionnée
 function highlightSuggestion(suggestionItems) {
     suggestionItems.forEach((item, index) => {
         item.classList.toggle("highlighted", index === selectedIndex);
