@@ -87,7 +87,7 @@ inputField.addEventListener("keydown", function(event) {
     }
 });
 
-// Fonction pour surligner la suggestion sélectionnée
+// Fonction pour surligner la suggestion sélectionnées
 function highlightSuggestion(suggestionItems) {
     suggestionItems.forEach((item, index) => {
         item.classList.toggle("highlighted", index === selectedIndex);
