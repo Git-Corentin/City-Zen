@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recherche de villes{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('homepage/style.css') }}">
+{% endblock %}
+
+
+
+{% block body %}
+    <div class="container"> <!-- Ajout d'un conteneur -->
+        <h1>City-Zen</h1>
+        <input type="text" id="citySearch" placeholder="Rechercher une ville" autocomplete="off">
+        <div id="suggestions" class="suggestions"></div>
+    </div>
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('homepage/script.js') }}"></script>
+{% endblock %}
