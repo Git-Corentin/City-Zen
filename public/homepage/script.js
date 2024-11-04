@@ -50,14 +50,10 @@ inputField.addEventListener("input", function() {
         suggestion.textContent = city.displayName; // Afficher le nom avec INSEE en majuscules
         suggestion.classList.add("suggestion-item");
 
-        // Clic sur une suggestion
+        // Clic sur une suggestion avec redirection
         suggestion.addEventListener("click", () => {
-            inputField.value = city.displayName.replace(/ \(\d+\)$/, ''); // Remplit l'input sans le code INSEE
-
-            cityUrl = getCityUrl(city.displayName.replace(/ \(\d+\)$/, ''));
+            const cityUrl = getCityUrl(city.displayName.replace(/ \(\d+\)$/, ''));
             window.location.href = cityUrl; // Redirection vers la page de la ville
-            suggestionsDiv.innerHTML = "";
-            suggestionsDiv.style.display = "none";
         });
 
         suggestionsDiv.appendChild(suggestion);
@@ -66,29 +62,26 @@ inputField.addEventListener("input", function() {
     suggestionsDiv.style.display = limitedSuggestions.length ? "block" : "none";
 });
 
-// Gestion de la navigation au clavier
+// Gestion de la navigation au clavier avec redirection
 inputField.addEventListener("keydown", function(event) {
     const suggestionItems = document.querySelectorAll(".suggestion-item");
 
     if (event.key === "ArrowDown") {
         // Flèche bas pour avancer dans la liste
-        selectedIndex = (selectedIndex + 1) % suggestionItems.length;
+        selectedIndex = (selectedIndex + 1) % suggestionItems.length; // Revient au début si on dépasse la fin
         highlightSuggestion(suggestionItems);
         event.preventDefault();
     } else if (event.key === "ArrowUp") {
         // Flèche haut pour reculer dans la liste
-        selectedIndex = (selectedIndex - 1 + suggestionItems.length) % suggestionItems.length;
+        selectedIndex = (selectedIndex - 1 + suggestionItems.length) % suggestionItems.length; // Revient à la fin si on dépasse le début
         highlightSuggestion(suggestionItems);
         event.preventDefault();
     } else if (event.key === "Enter") {
-        // Touche Entrée pour sélectionner la suggestion surlignée
+        // Touche Entrée pour sélectionner la suggestion surlignée avec redirection
         if (selectedIndex >= 0 && selectedIndex < suggestionItems.length) {
             const selectedCity = suggestionItems[selectedIndex].textContent;
-            inputField.value = selectedCity.replace(/ \(\d+\)$/, ''); // Remplit l'input sans le code INSEE
-            cityUrl = getCityUrl(selectedCity.replace(/ \(\d+\)$/, ''));
+            const cityUrl = getCityUrl(selectedCity.replace(/ \(\d+\)$/, ''));
             window.location.href = cityUrl; // Redirection vers la page de la ville
-            suggestionsDiv.innerHTML = "";
-            suggestionsDiv.style.display = "none";
         }
         event.preventDefault();
     }
