@@ -3,24 +3,10 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Utiliser toute la hauteur de la fenêtre */
-}
-
-.suggestion-item {
-    padding: 8px;
-    cursor: pointer;
-}
-
-.suggestion-item.highlighted {
-    background-color: #ddd; /* couleur de surbrillance */
 }
 
 .container {
-    position: relative; /* Positionnement relatif pour contenir les suggestions */
+    position: relative;
 }
 
 h1 {
@@ -32,31 +18,31 @@ h1 {
     width: 300px;
     padding: 10px;
     font-size: 16px;
-    border: 2px solid #007BFF; /* Couleur de la bordure */
+    border: 2px solid #007BFF;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    outline: none; /* Enlever le contour par défaut */
+    outline: none;
     transition: border-color 0.3s;
-    box-sizing: border-box; /* Inclure les bordures et padding dans la largeur totale */
+    box-sizing: border-box;
 }
 
 #citySearch:focus {
-    border-color: #0056b3; /* Couleur de la bordure au focus */
+    border-color: #0056b3;
 }
 
 .suggestions {
     width: 300px;
-    border: 1px solid #007BFF; /* Bordure du conteneur des suggestions */
+    border: 1px solid #007BFF;
     border-radius: 5px;
     background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: absolute; /* Positionner les suggestions sous le champ de recherche */
+    position: absolute;
     z-index: 10;
-    max-height: 200px; /* Limiter la hauteur des suggestions */
-    overflow-y: auto; /* Ajouter un défilement si nécessaire */
-    display: none; /* Cacher par défaut */
-    margin-top: 5px; /* Espace entre le champ et les suggestions */
-    box-sizing: border-box; /* Assurer que la largeur inclut la bordure */
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    margin-top: 5px;
+    box-sizing: border-box;
 }
 
 .suggestions div {
@@ -65,5 +51,5 @@ h1 {
 }
 
 .suggestions div:hover {
-    background-color: #f1f1f1; /* Changer la couleur de fond au survol */
+    background-color: #f1f1f1;
 }
