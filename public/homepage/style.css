@@ -10,6 +10,15 @@ body {
     height: 100vh; /* Utiliser toute la hauteur de la fenêtre */
 }
 
+.suggestion-item {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggestion-item.highlighted {
+    background-color: #ddd; /* couleur de surbrillance */
+}
+
 .container {
     position: relative; /* Positionnement relatif pour contenir les suggestions */
 }

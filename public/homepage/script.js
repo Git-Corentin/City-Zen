@@ -1,11 +1,12 @@
 let cities = [];
+let selectedIndex = -1; // Pour suivre la suggestion actuellement sélectionnée
 
 // Charger les villes à partir du fichier JSON
 fetch('homepage/cities.json') // Chemin vers le fichier JSON
     .then(response => response.json())
     .then(data => {
         cities = data.cities.map(city => ({
-            displayName: city.city_code.toUpperCase() + " (" + city.zip_code + ")", // Nom affiché en majuscules avec l'INSEE
+            displayName: city.city_code.toUpperCase() + " (" + city.zip_code + ")", // Nom affiché en majuscules avec le code INSEE
             searchName: city.city_code.toLowerCase().replace(/-/g, ' ') + " " + city.zip_code // Nom de recherche (ville sans tirets et code postal)
         }));
     })
@@ -14,9 +15,15 @@ fetch('homepage/cities.json') // Chemin vers le fichier JSON
 const inputField = document.getElementById("citySearch");
 const suggestionsDiv = document.getElementById("suggestions");
 
+// Fonction pour construire l'URL de redirection
+function getCityUrl(cityName) {
+    return `/city/${cityName.replace(/\s+/g, '-').toLowerCase()}`;
+}
+
 inputField.addEventListener("input", function() {
     const query = this.value.toLowerCase().replace(/-/g, ' '); // Normaliser la saisie de l'utilisateur
     suggestionsDiv.innerHTML = "";
+    selectedIndex = -1; // Réinitialiser l'index à chaque saisie
 
     // Définir le nombre de suggestions en fonction de la longueur du texte
     let maxSuggestions;
@@ -38,27 +45,58 @@ inputField.addEventListener("input", function() {
     const filteredCities = cities.filter(city => city.searchName.includes(query));
     const limitedSuggestions = filteredCities.slice(0, maxSuggestions);
 
-    limitedSuggestions.forEach(city => {
+    limitedSuggestions.forEach((city, index) => {
         const suggestion = document.createElement("div");
         suggestion.textContent = city.displayName; // Afficher le nom avec INSEE en majuscules
+        suggestion.classList.add("suggestion-item");
+
+        // Clic sur une suggestion
         suggestion.addEventListener("click", () => {
             inputField.value = city.displayName.replace(/ \(\d+\)$/, ''); // Remplit l'input sans le code INSEE
+
+            cityUrl = getCityUrl(city.displayName.replace(/ \(\d+\)$/, ''));
+            window.location.href = cityUrl; // Redirection vers la page de la ville
             suggestionsDiv.innerHTML = "";
             suggestionsDiv.style.display = "none";
         });
+
         suggestionsDiv.appendChild(suggestion);
     });
 
     suggestionsDiv.style.display = limitedSuggestions.length ? "block" : "none";
+});
 
-    if (limitedSuggestions.length === 1) {
-        inputField.addEventListener("keydown", function(event) {
-            if (event.key === "Enter") {
-                inputField.value = limitedSuggestions[0].displayName.replace(/ \(\d+\)$/, ''); // Remplit sans le code INSEE
-                suggestionsDiv.innerHTML = "";
-                suggestionsDiv.style.display = "none";
-                event.preventDefault();
-            }
-        });
+// Gestion de la navigation au clavier
+inputField.addEventListener("keydown", function(event) {
+    const suggestionItems = document.querySelectorAll(".suggestion-item");
+
+    if (event.key === "ArrowDown") {
+        // Flèche bas pour avancer dans la liste
+        selectedIndex = (selectedIndex + 1) % suggestionItems.length;
+        highlightSuggestion(suggestionItems);
+        event.preventDefault();
+    } else if (event.key === "ArrowUp") {
+        // Flèche haut pour reculer dans la liste
+        selectedIndex = (selectedIndex - 1 + suggestionItems.length) % suggestionItems.length;
+        highlightSuggestion(suggestionItems);
+        event.preventDefault();
+    } else if (event.key === "Enter") {
+        // Touche Entrée pour sélectionner la suggestion surlignée
+        if (selectedIndex >= 0 && selectedIndex < suggestionItems.length) {
+            const selectedCity = suggestionItems[selectedIndex].textContent;
+            inputField.value = selectedCity.replace(/ \(\d+\)$/, ''); // Remplit l'input sans le code INSEE
+            cityUrl = getCityUrl(selectedCity.replace(/ \(\d+\)$/, ''));
+            window.location.href = cityUrl; // Redirection vers la page de la ville
+            suggestionsDiv.innerHTML = "";
+            suggestionsDiv.style.display = "none";
+        }
+        event.preventDefault();
     }
 });
+
+// Fonction pour surligner la suggestion sélectionnée
+function highlightSuggestion(suggestionItems) {
+    suggestionItems.forEach((item, index) => {
+        item.classList.toggle("highlighted", index === selectedIndex);
+    });
+}
