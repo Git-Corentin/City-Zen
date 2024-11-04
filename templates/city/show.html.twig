@@ -79,12 +79,30 @@
 
         // Appeler la fonction pour afficher la météo
         fetchWeather();
+
+        // Initialiser la carte avec Leaflet
+        function initMap() {
+            const map = L.map('map').setView([latitude, longitude], 13); // Centre la carte sur les coordonnées
+
+            // Ajouter le fond de carte
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            // Ajouter un marqueur aux coordonnées
+            L.marker([latitude, longitude]).addTo(map)
+                .bindPopup(`<b>${cityName}</b><br>Latitude: ${latitude}, Longitude: ${longitude}`)
+                .openPopup();
+        }
+
+        document.addEventListener("DOMContentLoaded", initMap); // Charger la carte une fois la page prête
     </script>
 
     <div id="weather">Chargement de la météo...</div>
+    <div id="map"></div>
 
     <style>
-        /* Style CSS moderne pour la mise en page */
+        /* Style CSS pour l'affichage météo et la carte */
         #weather {
             display: flex;
             flex-wrap: wrap;
@@ -124,5 +142,19 @@
             text-align: center;
             color: #333;
         }
+
+        /* Style pour la carte */
+        #map {
+            height: 400px;
+            width: 100%;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
     </style>
+
+    <!-- Ajout de Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
 {% endblock %}
