@@ -14,6 +14,14 @@ h1 {
     margin-bottom: 20px;
 }
 
+/* Container principal pour centrer horizontalement */
+.search-wrapper {
+    display: flex;
+    flex-direction: column; /* Place les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+    width: 100%; /* Assure que le conteneur prend toute la largeur */
+}
+
 #citySearch {
     width: 300px;
     padding: 10px;
@@ -41,7 +49,7 @@ h1 {
     max-height: 200px;
     overflow-y: auto;
     display: none;
-    margin-top: 5px;
+    margin-top: 50px;
     box-sizing: border-box;
 }
 

@@ -2,18 +2,80 @@
 
 {% block title %}Recherche de villes{% endblock %}
 
-{% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('homepage/style.css') }}">
-{% endblock %}
-
-
 
 {% block body %}
     <div class="container"> <!-- Ajout d'un conteneur -->
         <h1 class="text-center">City-Zen</h1>
-        <input type="text" id="citySearch" placeholder="Rechercher une ville" autocomplete="off">
-        <div id="suggestions" class="suggestions"></div>
+        <div class="search-wrapper">
+            <input type="text" id="citySearch" placeholder="Rechercher une ville" autocomplete="off">
+            <div id="suggestions" class="suggestions"></div>
+        </div>
     </div>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Container principal pour centrer horizontalement */
+        .search-wrapper {
+            display: flex;
+            flex-direction: column; /* Place les éléments verticalement */
+            align-items: center; /* Centre les éléments horizontalement */
+            width: 100%; /* Assure que le conteneur prend toute la largeur */
+        }
+
+        #citySearch {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #007BFF;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            outline: none;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+
+        #citySearch:focus {
+            border-color: #0056b3;
+        }
+
+        .suggestions {
+            width: 300px;
+            border: 1px solid #007BFF;
+            border-radius: 5px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            z-index: 10;
+            max-height: 200px;
+            overflow-y: auto;
+            display: none;
+            margin-top: 50px;
+            box-sizing: border-box;
+        }
+
+        .suggestions div {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .suggestions div:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
 {% endblock %}
 {% block javascripts %}
     <script src="{{ asset('homepage/script.js') }}"></script>
