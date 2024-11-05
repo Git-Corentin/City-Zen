@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Comment index{% endblock %}
+
+{% block body %}
+    <h1>Comment index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Overall</th>
+                <th>Housing</th>
+                <th>HousingCom</th>
+                <th>Food</th>
+                <th>FoodCom</th>
+                <th>Transport</th>
+                <th>TransportCom</th>
+                <th>Security</th>
+                <th>SecurityCom</th>
+                <th>Administration</th>
+                <th>AdministrationCom</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for comment in comments %}
+            <tr>
+                <td>{{ comment.id }}</td>
+                <td>{{ comment.overall }}</td>
+                <td>{{ comment.housing }}</td>
+                <td>{{ comment.housingCom }}</td>
+                <td>{{ comment.food }}</td>
+                <td>{{ comment.foodCom }}</td>
+                <td>{{ comment.transport }}</td>
+                <td>{{ comment.transportCom }}</td>
+                <td>{{ comment.security }}</td>
+                <td>{{ comment.securityCom }}</td>
+                <td>{{ comment.administration }}</td>
+                <td>{{ comment.administrationCom }}</td>
+                <td>
+                    <a href="{{ path('app_comment_show', {'id': comment.id}) }}">show</a>
+                    <a href="{{ path('app_comment_edit', {'id': comment.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="13">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_comment_new') }}">Create new</a>
+{% endblock %}

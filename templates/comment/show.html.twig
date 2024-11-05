@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Comment{% endblock %}
+
+{% block body %}
+    <h1>Comment</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ comment.id }}</td>
+            </tr>
+            <tr>
+                <th>Overall</th>
+                <td>{{ comment.overall }}</td>
+            </tr>
+            <tr>
+                <th>Housing</th>
+                <td>{{ comment.housing }}</td>
+            </tr>
+            <tr>
+                <th>HousingCom</th>
+                <td>{{ comment.housingCom }}</td>
+            </tr>
+            <tr>
+                <th>Food</th>
+                <td>{{ comment.food }}</td>
+            </tr>
+            <tr>
+                <th>FoodCom</th>
+                <td>{{ comment.foodCom }}</td>
+            </tr>
+            <tr>
+                <th>Transport</th>
+                <td>{{ comment.transport }}</td>
+            </tr>
+            <tr>
+                <th>TransportCom</th>
+                <td>{{ comment.transportCom }}</td>
+            </tr>
+            <tr>
+                <th>Security</th>
+                <td>{{ comment.security }}</td>
+            </tr>
+            <tr>
+                <th>SecurityCom</th>
+                <td>{{ comment.securityCom }}</td>
+            </tr>
+            <tr>
+                <th>Administration</th>
+                <td>{{ comment.administration }}</td>
+            </tr>
+            <tr>
+                <th>AdministrationCom</th>
+                <td>{{ comment.administrationCom }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_comment_index') }}">back to list</a>
+
+    <a href="{{ path('app_comment_edit', {'id': comment.id}) }}">edit</a>
+
+    {{ include('comment/_delete_form.html.twig') }}
+{% endblock %}
