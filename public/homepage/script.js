@@ -9,7 +9,7 @@ const countrySelect = document.getElementById("countrySelect");
 
 // Fonction pour charger les villes en fonction du pays
 function loadCities(countryCode) {
-    fetch(`homepage/json_files/${countryCode === 'fr' ? 'french_cities' : 'australian_cities'}.json`)
+    fetch(`json_files/${countryCode === 'fr' ? 'french_cities' : 'australian_cities'}.json`)
         .then(response => response.json())
         .then(data => {
             if (countryCode === 'fr') {
