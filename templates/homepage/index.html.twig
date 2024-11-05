@@ -1,82 +1,126 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Recherche de villes{% endblock %}
+{% block stylesheets %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
 
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .search-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .country-select {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .country-select select {
+        padding: 10px;
+        border: 2px solid #007BFF;;
+        font-size: 1em;
+        border-radius: 5px;
+        color: #333;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        outline: none;
+        background-color: #f0f2f5;
+    }
+
+    .country-flag {
+        width: 24px;
+        height: 16px;
+        margin-right: 10px;
+    }
+
+    #citySearch {
+        width: 300px;
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #007BFF;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        outline: none;
+        transition: border-color 0.3s;
+        box-sizing: border-box;
+    }
+
+    #citySearch:focus {
+        border-color: #0056b3;
+    }
+
+    .suggestions {
+        width: 300px;
+        border: 1px solid #007BFF;
+        border-radius: 5px;
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        z-index: 10;
+        max-height: 200px;
+        overflow-y: auto;
+        display: none;
+        box-sizing: border-box;
+        margin-top: 100px;
+    }
+
+    .suggestions div {
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .suggestions div:hover {
+        background-color: #f1f1f1;
+    }
+</style>
+{% endblock %}
 
 {% block body %}
-    <div class="container"> <!-- Ajout d'un conteneur -->
+    <div class="container">
         <h1 class="text-center">City-Zen</h1>
         <div class="search-wrapper">
+            <div class="country-select">
+                <img id="flagIcon" class="country-flag" src="https://flagcdn.com/w320/fr.png" alt="Drapeau">
+                <select id="countrySelect" onchange="updateFlag()">
+                    <option value="fr">France</option>
+                    <option value="au">Australie</option>
+                </select>
+            </div>
             <input type="text" id="citySearch" placeholder="Rechercher une ville" autocomplete="off">
             <div id="suggestions" class="suggestions"></div>
         </div>
     </div>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            position: relative;
-        }
-
-        h1 {
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        /* Container principal pour centrer horizontalement */
-        .search-wrapper {
-            display: flex;
-            flex-direction: column; /* Place les éléments verticalement */
-            align-items: center; /* Centre les éléments horizontalement */
-            width: 100%; /* Assure que le conteneur prend toute la largeur */
-        }
-
-        #citySearch {
-            width: 300px;
-            padding: 10px;
-            font-size: 16px;
-            border: 2px solid #007BFF;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            outline: none;
-            transition: border-color 0.3s;
-            box-sizing: border-box;
-        }
-
-        #citySearch:focus {
-            border-color: #0056b3;
-        }
-
-        .suggestions {
-            width: 300px;
-            border: 1px solid #007BFF;
-            border-radius: 5px;
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            position: absolute;
-            z-index: 10;
-            max-height: 200px;
-            overflow-y: auto;
-            display: none;
-            margin-top: 50px;
-            box-sizing: border-box;
-        }
-
-        .suggestions div {
-            padding: 10px;
-            cursor: pointer;
-        }
-
-        .suggestions div:hover {
-            background-color: #f1f1f1;
-        }
-    </style>
 {% endblock %}
+
 {% block javascripts %}
     <script src="{{ asset('homepage/script.js') }}"></script>
+    <script>
+        function updateFlag() {
+            const countrySelect = document.getElementById("countrySelect");
+            const flagIcon = document.getElementById("flagIcon");
+            const country = countrySelect.value;
+            flagIcon.src = `https://flagcdn.com/w320/${country}.png`;
+        }
+    </script>
+
 {% endblock %}
