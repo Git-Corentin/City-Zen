@@ -3,7 +3,7 @@ let selectedIndex = -1; // Pour suivre la suggestion actuellement sélectionnée
 let limitedSuggestions = []; // Déclarer ici pour une portée globale
 
 // Charger les villes à partir du fichier JSON
-fetch('homepage/cities.json') // Chemin vers le fichier JSON
+fetch('homepage/french_cities.json') // Chemin vers le fichier JSON
     .then(response => response.json())
     .then(data => {
         cities = data.cities.map(city => ({
