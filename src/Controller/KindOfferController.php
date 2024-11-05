@@ -15,4 +15,12 @@ class KindOfferController extends AbstractController
             'controller_name' => 'KindOfferController',
         ]);
     }
+
+    #[Route('/business-offer', name: 'app_business_offer')]
+    public function business_offer(): Response
+    {
+        return $this->render('offers/business_offer.html.twig', [
+            'controller_name' => 'KindOfferController',
+        ]);
+    }
 }
