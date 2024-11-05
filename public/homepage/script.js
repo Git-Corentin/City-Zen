@@ -1,34 +1,58 @@
 let cities = [];
-let selectedIndex = -1; // Pour suivre la suggestion actuellement sélectionnée
-let limitedSuggestions = []; // Déclarer ici pour une portée globale
-
-// Charger les villes à partir du fichier JSON
-fetch('homepage/french_cities.json') // Chemin vers le fichier JSON
-    .then(response => response.json())
-    .then(data => {
-        cities = data.cities.map(city => ({
-            displayName: city.city_code.toUpperCase() + " (" + city.zip_code + ")", // Nom affiché en majuscules avec le code postal
-            searchName: city.city_code.toLowerCase().replace(/-/g, ' ') + " " + city.zip_code, // Nom de recherche (ville sans tirets et code postal)
-            latitude: city.latitude, // Ajout de la latitude
-            longitude: city.longitude // Ajout de la longitude
-        }));
-    })
-    .catch(error => console.error('Erreur de chargement des villes :', error));
+let selectedIndex = -1;
+let limitedSuggestions = [];
+let currentCountry = 'fr'; // Définition initiale (France)
 
 const inputField = document.getElementById("citySearch");
 const suggestionsDiv = document.getElementById("suggestions");
+const countrySelect = document.getElementById("countrySelect");
 
-// Fonction pour construire l'URL de redirection avec latitude et longitude
+// Fonction pour charger les villes en fonction du pays
+function loadCities(countryCode) {
+    fetch(`homepage/${countryCode === 'fr' ? 'french_cities' : 'australian_cities'}.json`)
+        .then(response => response.json())
+        .then(data => {
+            if (countryCode === 'fr') {
+                cities = data.cities.map(city => ({
+                    displayName: city.city_code.toUpperCase() + " (" + (city.zip_code || "") + ")",
+                    searchName: city.city_code.toLowerCase().replace(/-/g, ' ') + " " + (city.zip_code || ""),
+                    latitude: city.latitude,
+                    longitude: city.longitude
+
+                }));
+            }
+            if (countryCode === 'au') {
+                cities = data.cities.map(city => ({
+                    displayName: city.city_code.toUpperCase(),
+                    searchName: city.city_code.toLowerCase().replace(/-/g, ' '),
+                    latitude: city.latitude,
+                    longitude: city.longitude
+
+                }));
+            }
+
+        })
+        .catch(error => console.error('Erreur de chargement des villes :', error));
+}
+
+// Charger les villes initiales (France)
+loadCities(currentCountry);
+
+// Détecter le changement de pays et recharger les villes
+countrySelect.addEventListener("change", () => {
+    currentCountry = countrySelect.value;
+    loadCities(currentCountry); // Recharger les villes pour le pays sélectionné
+});
+
 function getCityUrl(cityName, latitude, longitude) {
     return `/city/${cityName.replace(/\s+/g, '-').toLowerCase()}/${latitude}/${longitude}`;
 }
 
 inputField.addEventListener("input", function() {
-    const query = this.value.toLowerCase().replace(/-/g, ' '); // Normaliser la saisie de l'utilisateur
+    const query = this.value.toLowerCase().replace(/-/g, ' ');
     suggestionsDiv.innerHTML = "";
-    selectedIndex = -1; // Réinitialiser l'index à chaque saisie
+    selectedIndex = -1;
 
-    // Définir le nombre de suggestions en fonction de la longueur du texte
     let maxSuggestions;
     if (query.length >= 4) {
         maxSuggestions = 10;
@@ -38,7 +62,7 @@ inputField.addEventListener("input", function() {
         maxSuggestions = 2;
     } else {
         suggestionsDiv.style.display = "none";
-        return; // Ne rien afficher si la recherche est trop courte
+        return;
     }
 
     if (query.includes("paris")) {
@@ -46,21 +70,20 @@ inputField.addEventListener("input", function() {
     }
 
     const filteredCities = cities.filter(city => city.searchName.includes(query));
-    limitedSuggestions = filteredCities.slice(0, maxSuggestions); // Mettre à jour limitedSuggestions globalement
+    limitedSuggestions = filteredCities.slice(0, maxSuggestions);
 
     limitedSuggestions.forEach((city, index) => {
         const suggestion = document.createElement("div");
-        suggestion.textContent = city.displayName; // Afficher le nom avec le code postal en majuscules
+        suggestion.textContent = city.displayName;
         suggestion.classList.add("suggestion-item");
 
-        // Clic sur une suggestion avec redirection
         suggestion.addEventListener("click", () => {
             const cityUrl = getCityUrl(
                 city.displayName.replace(/ \(\d+\)$/, ''),
                 city.latitude,
                 city.longitude
             );
-            window.location.href = cityUrl; // Redirection vers la page de la ville
+            window.location.href = cityUrl;
         });
 
         suggestionsDiv.appendChild(suggestion);
@@ -69,22 +92,18 @@ inputField.addEventListener("input", function() {
     suggestionsDiv.style.display = limitedSuggestions.length ? "block" : "none";
 });
 
-// Gestion de la navigation au clavier avec redirection
 inputField.addEventListener("keydown", function(event) {
     const suggestionItems = document.querySelectorAll(".suggestion-item");
 
     if (event.key === "ArrowDown") {
-        // Flèche bas pour avancer dans la liste
-        selectedIndex = (selectedIndex + 1) % suggestionItems.length; // Revient au début si on dépasse la fin
+        selectedIndex = (selectedIndex + 1) % suggestionItems.length;
         highlightSuggestion(suggestionItems);
         event.preventDefault();
     } else if (event.key === "ArrowUp") {
-        // Flèche haut pour reculer dans la liste
-        selectedIndex = (selectedIndex - 1 + suggestionItems.length) % suggestionItems.length; // Revient à la fin si on dépasse le début
+        selectedIndex = (selectedIndex - 1 + suggestionItems.length) % suggestionItems.length;
         highlightSuggestion(suggestionItems);
         event.preventDefault();
     } else if (event.key === "Enter") {
-        // Touche Entrée pour sélectionner la suggestion surlignée avec redirection
         if (selectedIndex >= 0 && selectedIndex < suggestionItems.length) {
             const selectedCity = limitedSuggestions[selectedIndex];
             const cityUrl = getCityUrl(
@@ -92,13 +111,12 @@ inputField.addEventListener("keydown", function(event) {
                 selectedCity.latitude,
                 selectedCity.longitude
             );
-            window.location.href = cityUrl; // Redirection vers la page de la ville
+            window.location.href = cityUrl;
         }
         event.preventDefault();
     }
 });
 
-// Fonction pour surligner la suggestion sélectionnée
 function highlightSuggestion(suggestionItems) {
     suggestionItems.forEach((item, index) => {
         item.classList.toggle("highlighted", index === selectedIndex);

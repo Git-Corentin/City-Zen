@@ -1,0 +1,6214 @@
+{
+    "cities": [
+        {
+            "city_code": "Sydney",
+            "latitude": -33.865,
+            "longitude": 151.2094,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Melbourne",
+            "latitude": -37.8136,
+            "longitude": 144.9631,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Brisbane",
+            "latitude": -27.4678,
+            "longitude": 153.0281,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Perth",
+            "latitude": -31.9522,
+            "longitude": 115.8589,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Adelaide",
+            "latitude": -34.9289,
+            "longitude": 138.6011,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Gold Coast",
+            "latitude": -28.0167,
+            "longitude": 153.4,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Canberra",
+            "latitude": -35.2931,
+            "longitude": 149.1269,
+            "region_name": "Australian Capital Territory"
+        },
+        {
+            "city_code": "Newcastle",
+            "latitude": -32.9167,
+            "longitude": 151.75,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Wollongong",
+            "latitude": -34.4331,
+            "longitude": 150.8831,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Geelong",
+            "latitude": -38.15,
+            "longitude": 144.35,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Hobart",
+            "latitude": -42.8806,
+            "longitude": 147.325,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Townsville",
+            "latitude": -19.2564,
+            "longitude": 146.8183,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Ipswich",
+            "latitude": -27.6167,
+            "longitude": 152.7667,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Cairns",
+            "latitude": -16.9303,
+            "longitude": 145.7703,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Toowoomba",
+            "latitude": -27.5667,
+            "longitude": 151.95,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Darwin",
+            "latitude": -12.4381,
+            "longitude": 130.8411,
+            "region_name": "Northern Territory"
+        },
+        {
+            "city_code": "Ballarat",
+            "latitude": -37.55,
+            "longitude": 143.85,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Bendigo",
+            "latitude": -36.75,
+            "longitude": 144.2667,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Launceston",
+            "latitude": -41.4419,
+            "longitude": 147.145,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Mackay",
+            "latitude": -21.1411,
+            "longitude": 149.1861,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Rockhampton",
+            "latitude": -23.375,
+            "longitude": 150.5117,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Maitland",
+            "latitude": -32.7167,
+            "longitude": 151.55,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Bunbury",
+            "latitude": -33.3333,
+            "longitude": 115.6333,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Coffs Harbour",
+            "latitude": -30.3022,
+            "longitude": 153.1189,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Bundaberg",
+            "latitude": -24.85,
+            "longitude": 152.35,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Wagga Wagga",
+            "latitude": -35.1189,
+            "longitude": 147.3689,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Hervey Bay",
+            "latitude": -25.2853,
+            "longitude": 152.8728,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Shepparton",
+            "latitude": -36.3833,
+            "longitude": 145.4,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Albury",
+            "latitude": -36.0806,
+            "longitude": 146.9158,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Port Macquarie",
+            "latitude": -31.4333,
+            "longitude": 152.9,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Pakenham",
+            "latitude": -38.0712,
+            "longitude": 145.4878,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Tamworth",
+            "latitude": -31.0833,
+            "longitude": 150.9167,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Caloundra",
+            "latitude": -26.7986,
+            "longitude": 153.1289,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Orange",
+            "latitude": -33.2833,
+            "longitude": 149.1,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Dubbo",
+            "latitude": -32.2569,
+            "longitude": 148.6011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Geraldton",
+            "latitude": -28.7744,
+            "longitude": 114.6089,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Nowra",
+            "latitude": -34.8833,
+            "longitude": 150.6,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Bathurst",
+            "latitude": -33.42,
+            "longitude": 149.5778,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Queanbeyan",
+            "latitude": -35.3533,
+            "longitude": 149.2342,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Frankston",
+            "latitude": -38.158,
+            "longitude": 145.135,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Sunbury",
+            "latitude": -37.5811,
+            "longitude": 144.7139,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Warrnambool",
+            "latitude": -38.3833,
+            "longitude": 142.4833,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Wodonga",
+            "latitude": -36.1214,
+            "longitude": 146.8881,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Albany",
+            "latitude": -35.0228,
+            "longitude": 117.8814,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Gladstone",
+            "latitude": -23.8489,
+            "longitude": 151.2625,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Mildura",
+            "latitude": -34.1889,
+            "longitude": 142.1583,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Southport",
+            "latitude": -27.9667,
+            "longitude": 153.4,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Dandenong",
+            "latitude": -37.981,
+            "longitude": 145.215,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Kalgoorlie",
+            "latitude": -30.7489,
+            "longitude": 121.4658,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Mount Gambier",
+            "latitude": -37.8294,
+            "longitude": 140.7828,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Lismore",
+            "latitude": -28.8167,
+            "longitude": 153.2833,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Maryborough",
+            "latitude": -25.5375,
+            "longitude": 152.7019,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Quakers Hill",
+            "latitude": -33.7344,
+            "longitude": 150.8789,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Gawler",
+            "latitude": -34.5981,
+            "longitude": 138.745,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Caboolture",
+            "latitude": -27.0667,
+            "longitude": 152.967,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Ballina",
+            "latitude": -28.8333,
+            "longitude": 153.5333,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Taree",
+            "latitude": -31.9,
+            "longitude": 152.45,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Traralgon",
+            "latitude": -38.1958,
+            "longitude": 146.5403,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Busselton",
+            "latitude": -33.6478,
+            "longitude": 115.3458,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Armidale",
+            "latitude": -30.5,
+            "longitude": 151.65,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Goulburn",
+            "latitude": -34.7547,
+            "longitude": 149.6186,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Alice Springs",
+            "latitude": -23.7,
+            "longitude": 133.8667,
+            "region_name": "Northern Territory"
+        },
+        {
+            "city_code": "Devonport",
+            "latitude": -41.1806,
+            "longitude": 146.3464,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Bacchus Marsh",
+            "latitude": -37.675,
+            "longitude": 144.4389,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Whyalla",
+            "latitude": -33.0333,
+            "longitude": 137.5667,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Cessnock",
+            "latitude": -32.8342,
+            "longitude": 151.3555,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Gympie",
+            "latitude": -26.19,
+            "longitude": 152.6655,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Griffith",
+            "latitude": -34.29,
+            "longitude": 146.04,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Kwinana",
+            "latitude": -32.2394,
+            "longitude": 115.7702,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Burnie",
+            "latitude": -41.0636,
+            "longitude": 145.8753,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Wangaratta",
+            "latitude": -36.3583,
+            "longitude": 146.3125,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Grafton",
+            "latitude": -29.6833,
+            "longitude": 152.9333,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Yeppoon",
+            "latitude": -23.1333,
+            "longitude": 150.7333,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Murray Bridge",
+            "latitude": -35.117,
+            "longitude": 139.267,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Mount Isa",
+            "latitude": -20.7333,
+            "longitude": 139.5,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Narangba",
+            "latitude": -27.2015,
+            "longitude": 152.9655,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Mount Eliza",
+            "latitude": -38.189,
+            "longitude": 145.092,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Broken Hill",
+            "latitude": -31.9567,
+            "longitude": 141.4678,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Nerang",
+            "latitude": -27.9956,
+            "longitude": 153.322,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Karratha",
+            "latitude": -20.7364,
+            "longitude": 116.8464,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Mount Barker",
+            "latitude": -35.0667,
+            "longitude": 138.85,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Horsham",
+            "latitude": -36.7167,
+            "longitude": 142.2,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Lara",
+            "latitude": -38.0167,
+            "longitude": 144.4167,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Singleton",
+            "latitude": -32.5667,
+            "longitude": 151.1697,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Port Lincoln",
+            "latitude": -34.7322,
+            "longitude": 135.8586,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Banora Point",
+            "latitude": -28.2225,
+            "longitude": 153.5386,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Warwick",
+            "latitude": -28.2152,
+            "longitude": 152.0352,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Rochedale",
+            "latitude": -27.5952,
+            "longitude": 153.1233,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Kempsey",
+            "latitude": -31.0833,
+            "longitude": 152.8333,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Ulladulla",
+            "latitude": -35.3486,
+            "longitude": 150.4678,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Sale",
+            "latitude": -38.1,
+            "longitude": 147.0667,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Echuca",
+            "latitude": -36.1333,
+            "longitude": 144.75,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Australind",
+            "latitude": -33.2792,
+            "longitude": 115.715,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Broome",
+            "latitude": -17.9619,
+            "longitude": 122.2361,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Port Hedland",
+            "latitude": -20.31,
+            "longitude": 118.6011,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Warragul",
+            "latitude": -38.15,
+            "longitude": 145.9333,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Port Pirie",
+            "latitude": -33.1858,
+            "longitude": 138.0169,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Barwon Heads",
+            "latitude": -38.25,
+            "longitude": 144.5167,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Emerald",
+            "latitude": -23.5167,
+            "longitude": 148.15,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Ulverstone",
+            "latitude": -41.1667,
+            "longitude": 146.1667,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Morwell",
+            "latitude": -38.2333,
+            "longitude": 146.4,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Gisborne",
+            "latitude": -37.49,
+            "longitude": 144.5889,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Port Augusta",
+            "latitude": -32.4925,
+            "longitude": 137.7658,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Forster",
+            "latitude": -32.1806,
+            "longitude": 152.5117,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Penrith",
+            "latitude": -33.7511,
+            "longitude": 150.6942,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Torquay",
+            "latitude": -38.3333,
+            "longitude": 144.3167,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Jimboomba",
+            "latitude": -27.8333,
+            "longitude": 153.0333,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Lithgow",
+            "latitude": -33.4833,
+            "longitude": 150.15,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Bowral",
+            "latitude": -34.4792,
+            "longitude": 150.4181,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Goonellabah",
+            "latitude": -28.815,
+            "longitude": 153.3178,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Raymond Terrace",
+            "latitude": -32.7615,
+            "longitude": 151.7441,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Leopold",
+            "latitude": -38.1892,
+            "longitude": 144.4644,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Dalby",
+            "latitude": -27.1833,
+            "longitude": 151.2667,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Campbelltown",
+            "latitude": -34.0733,
+            "longitude": 150.8261,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Colac",
+            "latitude": -38.3403,
+            "longitude": 143.5847,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Muswellbrook",
+            "latitude": -32.2654,
+            "longitude": 150.8885,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Esperance",
+            "latitude": -33.8611,
+            "longitude": 121.8919,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Drouin",
+            "latitude": -38.1333,
+            "longitude": 145.85,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Rutherford",
+            "latitude": -32.715,
+            "longitude": 151.5317,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Nelson Bay",
+            "latitude": -32.715,
+            "longitude": 152.1511,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Inverell",
+            "latitude": -29.7817,
+            "longitude": 151.1178,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Parkes",
+            "latitude": -33.095,
+            "longitude": 148.2628,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Somerville",
+            "latitude": -38.226,
+            "longitude": 145.177,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Gracemere",
+            "latitude": -23.4333,
+            "longitude": 150.45,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Batemans Bay",
+            "latitude": -35.7081,
+            "longitude": 150.1744,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Nambour",
+            "latitude": -26.6269,
+            "longitude": 152.9592,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Swan Hill",
+            "latitude": -35.3333,
+            "longitude": 143.55,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Mareeba",
+            "latitude": -16.9833,
+            "longitude": 145.4167,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Corinda",
+            "latitude": -27.4833,
+            "longitude": 153.1,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Samford",
+            "latitude": -27.3667,
+            "longitude": 152.8833,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Mudgee",
+            "latitude": -32.6125,
+            "longitude": 149.5872,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Casino",
+            "latitude": -28.8483,
+            "longitude": 153.0511,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Portland",
+            "latitude": -38.3333,
+            "longitude": 141.6,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Kingston",
+            "latitude": -42.9769,
+            "longitude": 147.3083,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Kingaroy",
+            "latitude": -26.5333,
+            "longitude": 151.8333,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Kangaroo Flat",
+            "latitude": -36.8,
+            "longitude": 144.25,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Bowen",
+            "latitude": -20.0167,
+            "longitude": 148.2333,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Young",
+            "latitude": -34.3,
+            "longitude": 148.3,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Cowra",
+            "latitude": -33.8183,
+            "longitude": 148.6578,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Hamilton",
+            "latitude": -37.7333,
+            "longitude": 142.0167,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Gunnedah",
+            "latitude": -30.9667,
+            "longitude": 150.25,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Mount Evelyn",
+            "latitude": -37.7833,
+            "longitude": 145.3833,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Andergrove",
+            "latitude": -21.0931,
+            "longitude": 149.186,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Moree",
+            "latitude": -29.465,
+            "longitude": 149.8344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Benalla",
+            "latitude": -36.5519,
+            "longitude": 145.9817,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Currumbin",
+            "latitude": -28.158,
+            "longitude": 153.469,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Wollert",
+            "latitude": -37.597,
+            "longitude": 145.033,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Mittagong",
+            "latitude": -34.45,
+            "longitude": 150.45,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Kelso",
+            "latitude": -33.4186,
+            "longitude": 149.6056,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Yanchep",
+            "latitude": -31.55,
+            "longitude": 115.634,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Bentley",
+            "latitude": -32.001,
+            "longitude": 115.924,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Moe",
+            "latitude": -38.1722,
+            "longitude": 146.2678,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Ayr",
+            "latitude": -19.5744,
+            "longitude": 147.4066,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Moranbah",
+            "latitude": -22.0016,
+            "longitude": 148.0533,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Leeton",
+            "latitude": -34.5483,
+            "longitude": 146.4011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Moss Vale",
+            "latitude": -34.5483,
+            "longitude": 150.3678,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Wallan",
+            "latitude": -37.4167,
+            "longitude": 144.9833,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Springwood",
+            "latitude": -33.6967,
+            "longitude": 150.5683,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Lesmurdie",
+            "latitude": -31.994,
+            "longitude": 116.05,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Forbes",
+            "latitude": -33.3833,
+            "longitude": 148.0167,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Emu Plains",
+            "latitude": -33.7483,
+            "longitude": 150.6678,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Rye",
+            "latitude": -38.377,
+            "longitude": 144.838,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Darley",
+            "latitude": -37.6547,
+            "longitude": 144.437,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Ararat",
+            "latitude": -37.2833,
+            "longitude": 142.9167,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Tweed Heads",
+            "latitude": -28.1833,
+            "longitude": 153.55,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Highfields",
+            "latitude": -27.4581,
+            "longitude": 151.9492,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Charters Towers",
+            "latitude": -20.1,
+            "longitude": 146.2667,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Melton",
+            "latitude": -37.6833,
+            "longitude": 144.5833,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Katoomba",
+            "latitude": -33.715,
+            "longitude": 150.3128,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Kilmore",
+            "latitude": -37.2833,
+            "longitude": 144.95,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Mooroopna",
+            "latitude": -36.3833,
+            "longitude": 145.35,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Yarrawonga",
+            "latitude": -36.0167,
+            "longitude": 146.0,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Maryborough",
+            "latitude": -37.05,
+            "longitude": 143.735,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Deniliquin",
+            "latitude": -35.5317,
+            "longitude": 144.9344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Mandurah",
+            "latitude": -32.5289,
+            "longitude": 115.7231,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Bli Bli",
+            "latitude": -26.618,
+            "longitude": 153.037,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Kiama",
+            "latitude": -34.6708,
+            "longitude": 150.8542,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Narre Warren North",
+            "latitude": -37.9833,
+            "longitude": 145.3167,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Narrabri",
+            "latitude": -30.3317,
+            "longitude": 149.7678,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Bairnsdale",
+            "latitude": -37.8333,
+            "longitude": 147.6167,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Clifton Springs",
+            "latitude": -38.15,
+            "longitude": 144.5667,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "North Tamborine",
+            "latitude": -27.9694,
+            "longitude": 153.1992,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Bargara",
+            "latitude": -24.8205,
+            "longitude": 152.4625,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Kingscliff",
+            "latitude": -28.2564,
+            "longitude": 153.5781,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Healesville",
+            "latitude": -37.6561,
+            "longitude": 145.5139,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Fremantle",
+            "latitude": -32.0569,
+            "longitude": 115.7439,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Blaxland",
+            "latitude": -33.7453,
+            "longitude": 150.6175,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Atherton",
+            "latitude": -17.2658,
+            "longitude": 145.478,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Kyabram",
+            "latitude": -36.3167,
+            "longitude": 145.05,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Innisfail",
+            "latitude": -17.5236,
+            "longitude": 146.0292,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Sanctuary Point",
+            "latitude": -35.1036,
+            "longitude": 150.6267,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Collie",
+            "latitude": -33.363,
+            "longitude": 116.156,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Gatton",
+            "latitude": -27.5611,
+            "longitude": 152.2755,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Merrimac",
+            "latitude": -28.05,
+            "longitude": 153.3667,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Murwillumbah",
+            "latitude": -28.3333,
+            "longitude": 153.3833,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Urraween",
+            "latitude": -25.2955,
+            "longitude": 152.8219,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Kyneton",
+            "latitude": -37.2333,
+            "longitude": 144.45,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Bongaree",
+            "latitude": -27.0814,
+            "longitude": 153.1633,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Roma",
+            "latitude": -26.5733,
+            "longitude": 148.7869,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Mount Cotton",
+            "latitude": -27.6188,
+            "longitude": 153.221,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Cootamundra",
+            "latitude": -34.6417,
+            "longitude": 148.025,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Beerwah",
+            "latitude": -26.8556,
+            "longitude": 152.96,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Castlemaine",
+            "latitude": -37.0636,
+            "longitude": 144.2172,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Pottsville",
+            "latitude": -28.3869,
+            "longitude": 153.5608,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Cooma",
+            "latitude": -36.235,
+            "longitude": 149.1258,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Gordonvale",
+            "latitude": -17.0936,
+            "longitude": 145.7866,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Lysterfield",
+            "latitude": -37.9333,
+            "longitude": 145.3,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Bomaderry",
+            "latitude": -34.848,
+            "longitude": 150.605,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Chinchilla",
+            "latitude": -26.7397,
+            "longitude": 150.625,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Northam",
+            "latitude": -31.6531,
+            "longitude": 116.6661,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Yass",
+            "latitude": -34.8203,
+            "longitude": 148.9136,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Strathalbyn",
+            "latitude": -35.2667,
+            "longitude": 138.9,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Burpengary",
+            "latitude": -27.1442,
+            "longitude": 153.0,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Waterford",
+            "latitude": -27.6833,
+            "longitude": 153.133,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Lennox Head",
+            "latitude": -28.7983,
+            "longitude": 153.5844,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Beaudesert",
+            "latitude": -27.988,
+            "longitude": 152.9958,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Margaret River",
+            "latitude": -33.955,
+            "longitude": 115.075,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Helensburgh",
+            "latitude": -34.1833,
+            "longitude": 151.0,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Goondiwindi",
+            "latitude": -28.5461,
+            "longitude": 150.3097,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Seymour",
+            "latitude": -37.03,
+            "longitude": 145.13,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Nambucca Heads",
+            "latitude": -30.6414,
+            "longitude": 152.9906,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Nuriootpa",
+            "latitude": -34.4667,
+            "longitude": 138.9833,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Wauchope",
+            "latitude": -31.465,
+            "longitude": 152.7344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Tumut",
+            "latitude": -35.3047,
+            "longitude": 148.2228,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Wentworthville",
+            "latitude": -33.8233,
+            "longitude": 150.9678,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Tuncurry",
+            "latitude": -32.175,
+            "longitude": 152.4989,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Glen Innes",
+            "latitude": -29.75,
+            "longitude": 151.7361,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Yamba",
+            "latitude": -29.4333,
+            "longitude": 153.35,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Wentworth Falls",
+            "latitude": -33.7164,
+            "longitude": 150.3772,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "South Grafton",
+            "latitude": -29.715,
+            "longitude": 152.9344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Kurri Kurri",
+            "latitude": -32.8167,
+            "longitude": 151.4833,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Stawell",
+            "latitude": -37.05,
+            "longitude": 142.7667,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Cobram",
+            "latitude": -35.9667,
+            "longitude": 145.65,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Wynyard",
+            "latitude": -41.0,
+            "longitude": 145.7167,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Naracoorte",
+            "latitude": -36.955,
+            "longitude": 140.7429,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "North Mackay",
+            "latitude": -21.1216,
+            "longitude": 149.1783,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Cannington",
+            "latitude": -32.0167,
+            "longitude": 115.95,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Concord",
+            "latitude": -33.8444,
+            "longitude": 151.0903,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Woodend",
+            "latitude": -37.363,
+            "longitude": 144.526,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Dromana",
+            "latitude": -38.338,
+            "longitude": 144.965,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Emerald",
+            "latitude": -37.9331,
+            "longitude": 145.437,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Biloela",
+            "latitude": -24.4002,
+            "longitude": 150.5133,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Alstonville",
+            "latitude": -28.8317,
+            "longitude": 153.4344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Cannonvale",
+            "latitude": -20.2863,
+            "longitude": 148.6866,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Point Vernon",
+            "latitude": -25.2538,
+            "longitude": 152.8177,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Palmwoods",
+            "latitude": -26.6883,
+            "longitude": 152.9597,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Scone",
+            "latitude": -32.0833,
+            "longitude": 150.85,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Whittlesea",
+            "latitude": -37.5139,
+            "longitude": 145.114,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "East Ballina",
+            "latitude": -28.8594,
+            "longitude": 153.5872,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Sarina",
+            "latitude": -21.4225,
+            "longitude": 149.2175,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Byron Bay",
+            "latitude": -28.6483,
+            "longitude": 153.6178,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Granville",
+            "latitude": -33.8578,
+            "longitude": 151.0106,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Corowa",
+            "latitude": -35.9833,
+            "longitude": 146.3833,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Richmond",
+            "latitude": -33.5983,
+            "longitude": 150.7511,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Cooranbong",
+            "latitude": -33.074,
+            "longitude": 151.451,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Bullsbrook",
+            "latitude": -31.663,
+            "longitude": 116.03,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Inverloch",
+            "latitude": -38.6334,
+            "longitude": 145.7278,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "New Norfolk",
+            "latitude": -42.7828,
+            "longitude": 147.0594,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Stanthorpe",
+            "latitude": -28.6547,
+            "longitude": 151.935,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Wingham",
+            "latitude": -31.85,
+            "longitude": 152.367,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "West Tamworth",
+            "latitude": -31.0894,
+            "longitude": 150.9436,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Irymple",
+            "latitude": -34.2333,
+            "longitude": 142.1667,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Dunsborough",
+            "latitude": -33.6167,
+            "longitude": 115.1,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Kununurra",
+            "latitude": -15.7736,
+            "longitude": 128.7386,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Smithfield Heights",
+            "latitude": -16.8314,
+            "longitude": 145.691,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Woolgoolga",
+            "latitude": -30.115,
+            "longitude": 153.2011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Bannockburn",
+            "latitude": -38.05,
+            "longitude": 144.1667,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Maffra",
+            "latitude": -37.95,
+            "longitude": 146.983,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Tannum Sands",
+            "latitude": -23.9474,
+            "longitude": 151.3675,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Ocean Shores",
+            "latitude": -28.5092,
+            "longitude": 153.5375,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Howard Springs",
+            "latitude": -12.4922,
+            "longitude": 131.053,
+            "region_name": "Northern Territory"
+        },
+        {
+            "city_code": "Leongatha",
+            "latitude": -38.4833,
+            "longitude": 145.95,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Worragee",
+            "latitude": -34.9144,
+            "longitude": 150.6386,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Tahmoor",
+            "latitude": -34.2233,
+            "longitude": 150.5928,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Red Cliffs",
+            "latitude": -34.3075,
+            "longitude": 142.1881,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Glenbrook",
+            "latitude": -33.765,
+            "longitude": 150.6267,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "McMinns Lagoon",
+            "latitude": -12.5329,
+            "longitude": 131.05,
+            "region_name": "Northern Territory"
+        },
+        {
+            "city_code": "Kiama Downs",
+            "latitude": -34.6317,
+            "longitude": 150.8511,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Lyndhurst",
+            "latitude": -38.081,
+            "longitude": 145.207,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Wonthaggi",
+            "latitude": -38.6056,
+            "longitude": 145.5917,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Junee",
+            "latitude": -34.8661,
+            "longitude": 147.5822,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Pinjarra",
+            "latitude": -32.63,
+            "longitude": 115.8711,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Encounter Bay",
+            "latitude": -35.5742,
+            "longitude": 138.6005,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Nairne",
+            "latitude": -35.0333,
+            "longitude": 138.9167,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Cowes",
+            "latitude": -38.4511,
+            "longitude": 145.2419,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Picton",
+            "latitude": -34.1817,
+            "longitude": 150.6011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Salamander Bay",
+            "latitude": -32.7292,
+            "longitude": 152.0894,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Lakes Entrance",
+            "latitude": -37.8667,
+            "longitude": 147.9833,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Mansfield",
+            "latitude": -37.05,
+            "longitude": 146.083,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Churchill",
+            "latitude": -38.3167,
+            "longitude": 146.417,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Bucasia",
+            "latitude": -21.0311,
+            "longitude": 149.1597,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Strathfield",
+            "latitude": -33.8606,
+            "longitude": 151.0886,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Boyne Island",
+            "latitude": -23.9477,
+            "longitude": 151.355,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Blackwater",
+            "latitude": -23.4667,
+            "longitude": 148.7667,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Millicent",
+            "latitude": -37.5967,
+            "longitude": 140.3524,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Oakey",
+            "latitude": -27.4338,
+            "longitude": 151.7211,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Temora",
+            "latitude": -34.4333,
+            "longitude": 147.5333,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Narromine",
+            "latitude": -32.2333,
+            "longitude": 148.2333,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Ningi",
+            "latitude": -27.0667,
+            "longitude": 153.0833,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Bega",
+            "latitude": -36.6847,
+            "longitude": 149.8422,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Mount Low",
+            "latitude": -19.2247,
+            "longitude": 146.6808,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Leura",
+            "latitude": -33.7167,
+            "longitude": 150.3333,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Renmark",
+            "latitude": -34.1741,
+            "longitude": 140.7418,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "South West Rocks",
+            "latitude": -30.8842,
+            "longitude": 153.0403,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Tanunda",
+            "latitude": -34.5167,
+            "longitude": 138.9667,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Kadina",
+            "latitude": -33.9625,
+            "longitude": 137.7125,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Newman",
+            "latitude": -23.3539,
+            "longitude": 119.7319,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Glenella",
+            "latitude": -21.1197,
+            "longitude": 149.1542,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Roxby Downs",
+            "latitude": -30.5625,
+            "longitude": 136.8785,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Numurkah",
+            "latitude": -36.0833,
+            "longitude": 145.4333,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Korumburra",
+            "latitude": -38.4333,
+            "longitude": 145.8167,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Rasmussen",
+            "latitude": -19.3497,
+            "longitude": 146.716,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Tatura",
+            "latitude": -36.4333,
+            "longitude": 145.233,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Carnarvon",
+            "latitude": -24.8672,
+            "longitude": 113.6611,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Romsey",
+            "latitude": -37.35,
+            "longitude": 144.75,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Blackheath",
+            "latitude": -33.6311,
+            "longitude": 150.2911,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Bargo",
+            "latitude": -34.2983,
+            "longitude": 150.5844,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Old Bar",
+            "latitude": -31.9667,
+            "longitude": 152.583,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Narrandera",
+            "latitude": -34.7483,
+            "longitude": 146.5511,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Ingham",
+            "latitude": -18.65,
+            "longitude": 146.1667,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Manjimup",
+            "latitude": -34.2411,
+            "longitude": 116.1464,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "George Town",
+            "latitude": -41.1,
+            "longitude": 146.8167,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Wyong",
+            "latitude": -33.282,
+            "longitude": 151.418,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Broadford",
+            "latitude": -37.2,
+            "longitude": 145.067,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Drysdale",
+            "latitude": -38.1667,
+            "longitude": 144.5667,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Narrogin",
+            "latitude": -32.936,
+            "longitude": 117.178,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Cockatoo",
+            "latitude": -37.935,
+            "longitude": 145.492,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Victor Harbor",
+            "latitude": -35.55,
+            "longitude": 138.6167,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Oxford Park",
+            "latitude": -27.419,
+            "longitude": 153.0255,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Moama",
+            "latitude": -36.0833,
+            "longitude": 144.75,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Bungendore",
+            "latitude": -35.2483,
+            "longitude": 149.4511,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Latrobe",
+            "latitude": -41.2464,
+            "longitude": 146.4246,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Curl Curl",
+            "latitude": -33.765,
+            "longitude": 151.3011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Beachmere",
+            "latitude": -27.1294,
+            "longitude": 153.0538,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Berri",
+            "latitude": -34.2833,
+            "longitude": 140.6,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Wellington",
+            "latitude": -32.55,
+            "longitude": 148.9333,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Tenterfield",
+            "latitude": -29.0553,
+            "longitude": 152.0178,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Thirlmere",
+            "latitude": -34.1983,
+            "longitude": 150.5678,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Legana",
+            "latitude": -41.3667,
+            "longitude": 147.05,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Faulconbridge",
+            "latitude": -33.6875,
+            "longitude": 150.5439,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "The Entrance",
+            "latitude": -33.3472,
+            "longitude": 151.496,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Cobar",
+            "latitude": -31.4997,
+            "longitude": 145.8319,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Wallaroo",
+            "latitude": -33.9167,
+            "longitude": 137.6167,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Moruya",
+            "latitude": -35.9111,
+            "longitude": 150.0806,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Gerringong",
+            "latitude": -34.7483,
+            "longitude": 150.8344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Sandstone Point",
+            "latitude": -27.0736,
+            "longitude": 153.1233,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Tambourine",
+            "latitude": -27.8816,
+            "longitude": 153.13,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Margate",
+            "latitude": -43.0294,
+            "longitude": 147.2617,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Trafalgar",
+            "latitude": -38.2,
+            "longitude": 146.15,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Somerset",
+            "latitude": -41.05,
+            "longitude": 145.8333,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Marian",
+            "latitude": -21.1453,
+            "longitude": 148.9431,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Weipa",
+            "latitude": -12.6167,
+            "longitude": 141.8667,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Kerang",
+            "latitude": -35.7167,
+            "longitude": 143.9167,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Westbrook",
+            "latitude": -27.6,
+            "longitude": 151.8333,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Smithton",
+            "latitude": -40.844,
+            "longitude": 145.12,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Longford",
+            "latitude": -41.5958,
+            "longitude": 147.122,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Karana Downs",
+            "latitude": -27.55,
+            "longitude": 152.817,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Beechworth",
+            "latitude": -36.3594,
+            "longitude": 146.6869,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Penguin",
+            "latitude": -41.1167,
+            "longitude": 146.0708,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Anna Bay",
+            "latitude": -32.7817,
+            "longitude": 152.0844,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Loxton",
+            "latitude": -34.4539,
+            "longitude": 140.5669,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Pearcedale",
+            "latitude": -38.203,
+            "longitude": 145.231,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Landsborough",
+            "latitude": -26.8091,
+            "longitude": 152.9655,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Laidley",
+            "latitude": -27.6313,
+            "longitude": 152.3938,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Wonga Park",
+            "latitude": -37.739,
+            "longitude": 145.267,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Peregian Beach",
+            "latitude": -26.481,
+            "longitude": 153.096,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Cooroy",
+            "latitude": -26.4166,
+            "longitude": 152.9119,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Bellingen",
+            "latitude": -30.4483,
+            "longitude": 152.9011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Riddell",
+            "latitude": -37.4667,
+            "longitude": 144.683,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Suffolk Park",
+            "latitude": -28.6983,
+            "longitude": 153.6178,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Buninyong",
+            "latitude": -37.6503,
+            "longitude": 143.8839,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Weston",
+            "latitude": -32.8103,
+            "longitude": 151.4561,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Katanning",
+            "latitude": -33.6908,
+            "longitude": 117.5553,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Bellbrae",
+            "latitude": -38.3333,
+            "longitude": 144.3,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Sawtell",
+            "latitude": -30.365,
+            "longitude": 153.1011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Silverdale",
+            "latitude": -33.915,
+            "longitude": 150.6094,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Tallebudgera",
+            "latitude": -28.1489,
+            "longitude": 153.418,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Bay View",
+            "latitude": -33.6592,
+            "longitude": 151.2861,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Portarlington",
+            "latitude": -38.1167,
+            "longitude": 144.65,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Nanango",
+            "latitude": -26.6667,
+            "longitude": 152.0,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Logan Village",
+            "latitude": -27.7667,
+            "longitude": 153.1,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Glass House Mountains",
+            "latitude": -26.9,
+            "longitude": 152.9167,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Sussex Inlet",
+            "latitude": -35.125,
+            "longitude": 150.5436,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Proserpine",
+            "latitude": -20.4017,
+            "longitude": 148.5814,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Merimbula",
+            "latitude": -36.8983,
+            "longitude": 149.9011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Scarness",
+            "latitude": -25.2833,
+            "longitude": 152.85,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Port Douglas",
+            "latitude": -16.4834,
+            "longitude": 145.4652,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Gosford",
+            "latitude": -33.4233,
+            "longitude": 151.3414,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Bridgewater",
+            "latitude": -35.0164,
+            "longitude": 138.768,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Lake Cathie",
+            "latitude": -31.5483,
+            "longitude": 152.8511,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Condobolin",
+            "latitude": -33.0886,
+            "longitude": 147.1494,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Paynesville",
+            "latitude": -37.9167,
+            "longitude": 147.7167,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Woodford",
+            "latitude": -26.9408,
+            "longitude": 152.7669,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Maddingley",
+            "latitude": -37.6864,
+            "longitude": 144.4336,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Hurstbridge",
+            "latitude": -37.6389,
+            "longitude": 145.195,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Quirindi",
+            "latitude": -31.5081,
+            "longitude": 150.68,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Maleny",
+            "latitude": -26.758,
+            "longitude": 152.8513,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Calliope",
+            "latitude": -24.0061,
+            "longitude": 151.1988,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Corrimal",
+            "latitude": -34.3775,
+            "longitude": 150.9117,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Walkerston",
+            "latitude": -21.1608,
+            "longitude": 149.0591,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Blayney",
+            "latitude": -33.5333,
+            "longitude": 149.25,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Camperdown",
+            "latitude": -38.2333,
+            "longitude": 143.15,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Aldgate",
+            "latitude": -35.0153,
+            "longitude": 138.736,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Port Fairy",
+            "latitude": -38.3667,
+            "longitude": 142.2333,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Tyabb",
+            "latitude": -38.259,
+            "longitude": 145.189,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Lowood",
+            "latitude": -27.4667,
+            "longitude": 152.5833,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Charleville",
+            "latitude": -26.4016,
+            "longitude": 146.2383,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Derby",
+            "latitude": -17.3056,
+            "longitude": 123.6339,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Mooloolah",
+            "latitude": -26.7625,
+            "longitude": 152.9633,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Pittsworth",
+            "latitude": -27.7167,
+            "longitude": 151.6333,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Vincentia",
+            "latitude": -35.0758,
+            "longitude": 150.6742,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Coonabarabran",
+            "latitude": -31.265,
+            "longitude": 149.2678,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Euroa",
+            "latitude": -36.75,
+            "longitude": 145.567,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Oberon",
+            "latitude": -33.7167,
+            "longitude": 149.8667,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Woombye",
+            "latitude": -26.6667,
+            "longitude": 152.967,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Nhulunbuy",
+            "latitude": -12.1825,
+            "longitude": 136.7819,
+            "region_name": "Northern Territory"
+        },
+        {
+            "city_code": "Camden",
+            "latitude": -34.0544,
+            "longitude": 150.6958,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Murrumbateman",
+            "latitude": -34.9625,
+            "longitude": 149.0261,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Fernvale",
+            "latitude": -27.45,
+            "longitude": 152.65,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "East Hills",
+            "latitude": -33.9567,
+            "longitude": 150.9844,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Bohle Plains",
+            "latitude": -19.3136,
+            "longitude": 146.6919,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Junortoun",
+            "latitude": -36.7667,
+            "longitude": 144.35,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Myrtleford",
+            "latitude": -36.55,
+            "longitude": 146.717,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Crib Point",
+            "latitude": -38.363,
+            "longitude": 145.202,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Marcoola",
+            "latitude": -26.5833,
+            "longitude": 153.083,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Mullumbimby",
+            "latitude": -28.55,
+            "longitude": 153.5,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Creswick",
+            "latitude": -37.4333,
+            "longitude": 143.9,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Clare",
+            "latitude": -33.8333,
+            "longitude": 138.6,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Tura Beach",
+            "latitude": -36.8483,
+            "longitude": 149.9261,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Eden",
+            "latitude": -37.065,
+            "longitude": 149.9011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "West Wyalong",
+            "latitude": -33.9167,
+            "longitude": 147.2167,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Gilgandra",
+            "latitude": -31.7,
+            "longitude": 148.6667,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Yunderup",
+            "latitude": -32.5833,
+            "longitude": 115.8,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Rochester",
+            "latitude": -36.3667,
+            "longitude": 144.7,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "McLaren Vale",
+            "latitude": -35.2198,
+            "longitude": 138.5411,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Miners Rest",
+            "latitude": -37.486,
+            "longitude": 143.757,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Robinvale",
+            "latitude": -34.5833,
+            "longitude": 142.7667,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Wilton",
+            "latitude": -34.24,
+            "longitude": 150.7011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Riverview",
+            "latitude": -27.6,
+            "longitude": 152.85,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Bogangar",
+            "latitude": -28.3317,
+            "longitude": 153.5594,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Shoalhaven Heads",
+            "latitude": -34.85,
+            "longitude": 150.7417,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Saint George",
+            "latitude": -28.0363,
+            "longitude": 148.5797,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Little Hampton",
+            "latitude": -35.05,
+            "longitude": 138.85,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Clermont",
+            "latitude": -22.823,
+            "longitude": 147.6383,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Home Hill",
+            "latitude": -19.6611,
+            "longitude": 147.4139,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Central Coast",
+            "latitude": -33.42,
+            "longitude": 151.3,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Kuranda",
+            "latitude": -16.8197,
+            "longitude": 145.6369,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Wilberforce",
+            "latitude": -33.5594,
+            "longitude": 150.841,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Tom Price",
+            "latitude": -22.6939,
+            "longitude": 117.795,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Urunga",
+            "latitude": -30.4983,
+            "longitude": 153.0178,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Dysart",
+            "latitude": -22.5855,
+            "longitude": 148.3508,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Two Rocks",
+            "latitude": -31.495,
+            "longitude": 115.588,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Ballan",
+            "latitude": -37.6,
+            "longitude": 144.25,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Gloucester",
+            "latitude": -32.0094,
+            "longitude": 151.9603,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Bonny Hills",
+            "latitude": -31.5817,
+            "longitude": 152.8344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Longreach",
+            "latitude": -23.4422,
+            "longitude": 144.2491,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Stirling",
+            "latitude": -35.0022,
+            "longitude": 138.706,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Perth",
+            "latitude": -41.5731,
+            "longitude": 147.1714,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Bordertown",
+            "latitude": -36.3118,
+            "longitude": 140.7702,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Lewiston",
+            "latitude": -34.6044,
+            "longitude": 138.5914,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Waroona",
+            "latitude": -32.8667,
+            "longitude": 115.9167,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Leschenault",
+            "latitude": -33.245,
+            "longitude": 115.735,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Terranora",
+            "latitude": -28.2456,
+            "longitude": 153.5025,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Kapunda",
+            "latitude": -34.3389,
+            "longitude": 138.9167,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Woori Yallock",
+            "latitude": -37.778,
+            "longitude": 145.528,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Saint Georges Basin",
+            "latitude": -35.13,
+            "longitude": 150.6269,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Pomona",
+            "latitude": -26.3625,
+            "longitude": 152.8564,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Sorell",
+            "latitude": -42.7831,
+            "longitude": 147.5625,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Tea Gardens",
+            "latitude": -32.6669,
+            "longitude": 152.1594,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Culburra",
+            "latitude": -34.9347,
+            "longitude": 150.7539,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Yarra Glen",
+            "latitude": -37.6489,
+            "longitude": 145.3719,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Beaconsfield Upper",
+            "latitude": -37.996,
+            "longitude": 145.415,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Morisset",
+            "latitude": -33.115,
+            "longitude": 151.5011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Merredin",
+            "latitude": -31.482,
+            "longitude": 118.279,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Deloraine",
+            "latitude": -41.5333,
+            "longitude": 146.6667,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Evans Head",
+            "latitude": -29.115,
+            "longitude": 153.4344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Rosewood",
+            "latitude": -27.6333,
+            "longitude": 152.583,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Greta",
+            "latitude": -32.6872,
+            "longitude": 151.3844,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Wollongbar",
+            "latitude": -28.815,
+            "longitude": 153.4011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Donnybrook",
+            "latitude": -33.58,
+            "longitude": 115.82,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "McCrae",
+            "latitude": -38.3497,
+            "longitude": 144.9281,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Angle Vale",
+            "latitude": -34.642,
+            "longitude": 138.647,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Bridgetown",
+            "latitude": -33.9583,
+            "longitude": 116.1381,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "North Wonthaggi",
+            "latitude": -38.6,
+            "longitude": 145.6,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Heathcote",
+            "latitude": -36.9167,
+            "longitude": 144.7,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Howlong",
+            "latitude": -35.9817,
+            "longitude": 146.6344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Williamstown",
+            "latitude": -34.6721,
+            "longitude": 138.8884,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Harvey",
+            "latitude": -33.08,
+            "longitude": 115.89,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Coonamble",
+            "latitude": -30.9317,
+            "longitude": 148.3678,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Uralla",
+            "latitude": -30.6472,
+            "longitude": 151.4956,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Bundanoon",
+            "latitude": -34.6556,
+            "longitude": 150.2994,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Cloncurry",
+            "latitude": -20.7,
+            "longitude": 140.5,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Tolga",
+            "latitude": -17.223,
+            "longitude": 145.4788,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Huonville",
+            "latitude": -43.0333,
+            "longitude": 147.0333,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Merbein",
+            "latitude": -34.1667,
+            "longitude": 142.05,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Alexandra",
+            "latitude": -37.1917,
+            "longitude": 145.71,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Waikerie",
+            "latitude": -34.1667,
+            "longitude": 139.9833,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Point Lonsdale",
+            "latitude": -38.2833,
+            "longitude": 144.6,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Hill Top",
+            "latitude": -34.3525,
+            "longitude": 150.4917,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Stirling North",
+            "latitude": -32.5167,
+            "longitude": 137.8333,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Hahndorf",
+            "latitude": -35.0303,
+            "longitude": 138.8076,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Berry",
+            "latitude": -34.7817,
+            "longitude": 150.7011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Burnett Heads",
+            "latitude": -24.7667,
+            "longitude": 152.4,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Moore Park",
+            "latitude": -24.7108,
+            "longitude": 152.2388,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Burradoo",
+            "latitude": -34.5031,
+            "longitude": 150.4089,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Mannum",
+            "latitude": -34.9151,
+            "longitude": 139.3044,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Wooroloo",
+            "latitude": -31.803,
+            "longitude": 116.314,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Crookwell",
+            "latitude": -34.4567,
+            "longitude": 149.4678,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Appin",
+            "latitude": -34.2067,
+            "longitude": 150.7844,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Cooloola Cove",
+            "latitude": -25.9805,
+            "longitude": 152.9944,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Cooktown",
+            "latitude": -15.469,
+            "longitude": 145.2515,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Jindabyne",
+            "latitude": -36.415,
+            "longitude": 148.6178,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Maclean",
+            "latitude": -29.4567,
+            "longitude": 153.2011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Stratford",
+            "latitude": -37.9667,
+            "longitude": 147.083,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Lawson",
+            "latitude": -33.7178,
+            "longitude": 150.4322,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Thursday Island",
+            "latitude": -10.5789,
+            "longitude": 142.22,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Woodside",
+            "latitude": -34.9531,
+            "longitude": 138.8742,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Narooma",
+            "latitude": -36.2,
+            "longitude": 150.1333,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Macksville",
+            "latitude": -30.7175,
+            "longitude": 152.9172,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Molong",
+            "latitude": -33.0981,
+            "longitude": 148.8561,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Grenfell",
+            "latitude": -33.9097,
+            "longitude": 148.195,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Yarrabah Aboriginal Community",
+            "latitude": -16.9094,
+            "longitude": 145.8703,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Denmark",
+            "latitude": -34.96,
+            "longitude": 117.3531,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Bonville",
+            "latitude": -30.3833,
+            "longitude": 153.05,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Walcha",
+            "latitude": -30.9833,
+            "longitude": 151.6,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Manilla",
+            "latitude": -30.7483,
+            "longitude": 150.7178,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Yarra Junction",
+            "latitude": -37.779,
+            "longitude": 145.606,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Daylesford",
+            "latitude": -37.35,
+            "longitude": 144.15,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "York",
+            "latitude": -31.8883,
+            "longitude": 116.7686,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Anglesea",
+            "latitude": -38.4064,
+            "longitude": 144.1869,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Kambalda",
+            "latitude": -31.2,
+            "longitude": 121.67,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Lobethal",
+            "latitude": -34.9,
+            "longitude": 138.8667,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "The Oaks",
+            "latitude": -34.0817,
+            "longitude": 150.5678,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Gulgong",
+            "latitude": -32.365,
+            "longitude": 149.5344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Finley",
+            "latitude": -35.6317,
+            "longitude": 145.5678,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Capel",
+            "latitude": -33.557,
+            "longitude": 115.57,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Korora",
+            "latitude": -30.2503,
+            "longitude": 153.1156,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Exmouth",
+            "latitude": -21.9331,
+            "longitude": 114.1281,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Boonah",
+            "latitude": -27.9997,
+            "longitude": 152.6816,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Saint Leonards",
+            "latitude": -38.1667,
+            "longitude": 144.7167,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Vasse",
+            "latitude": -33.69,
+            "longitude": 115.3,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Aberdare",
+            "latitude": -32.8428,
+            "longitude": 151.3803,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Bunyip",
+            "latitude": -38.0833,
+            "longitude": 145.717,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Dodges Ferry",
+            "latitude": -42.8539,
+            "longitude": 147.6194,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Palm Island",
+            "latitude": -18.7345,
+            "longitude": 146.5794,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Cohuna",
+            "latitude": -35.8,
+            "longitude": 144.2,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Bright",
+            "latitude": -36.725,
+            "longitude": 146.963,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Hay",
+            "latitude": -34.4983,
+            "longitude": 144.8344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Launching Place",
+            "latitude": -37.7806,
+            "longitude": 145.5683,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Tully",
+            "latitude": -17.9333,
+            "longitude": 145.9333,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Huntly",
+            "latitude": -36.6649,
+            "longitude": 144.329,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Rutherglen",
+            "latitude": -36.0556,
+            "longitude": 146.4625,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Murgon",
+            "latitude": -26.2333,
+            "longitude": 151.95,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Scottsdale",
+            "latitude": -41.1667,
+            "longitude": 147.5167,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Baranduda",
+            "latitude": -36.1847,
+            "longitude": 146.9613,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Moore",
+            "latitude": -30.9789,
+            "longitude": 150.8692,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Goolwa",
+            "latitude": -35.5,
+            "longitude": 138.7667,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Gembrook",
+            "latitude": -37.95,
+            "longitude": 145.541,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Port Moonta",
+            "latitude": -34.05,
+            "longitude": 137.567,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Warracknabeal",
+            "latitude": -36.25,
+            "longitude": 142.417,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Abermain",
+            "latitude": -32.8072,
+            "longitude": 151.4275,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Beveridge",
+            "latitude": -37.4833,
+            "longitude": 144.9833,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Willunga",
+            "latitude": -35.274,
+            "longitude": 138.5535,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Maningrida",
+            "latitude": -12.05,
+            "longitude": 134.217,
+            "region_name": "Northern Territory"
+        },
+        {
+            "city_code": "Innes Park",
+            "latitude": -24.8661,
+            "longitude": 152.4804,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Tara",
+            "latitude": -27.2766,
+            "longitude": 150.4572,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Wickham",
+            "latitude": -20.675,
+            "longitude": 117.1403,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Terang",
+            "latitude": -38.2333,
+            "longitude": 142.9333,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Sandy Beach",
+            "latitude": -30.1483,
+            "longitude": 153.2011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Lightning Ridge",
+            "latitude": -29.4483,
+            "longitude": 147.9678,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Port Keats",
+            "latitude": -14.2333,
+            "longitude": 129.517,
+            "region_name": "Northern Territory"
+        },
+        {
+            "city_code": "Hadspen",
+            "latitude": -41.5,
+            "longitude": 147.067,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Balnarring",
+            "latitude": -38.371,
+            "longitude": 145.118,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Canowindra",
+            "latitude": -33.5667,
+            "longitude": 148.6667,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Tin Can Bay",
+            "latitude": -25.9167,
+            "longitude": 153.0,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Tuross Head",
+            "latitude": -36.065,
+            "longitude": 150.1344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Emerald Beach",
+            "latitude": -30.165,
+            "longitude": 153.1844,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Jindera",
+            "latitude": -35.95,
+            "longitude": 146.9,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Yandina",
+            "latitude": -26.55,
+            "longitude": 152.95,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Freeling",
+            "latitude": -34.45,
+            "longitude": 138.8,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Meringandan",
+            "latitude": -27.4166,
+            "longitude": 151.8922,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Agnes Water",
+            "latitude": -24.2125,
+            "longitude": 151.9032,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Mount Clear",
+            "latitude": -37.5833,
+            "longitude": 143.8667,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Coolamon",
+            "latitude": -34.8319,
+            "longitude": 147.2011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Mirboo North",
+            "latitude": -38.4,
+            "longitude": 146.15,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Kyogle",
+            "latitude": -28.6167,
+            "longitude": 153.0,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Saint Arnaud",
+            "latitude": -36.6,
+            "longitude": 143.25,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Lismore Heights",
+            "latitude": -28.8044,
+            "longitude": 153.3,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Toogoom",
+            "latitude": -25.2459,
+            "longitude": 152.671,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Ravenswood",
+            "latitude": -32.5833,
+            "longitude": 115.833,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Coldstream",
+            "latitude": -37.734,
+            "longitude": 145.383,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Baxter",
+            "latitude": -38.196,
+            "longitude": 145.157,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Crows Nest",
+            "latitude": -27.2658,
+            "longitude": 152.058,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Nyngan",
+            "latitude": -31.5667,
+            "longitude": 147.2,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Ceduna",
+            "latitude": -32.1167,
+            "longitude": 133.6667,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Walgett",
+            "latitude": -30.0317,
+            "longitude": 148.1011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Alice River",
+            "latitude": -19.3486,
+            "longitude": 146.6183,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Yarram",
+            "latitude": -38.55,
+            "longitude": 146.6667,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Lower Chittering",
+            "latitude": -31.556,
+            "longitude": 116.087,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Kootingal",
+            "latitude": -31.0567,
+            "longitude": 151.0511,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Gowrie Junction",
+            "latitude": -27.5061,
+            "longitude": 151.8816,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Port Elliot",
+            "latitude": -35.5167,
+            "longitude": 138.6667,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Angaston",
+            "latitude": -34.5,
+            "longitude": 139.05,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Aberdeen",
+            "latitude": -32.165,
+            "longitude": 150.9011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Mid Sapphire Beach",
+            "latitude": -30.2317,
+            "longitude": 153.1511,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Wee Waa",
+            "latitude": -30.215,
+            "longitude": 149.4344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "One Mile",
+            "latitude": -27.6333,
+            "longitude": 152.733,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Saint Helens",
+            "latitude": -41.3167,
+            "longitude": 148.2333,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Burrum Heads",
+            "latitude": -25.1841,
+            "longitude": 152.6138,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Koroit",
+            "latitude": -38.2833,
+            "longitude": 142.367,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Cundletown",
+            "latitude": -31.8817,
+            "longitude": 152.5178,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Heddon Greta",
+            "latitude": -32.8058,
+            "longitude": 151.5103,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Macedon",
+            "latitude": -37.4167,
+            "longitude": 144.5667,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Bellbird",
+            "latitude": -32.855,
+            "longitude": 151.3183,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Murrumburrah",
+            "latitude": -34.5483,
+            "longitude": 148.3678,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Buxton",
+            "latitude": -34.2558,
+            "longitude": 150.5331,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Guyra",
+            "latitude": -30.215,
+            "longitude": 151.6678,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Dungog",
+            "latitude": -32.4047,
+            "longitude": 151.7528,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Freshwater",
+            "latitude": -16.8833,
+            "longitude": 145.717,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Port Sorell",
+            "latitude": -41.1667,
+            "longitude": 146.55,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Bangalow",
+            "latitude": -28.6817,
+            "longitude": 153.5178,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Emu Park",
+            "latitude": -23.2569,
+            "longitude": 150.8264,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Cedar Grove",
+            "latitude": -27.86,
+            "longitude": 152.9742,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Orbost",
+            "latitude": -37.7,
+            "longitude": 148.45,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Warburton",
+            "latitude": -37.755,
+            "longitude": 145.697,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Westbury",
+            "latitude": -41.5167,
+            "longitude": 146.85,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Longwarry",
+            "latitude": -38.1,
+            "longitude": 145.767,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Lyndoch",
+            "latitude": -34.6037,
+            "longitude": 138.8866,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Nimbin",
+            "latitude": -28.6,
+            "longitude": 153.2333,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Wahroonga",
+            "latitude": -33.6928,
+            "longitude": 151.1261,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Clarence Town",
+            "latitude": -32.5842,
+            "longitude": 151.7819,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Heyfield",
+            "latitude": -37.9833,
+            "longitude": 146.783,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Branxton",
+            "latitude": -32.6483,
+            "longitude": 151.3511,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Camden Haven",
+            "latitude": -31.6483,
+            "longitude": 152.8011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Malanda",
+            "latitude": -17.355,
+            "longitude": 145.5958,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Gayndah",
+            "latitude": -25.6244,
+            "longitude": 151.608,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Wallerawang",
+            "latitude": -33.4067,
+            "longitude": 150.0678,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Freemans Reach",
+            "latitude": -33.5567,
+            "longitude": 150.8011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Wondai",
+            "latitude": -26.3183,
+            "longitude": 151.8736,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Mount Morgan",
+            "latitude": -23.65,
+            "longitude": 150.3833,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Wattleglen",
+            "latitude": -37.663,
+            "longitude": 145.183,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Winchelsea",
+            "latitude": -38.2333,
+            "longitude": 143.9833,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Dayboro",
+            "latitude": -27.1962,
+            "longitude": 152.8243,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Mossman",
+            "latitude": -16.4603,
+            "longitude": 145.3733,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Dalmeny",
+            "latitude": -36.165,
+            "longitude": 150.1344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Moonee Beach",
+            "latitude": -30.2057,
+            "longitude": 153.1529,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Malua Bay",
+            "latitude": -35.8,
+            "longitude": 150.2333,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Tongala",
+            "latitude": -36.25,
+            "longitude": 144.95,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Two Wells",
+            "latitude": -34.5962,
+            "longitude": 138.5159,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Eumundi",
+            "latitude": -26.4833,
+            "longitude": 152.95,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Curra",
+            "latitude": -26.0708,
+            "longitude": 152.5894,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Barmera",
+            "latitude": -34.25,
+            "longitude": 140.4667,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Middlemount",
+            "latitude": -22.8167,
+            "longitude": 148.7,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Bourke",
+            "latitude": -30.0817,
+            "longitude": 145.9511,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Dennington",
+            "latitude": -38.3558,
+            "longitude": 142.441,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Mount Barker",
+            "latitude": -34.63,
+            "longitude": 117.6669,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Mulwala",
+            "latitude": -35.9817,
+            "longitude": 146.0011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Balaklava",
+            "latitude": -34.149,
+            "longitude": 138.4145,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Cowaramup",
+            "latitude": -33.85,
+            "longitude": 115.11,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Moura",
+            "latitude": -24.5667,
+            "longitude": 150.0167,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Kilcoy",
+            "latitude": -26.9431,
+            "longitude": 152.5639,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Windsor",
+            "latitude": -33.6114,
+            "longitude": 150.8133,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Nagambie",
+            "latitude": -36.7703,
+            "longitude": 145.155,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Nathalia",
+            "latitude": -36.0583,
+            "longitude": 145.204,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Gleneagle",
+            "latitude": -27.9405,
+            "longitude": 152.9616,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Nhill",
+            "latitude": -36.3333,
+            "longitude": 141.65,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Robertson",
+            "latitude": -34.59,
+            "longitude": 150.5928,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Tumbarumba",
+            "latitude": -35.7833,
+            "longitude": 148.0167,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Ceduna",
+            "latitude": -32.1333,
+            "longitude": 133.6833,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Withcott",
+            "latitude": -27.5536,
+            "longitude": 152.0238,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Oakdale",
+            "latitude": -34.0817,
+            "longitude": 150.5011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Foster",
+            "latitude": -38.65,
+            "longitude": 146.2,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Cobden",
+            "latitude": -38.3333,
+            "longitude": 143.067,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Jacobs Well",
+            "latitude": -27.7858,
+            "longitude": 153.3614,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Redbank",
+            "latitude": -27.6,
+            "longitude": 152.867,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Wyreema",
+            "latitude": -27.65,
+            "longitude": 151.867,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Lower King",
+            "latitude": -34.9578,
+            "longitude": 117.9383,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Mount Crosby",
+            "latitude": -27.54,
+            "longitude": 152.804,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Woorim",
+            "latitude": -27.0677,
+            "longitude": 153.2033,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Chidlow",
+            "latitude": -31.857,
+            "longitude": 116.272,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Craignish",
+            "latitude": -25.283,
+            "longitude": 152.7288,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Wagin",
+            "latitude": -33.3167,
+            "longitude": 117.35,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Barooga",
+            "latitude": -35.9067,
+            "longitude": 145.6928,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Yackandandah",
+            "latitude": -36.3131,
+            "longitude": 146.8392,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Queenstown",
+            "latitude": -42.0667,
+            "longitude": 145.55,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Kingscote",
+            "latitude": -35.6531,
+            "longitude": 137.6342,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Denman",
+            "latitude": -32.3833,
+            "longitude": 150.6833,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Kambalda West",
+            "latitude": -31.2114,
+            "longitude": 121.7129,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Raworth",
+            "latitude": -32.7289,
+            "longitude": 151.615,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Garfield",
+            "latitude": -38.0667,
+            "longitude": 145.683,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Campbells Creek",
+            "latitude": -37.1,
+            "longitude": 144.2,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Batehaven",
+            "latitude": -35.7317,
+            "longitude": 150.2011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Moora",
+            "latitude": -30.638,
+            "longitude": 116.01,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Park Ridge",
+            "latitude": -27.7271,
+            "longitude": 153.0332,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Coober Pedy",
+            "latitude": -29.0111,
+            "longitude": 134.7556,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Jurien Bay",
+            "latitude": -30.297,
+            "longitude": 115.042,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Merriwa",
+            "latitude": -32.1317,
+            "longitude": 150.3511,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Miles",
+            "latitude": -26.6583,
+            "longitude": 150.187,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Olinda",
+            "latitude": -37.856,
+            "longitude": 145.364,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Brunswick Heads",
+            "latitude": -28.5586,
+            "longitude": 153.5447,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Mount Compass",
+            "latitude": -35.3506,
+            "longitude": 138.6203,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Dimboola",
+            "latitude": -36.45,
+            "longitude": 142.0167,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Clunes",
+            "latitude": -37.3,
+            "longitude": 143.7833,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Heywood",
+            "latitude": -38.1333,
+            "longitude": 141.617,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Kooralbyn",
+            "latitude": -28.0725,
+            "longitude": 152.8208,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Teesdale",
+            "latitude": -38.0333,
+            "longitude": 144.05,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Iluka",
+            "latitude": -29.4067,
+            "longitude": 153.3511,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Broulee",
+            "latitude": -35.8483,
+            "longitude": 150.1678,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Holbrook",
+            "latitude": -35.715,
+            "longitude": 147.3178,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Drayton",
+            "latitude": -27.6,
+            "longitude": 151.906,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Nullagine",
+            "latitude": -21.888,
+            "longitude": 120.107,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Esk",
+            "latitude": -27.2394,
+            "longitude": 152.4197,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Gulmarrad",
+            "latitude": -29.49,
+            "longitude": 153.2344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Corindi Beach",
+            "latitude": -30.0317,
+            "longitude": 153.2011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Gundagai",
+            "latitude": -35.065,
+            "longitude": 148.1011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Tathra",
+            "latitude": -36.7317,
+            "longitude": 149.9844,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "North Haven",
+            "latitude": -31.6317,
+            "longitude": 152.8178,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Spreyton",
+            "latitude": -41.2167,
+            "longitude": 146.35,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Boambee",
+            "latitude": -30.3317,
+            "longitude": 153.0844,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Casterton",
+            "latitude": -37.5833,
+            "longitude": 141.4,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Pine Mountain",
+            "latitude": -27.5333,
+            "longitude": 152.717,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Somers",
+            "latitude": -38.393,
+            "longitude": 145.163,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Tailem Bend",
+            "latitude": -35.25,
+            "longitude": 139.45,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Milton",
+            "latitude": -35.3042,
+            "longitude": 150.4408,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Sutton",
+            "latitude": -35.1483,
+            "longitude": 149.2178,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Wy Yung",
+            "latitude": -37.7953,
+            "longitude": 147.6073,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Rosedale",
+            "latitude": -38.15,
+            "longitude": 146.783,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Millgrove",
+            "latitude": -37.753,
+            "longitude": 145.652,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Braidwood",
+            "latitude": -35.4483,
+            "longitude": 149.8011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Yarragon",
+            "latitude": -38.2,
+            "longitude": 146.067,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Kingston South East",
+            "latitude": -36.8167,
+            "longitude": 139.85,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Belgrave South",
+            "latitude": -37.94,
+            "longitude": 145.356,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Boorowa",
+            "latitude": -34.4397,
+            "longitude": 148.7203,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Jamberoo",
+            "latitude": -34.6483,
+            "longitude": 150.7761,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Yaroomba",
+            "latitude": -26.55,
+            "longitude": 153.1,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Colo Vale",
+            "latitude": -34.3983,
+            "longitude": 150.4844,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Kleinton",
+            "latitude": -27.4167,
+            "longitude": 151.95,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Chiltern",
+            "latitude": -36.15,
+            "longitude": 146.6,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Apollo Bay",
+            "latitude": -38.75,
+            "longitude": 143.65,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Plainland",
+            "latitude": -27.5816,
+            "longitude": 152.4163,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Sorrento",
+            "latitude": -38.3396,
+            "longitude": 144.7413,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Warialda",
+            "latitude": -29.4097,
+            "longitude": 150.5217,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Yea",
+            "latitude": -37.2,
+            "longitude": 145.4167,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Lang Lang",
+            "latitude": -38.2667,
+            "longitude": 145.567,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Childers",
+            "latitude": -25.2363,
+            "longitude": 152.2775,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Cambooya",
+            "latitude": -27.7077,
+            "longitude": 151.8633,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Werris Creek",
+            "latitude": -31.3483,
+            "longitude": 150.6511,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Bowen Mountain",
+            "latitude": -33.5817,
+            "longitude": 150.6344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Tooradin",
+            "latitude": -38.2111,
+            "longitude": 145.38,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Bridport",
+            "latitude": -41.0005,
+            "longitude": 147.3918,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Chinderah",
+            "latitude": -28.2567,
+            "longitude": 153.5344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Mapleton",
+            "latitude": -26.6247,
+            "longitude": 152.8666,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Millmerran",
+            "latitude": -27.8788,
+            "longitude": 151.2683,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Badger Creek",
+            "latitude": -37.7,
+            "longitude": 145.5167,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Jamestown",
+            "latitude": -33.2053,
+            "longitude": 138.6019,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Cygnet",
+            "latitude": -43.15,
+            "longitude": 147.067,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Basin View",
+            "latitude": -35.0928,
+            "longitude": 150.5572,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Sheffield",
+            "latitude": -41.3822,
+            "longitude": 146.3247,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Curlewis",
+            "latitude": -38.1833,
+            "longitude": 144.5,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Walloon",
+            "latitude": -27.6,
+            "longitude": 152.6667,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Devon Meadows",
+            "latitude": -38.162,
+            "longitude": 145.303,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Halls Creek",
+            "latitude": -18.23,
+            "longitude": 127.67,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Yallourn North",
+            "latitude": -38.1667,
+            "longitude": 146.367,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Mirani",
+            "latitude": -21.1667,
+            "longitude": 148.8667,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Beaufort",
+            "latitude": -37.4333,
+            "longitude": 143.3667,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "River Heads",
+            "latitude": -25.4133,
+            "longitude": 152.9136,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Yenda",
+            "latitude": -34.25,
+            "longitude": 146.171,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Rockbank",
+            "latitude": -37.7333,
+            "longitude": 144.667,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Bermagui",
+            "latitude": -36.4317,
+            "longitude": 150.0678,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Kinglake",
+            "latitude": -37.5328,
+            "longitude": 145.3411,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Crescent Head",
+            "latitude": -31.19,
+            "longitude": 152.9761,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Tocumwal",
+            "latitude": -35.815,
+            "longitude": 145.5681,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Nyora",
+            "latitude": -38.3333,
+            "longitude": 145.667,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Gol Gol",
+            "latitude": -34.1667,
+            "longitude": 142.2167,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Cumbalum",
+            "latitude": -28.8317,
+            "longitude": 153.5344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Allansford",
+            "latitude": -38.3861,
+            "longitude": 142.593,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Hatton Vale",
+            "latitude": -27.5667,
+            "longitude": 152.483,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Barham",
+            "latitude": -35.5806,
+            "longitude": 144.195,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Ferny Creek",
+            "latitude": -37.8833,
+            "longitude": 145.3333,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Crystal Brook",
+            "latitude": -33.35,
+            "longitude": 138.2,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Maldon",
+            "latitude": -36.9917,
+            "longitude": 144.0667,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Little Grove",
+            "latitude": -35.07,
+            "longitude": 117.87,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Donald",
+            "latitude": -36.3157,
+            "longitude": 142.953,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Longford",
+            "latitude": -38.1642,
+            "longitude": 147.087,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Katherine",
+            "latitude": -14.4667,
+            "longitude": 132.2667,
+            "region_name": "Northern Territory"
+        },
+        {
+            "city_code": "Lake Cargelligo",
+            "latitude": -33.2983,
+            "longitude": 146.3678,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Drummond Cove",
+            "latitude": -28.673,
+            "longitude": 114.613,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Jensen",
+            "latitude": -19.2572,
+            "longitude": 146.641,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Tumby Bay",
+            "latitude": -34.3667,
+            "longitude": 136.1,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Inverleigh",
+            "latitude": -38.1,
+            "longitude": 144.05,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Culcairn",
+            "latitude": -35.665,
+            "longitude": 147.0344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Burrill Lake",
+            "latitude": -35.3817,
+            "longitude": 150.4511,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Hillston",
+            "latitude": -33.4817,
+            "longitude": 145.5344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Richmond",
+            "latitude": -42.7336,
+            "longitude": 147.4394,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Cooran",
+            "latitude": -26.3353,
+            "longitude": 152.8236,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Clifton",
+            "latitude": -27.9325,
+            "longitude": 151.9055,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Metung",
+            "latitude": -37.8833,
+            "longitude": 147.85,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Booral",
+            "latitude": -25.3539,
+            "longitude": 152.8897,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Oakhurst",
+            "latitude": -25.5125,
+            "longitude": 152.6263,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Gooburrum",
+            "latitude": -24.8222,
+            "longitude": 152.3216,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Wentworth",
+            "latitude": -34.0833,
+            "longitude": 141.9,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Long Beach",
+            "latitude": -35.6983,
+            "longitude": 150.2344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Bingara",
+            "latitude": -29.865,
+            "longitude": 150.5678,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Table Top",
+            "latitude": -35.965,
+            "longitude": 147.0011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Bulahdelah",
+            "latitude": -32.3831,
+            "longitude": 152.1953,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Barcaldine",
+            "latitude": -23.5555,
+            "longitude": 145.2888,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Blackall",
+            "latitude": -24.4167,
+            "longitude": 145.4667,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Peterborough",
+            "latitude": -32.9667,
+            "longitude": 138.8333,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Marong",
+            "latitude": -36.7333,
+            "longitude": 144.133,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Karuah",
+            "latitude": -32.6431,
+            "longitude": 151.9572,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Port Denison",
+            "latitude": -29.2833,
+            "longitude": 114.9167,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Barraba",
+            "latitude": -30.3817,
+            "longitude": 150.6178,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Toodyay",
+            "latitude": -31.55,
+            "longitude": 116.45,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Doomadgee",
+            "latitude": -17.9443,
+            "longitude": 138.83,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Ripley",
+            "latitude": -27.7167,
+            "longitude": 152.8333,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Ravenshoe",
+            "latitude": -17.6058,
+            "longitude": 145.483,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Hindmarsh",
+            "latitude": -35.5167,
+            "longitude": 138.8667,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Frederickton",
+            "latitude": -31.0317,
+            "longitude": 152.8678,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Warren",
+            "latitude": -31.6983,
+            "longitude": 147.8344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Bombala",
+            "latitude": -36.9167,
+            "longitude": 149.2333,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Paraburdoo",
+            "latitude": -23.201,
+            "longitude": 117.671,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Dongara",
+            "latitude": -29.251,
+            "longitude": 114.934,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Streaky Bay",
+            "latitude": -32.8,
+            "longitude": 134.2167,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Mortlake",
+            "latitude": -38.0667,
+            "longitude": 142.8,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Surfside",
+            "latitude": -35.695,
+            "longitude": 150.1997,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Meadows",
+            "latitude": -35.1833,
+            "longitude": 138.75,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Wallington",
+            "latitude": -38.2,
+            "longitude": 144.4833,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Douglas Park",
+            "latitude": -34.19,
+            "longitude": 150.7011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Howard",
+            "latitude": -25.3167,
+            "longitude": 152.567,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Bagdad",
+            "latitude": -42.6167,
+            "longitude": 147.217,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Alligator Creek",
+            "latitude": -19.4239,
+            "longitude": 146.946,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Macclesfield",
+            "latitude": -35.1667,
+            "longitude": 138.833,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Wundowie",
+            "latitude": -31.7667,
+            "longitude": 116.383,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Kalbarri",
+            "latitude": -27.71,
+            "longitude": 114.16,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Corryong",
+            "latitude": -36.1981,
+            "longitude": 147.899,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Hay Point",
+            "latitude": -21.3027,
+            "longitude": 149.2636,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Evandale",
+            "latitude": -41.5833,
+            "longitude": 147.2333,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Balranald",
+            "latitude": -34.6383,
+            "longitude": 143.5603,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Kurrajong Heights",
+            "latitude": -33.55,
+            "longitude": 150.6667,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Quindalup",
+            "latitude": -33.6671,
+            "longitude": 115.1451,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Mount Macedon",
+            "latitude": -37.4,
+            "longitude": 144.5833,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Rushworth",
+            "latitude": -36.5833,
+            "longitude": 145.0167,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Coleambally",
+            "latitude": -34.8067,
+            "longitude": 145.8844,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Waterview Heights",
+            "latitude": -29.665,
+            "longitude": 152.8678,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Little River",
+            "latitude": -37.933,
+            "longitude": 144.5,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Bywong",
+            "latitude": -35.165,
+            "longitude": 149.3344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Sharon",
+            "latitude": -24.8761,
+            "longitude": 152.2458,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Queenscliff",
+            "latitude": -38.2667,
+            "longitude": 144.65,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Kandos",
+            "latitude": -32.8483,
+            "longitude": 149.9678,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Valla Beach",
+            "latitude": -30.59,
+            "longitude": 153.0075,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Batlow",
+            "latitude": -35.515,
+            "longitude": 148.1344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Chewton",
+            "latitude": -37.0833,
+            "longitude": 144.267,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Penola",
+            "latitude": -37.3786,
+            "longitude": 140.8362,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Cardwell",
+            "latitude": -18.2642,
+            "longitude": 146.0258,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Glenden",
+            "latitude": -21.3539,
+            "longitude": 148.1144,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Neerim South",
+            "latitude": -38.0167,
+            "longitude": 145.9667,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Geeveston",
+            "latitude": -43.1667,
+            "longitude": 146.933,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Renmark West",
+            "latitude": -34.1653,
+            "longitude": 140.7097,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Birdwood",
+            "latitude": -34.8167,
+            "longitude": 138.967,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Beaconsfield",
+            "latitude": -41.2,
+            "longitude": 146.8,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Fitzroy Crossing",
+            "latitude": -18.1944,
+            "longitude": 125.5667,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Coolah",
+            "latitude": -31.8317,
+            "longitude": 149.7178,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Seven Mile Beach",
+            "latitude": -42.8586,
+            "longitude": 147.5053,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Toogoolawah",
+            "latitude": -27.0852,
+            "longitude": 152.3758,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Alton Downs",
+            "latitude": -23.3158,
+            "longitude": 150.3644,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Coraki",
+            "latitude": -28.9983,
+            "longitude": 153.2844,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Ranelagh",
+            "latitude": -43.0167,
+            "longitude": 147.0333,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Serpentine",
+            "latitude": -32.365,
+            "longitude": 115.981,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Mundubbera",
+            "latitude": -25.5881,
+            "longitude": 151.2991,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Berrigan",
+            "latitude": -35.6317,
+            "longitude": 145.8011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Hanwood",
+            "latitude": -34.3317,
+            "longitude": 146.0344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "San Remo",
+            "latitude": -38.5167,
+            "longitude": 145.3667,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Lucknow",
+            "latitude": -37.8133,
+            "longitude": 147.6481,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Millthorpe",
+            "latitude": -33.4483,
+            "longitude": 149.1844,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Babinda",
+            "latitude": -17.345,
+            "longitude": 145.925,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Mount Dandenong",
+            "latitude": -37.8311,
+            "longitude": 145.36,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Rainbow Beach",
+            "latitude": -25.9075,
+            "longitude": 153.0888,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Langwarrin",
+            "latitude": -38.189,
+            "longitude": 145.189,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Collinsville",
+            "latitude": -20.5526,
+            "longitude": 147.8452,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Silvan",
+            "latitude": -37.824,
+            "longitude": 145.421,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Jandowae",
+            "latitude": -26.7775,
+            "longitude": 151.1108,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Wongaling Beach",
+            "latitude": -17.9145,
+            "longitude": 146.0972,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Warragamba",
+            "latitude": -33.8817,
+            "longitude": 150.6011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Henty",
+            "latitude": -35.515,
+            "longitude": 147.0344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "The Rock",
+            "latitude": -35.265,
+            "longitude": 147.1178,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Smiths Lake",
+            "latitude": -32.3747,
+            "longitude": 152.5036,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Mundijong",
+            "latitude": -32.284,
+            "longitude": 115.973,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Aldavilla",
+            "latitude": -31.0817,
+            "longitude": 152.7678,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Canungra",
+            "latitude": -28.0195,
+            "longitude": 153.1652,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Binningup",
+            "latitude": -33.149,
+            "longitude": 115.689,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Hawks Nest",
+            "latitude": -32.63,
+            "longitude": 152.2006,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Allora",
+            "latitude": -28.0355,
+            "longitude": 151.9802,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Beauty Point",
+            "latitude": -41.1622,
+            "longitude": 146.8215,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Dunedoo",
+            "latitude": -32.015,
+            "longitude": 149.3928,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Boyanup",
+            "latitude": -33.4861,
+            "longitude": 115.73,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Buronga",
+            "latitude": -34.1706,
+            "longitude": 142.1733,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Valley Heights",
+            "latitude": -33.7,
+            "longitude": 150.5833,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Normanton",
+            "latitude": -17.6667,
+            "longitude": 141.0667,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Greenwell Point",
+            "latitude": -34.915,
+            "longitude": 150.7344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Airlie Beach",
+            "latitude": -20.2744,
+            "longitude": 148.715,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Hamilton Island",
+            "latitude": -20.35,
+            "longitude": 148.95,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Eden Park",
+            "latitude": -37.489,
+            "longitude": 145.07,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Timboon",
+            "latitude": -38.4833,
+            "longitude": 142.9667,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Witta",
+            "latitude": -26.6975,
+            "longitude": 152.8119,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Coominya",
+            "latitude": -27.3919,
+            "longitude": 152.5022,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Snug",
+            "latitude": -43.0671,
+            "longitude": 147.2556,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Raglan",
+            "latitude": -33.4317,
+            "longitude": 149.6511,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Boddington",
+            "latitude": -32.802,
+            "longitude": 116.471,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Berridale",
+            "latitude": -36.365,
+            "longitude": 148.8178,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Nelly Bay",
+            "latitude": -19.1583,
+            "longitude": 146.8486,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Haddon",
+            "latitude": -37.5908,
+            "longitude": 143.719,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Avoca",
+            "latitude": -37.0881,
+            "longitude": 143.4739,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Jarrahdale",
+            "latitude": -32.339,
+            "longitude": 116.062,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Dorrigo",
+            "latitude": -30.399,
+            "longitude": 152.7533,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Ouyen",
+            "latitude": -35.0667,
+            "longitude": 142.317,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Monto",
+            "latitude": -24.8667,
+            "longitude": 151.1167,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Glenview",
+            "latitude": -26.7667,
+            "longitude": 153.0167,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Bindoon",
+            "latitude": -31.38,
+            "longitude": 116.097,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Trentham",
+            "latitude": -37.3833,
+            "longitude": 144.3167,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Marulan",
+            "latitude": -34.715,
+            "longitude": 150.0011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Ardrossan",
+            "latitude": -34.4167,
+            "longitude": 137.9,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Kinglake West",
+            "latitude": -37.4667,
+            "longitude": 145.233,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Kojonup",
+            "latitude": -33.84,
+            "longitude": 117.15,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Yerrinbool",
+            "latitude": -34.365,
+            "longitude": 150.5425,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Bamaga",
+            "latitude": -10.8833,
+            "longitude": 142.3833,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Beverley",
+            "latitude": -32.109,
+            "longitude": 116.926,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Darlington Point",
+            "latitude": -34.565,
+            "longitude": 146.0011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Oatlands",
+            "latitude": -42.2996,
+            "longitude": 147.3666,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Middleton",
+            "latitude": -35.5,
+            "longitude": 138.7,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Aldershot",
+            "latitude": -25.4625,
+            "longitude": 152.661,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Gordon",
+            "latitude": -37.5833,
+            "longitude": 144.1,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Menangle",
+            "latitude": -34.1233,
+            "longitude": 150.7428,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Gundaroo",
+            "latitude": -35.0317,
+            "longitude": 149.2844,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Brewarrina",
+            "latitude": -29.9483,
+            "longitude": 146.8678,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Kendall",
+            "latitude": -31.6322,
+            "longitude": 152.7056,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Cunnamulla",
+            "latitude": -28.0702,
+            "longitude": 145.6825,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Hughenden",
+            "latitude": -20.8438,
+            "longitude": 144.1986,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Indented Head",
+            "latitude": -38.1381,
+            "longitude": 144.71,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Quorn",
+            "latitude": -32.3495,
+            "longitude": 138.0406,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Boggabri",
+            "latitude": -30.715,
+            "longitude": 150.0344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Tieri",
+            "latitude": -23.035,
+            "longitude": 148.3483,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Cherbourg",
+            "latitude": -26.2833,
+            "longitude": 151.95,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Moonbi",
+            "latitude": -31.0167,
+            "longitude": 151.0667,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Monash",
+            "latitude": -34.2333,
+            "longitude": 140.55,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Bowraville",
+            "latitude": -30.6317,
+            "longitude": 152.8642,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "McLaren Flat",
+            "latitude": -35.208,
+            "longitude": 138.5865,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Carlton",
+            "latitude": -42.874,
+            "longitude": 147.6534,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Meningie",
+            "latitude": -35.6883,
+            "longitude": 139.338,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Bakers Hill",
+            "latitude": -31.751,
+            "longitude": 116.455,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Eudlo",
+            "latitude": -26.7333,
+            "longitude": 152.967,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Carisbrook",
+            "latitude": -37.0481,
+            "longitude": 143.817,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Lorne",
+            "latitude": -38.5333,
+            "longitude": 143.967,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "South Murwillumbah",
+            "latitude": -28.3317,
+            "longitude": 153.4094,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Wurruk",
+            "latitude": -38.113,
+            "longitude": 147.021,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Cressy",
+            "latitude": -41.6833,
+            "longitude": 147.083,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Echunga",
+            "latitude": -35.1,
+            "longitude": 138.7833,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Augusta",
+            "latitude": -34.312,
+            "longitude": 115.159,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Cowell",
+            "latitude": -33.6833,
+            "longitude": 136.9167,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Peak Hill",
+            "latitude": -32.7075,
+            "longitude": 148.0514,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Yungaburra",
+            "latitude": -17.2711,
+            "longitude": 145.5831,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Paringa",
+            "latitude": -34.1667,
+            "longitude": 140.7833,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Dampier",
+            "latitude": -20.66,
+            "longitude": 116.71,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Burra",
+            "latitude": -33.6667,
+            "longitude": 138.9333,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Springsure",
+            "latitude": -24.1161,
+            "longitude": 148.0886,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Minlaton",
+            "latitude": -34.7714,
+            "longitude": 137.596,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Yulara",
+            "latitude": -25.2406,
+            "longitude": 130.9889,
+            "region_name": "Northern Territory"
+        },
+        {
+            "city_code": "Wahgunyah",
+            "latitude": -36.0,
+            "longitude": 146.3833,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Ellalong",
+            "latitude": -32.9072,
+            "longitude": 151.3214,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Moorooduc",
+            "latitude": -38.247,
+            "longitude": 145.105,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Mylor",
+            "latitude": -35.05,
+            "longitude": 138.75,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Nicholson",
+            "latitude": -37.8167,
+            "longitude": 147.7333,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Franklin",
+            "latitude": -43.0833,
+            "longitude": 147.017,
+            "region_name": "Tasmania"
+        },
+        {
+            "city_code": "Eagle Point",
+            "latitude": -37.9,
+            "longitude": 147.683,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Brandon",
+            "latitude": -19.5541,
+            "longitude": 147.3547,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Kersbrook",
+            "latitude": -34.784,
+            "longitude": 138.852,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Kalbar",
+            "latitude": -27.9419,
+            "longitude": 152.6233,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Minden",
+            "latitude": -27.55,
+            "longitude": 152.5333,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Parsons Point",
+            "latitude": -23.8492,
+            "longitude": 151.2733,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Tinonee",
+            "latitude": -31.9483,
+            "longitude": 152.4178,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Julatten",
+            "latitude": -16.6069,
+            "longitude": 145.343,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Robe",
+            "latitude": -37.15,
+            "longitude": 139.75,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Kew",
+            "latitude": -31.6317,
+            "longitude": 152.7178,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Greenock",
+            "latitude": -34.4578,
+            "longitude": 138.928,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Bouldercombe",
+            "latitude": -23.5767,
+            "longitude": 150.4671,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Glengarry",
+            "latitude": -38.1333,
+            "longitude": 146.55,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Mollymook",
+            "latitude": -35.3372,
+            "longitude": 150.4667,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Tallangatta",
+            "latitude": -36.2,
+            "longitude": 147.25,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Briagolong",
+            "latitude": -37.8333,
+            "longitude": 147.067,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Jabiru",
+            "latitude": -12.6667,
+            "longitude": 132.8333,
+            "region_name": "Northern Territory"
+        },
+        {
+            "city_code": "Puckapunyal",
+            "latitude": -37.0,
+            "longitude": 145.033,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Keith",
+            "latitude": -36.0991,
+            "longitude": 140.3541,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Balhannah",
+            "latitude": -34.9833,
+            "longitude": 138.8167,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Cabarlah",
+            "latitude": -27.4333,
+            "longitude": 152.0,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Tomerong",
+            "latitude": -35.0494,
+            "longitude": 150.5667,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Yarraman",
+            "latitude": -26.8411,
+            "longitude": 151.9841,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Mallacoota",
+            "latitude": -37.55,
+            "longitude": 149.75,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Panton Hill",
+            "latitude": -37.643,
+            "longitude": 145.239,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Sassafras Gully",
+            "latitude": -37.87,
+            "longitude": 145.354,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Lockhart",
+            "latitude": -35.215,
+            "longitude": 146.7178,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Coutts Crossing",
+            "latitude": -29.8317,
+            "longitude": 152.8844,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Helidon",
+            "latitude": -27.5506,
+            "longitude": 152.1256,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Nana Glen",
+            "latitude": -30.1317,
+            "longitude": 153.0011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Gin Gin",
+            "latitude": -31.9114,
+            "longitude": 148.0897,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Gin Gin",
+            "latitude": -24.9908,
+            "longitude": 151.9558,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Charlton",
+            "latitude": -36.2667,
+            "longitude": 143.35,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Dimbulah",
+            "latitude": -17.1489,
+            "longitude": 145.111,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Avenel",
+            "latitude": -36.9,
+            "longitude": 145.233,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Lawrence",
+            "latitude": -29.4983,
+            "longitude": 153.1011,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Lower Beechmont",
+            "latitude": -28.047,
+            "longitude": 153.247,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Mulambin",
+            "latitude": -23.1978,
+            "longitude": 150.7885,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Elliott Heads",
+            "latitude": -24.9119,
+            "longitude": 152.4902,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Bluewater",
+            "latitude": -19.1744,
+            "longitude": 146.5503,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Murrurundi",
+            "latitude": -31.765,
+            "longitude": 150.8344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Riverton",
+            "latitude": -34.15,
+            "longitude": 138.733,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Port Broughton",
+            "latitude": -33.5833,
+            "longitude": 137.9356,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Smythesdale",
+            "latitude": -37.65,
+            "longitude": 143.6833,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Goombungee",
+            "latitude": -27.3167,
+            "longitude": 151.7,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Mitchell",
+            "latitude": -26.4861,
+            "longitude": 147.9752,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Maitland",
+            "latitude": -34.3667,
+            "longitude": 137.6667,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Coleraine",
+            "latitude": -37.6,
+            "longitude": 141.7,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Jerilderie",
+            "latitude": -35.35,
+            "longitude": 145.7333,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Yellow Rock",
+            "latitude": -33.6983,
+            "longitude": 150.6344,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Yallingup",
+            "latitude": -33.6397,
+            "longitude": 115.0263,
+            "region_name": "Western Australia"
+        },
+        {
+            "city_code": "Bucca",
+            "latitude": -24.8625,
+            "longitude": 152.1008,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Mount Pleasant",
+            "latitude": -34.773,
+            "longitude": 139.051,
+            "region_name": "South Australia"
+        },
+        {
+            "city_code": "Wesburn",
+            "latitude": -37.767,
+            "longitude": 145.647,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Nome",
+            "latitude": -19.3594,
+            "longitude": 146.9508,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Lethbridge",
+            "latitude": -37.9667,
+            "longitude": 144.133,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Nar Nar Goon",
+            "latitude": -38.0819,
+            "longitude": 145.575,
+            "region_name": "Victoria"
+        },
+        {
+            "city_code": "Capella",
+            "latitude": -23.0667,
+            "longitude": 148.0167,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "The Palms",
+            "latitude": -26.1902,
+            "longitude": 152.5861,
+            "region_name": "Queensland"
+        },
+        {
+            "city_code": "Millfield",
+            "latitude": -32.8886,
+            "longitude": 151.2614,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Dunbogan",
+            "latitude": -31.65,
+            "longitude": 152.8167,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Tomakin",
+            "latitude": -35.8228,
+            "longitude": 150.1894,
+            "region_name": "New South Wales"
+        },
+        {
+            "city_code": "Currie",
+            "latitude": -39.9311,
+            "longitude": 143.851,
+            "region_name": "Tasmania"
+        }
+    ]
+}
