@@ -11,7 +11,7 @@
 </head>
 <body>
 <!-- Navbar en haut à gauche -->
-<nav class="navbar navbar-expand-lg bg-success p-2 bg-opacity-25"">
+<nav class="navbar navbar-expand-lg bg-success p-2 bg-opacity-25">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">Accueil</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,7 +20,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Destination</a>
+                    <a class="nav-link" aria-current="page" href="#">Destination</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact</a>
@@ -31,18 +31,47 @@
                     {% if app.user %}
                         <a class="nav-link" href="/logout">Déconnexion</a>
                     {% else %}
-                        <a class="nav-link" href="/login">Se connecter</a>
+                        <a class="nav-link" href="/login" class="btn btn-outline-light me-2">Se connecter</a>
                     {% endif %}
                 </li>
                 <li class="nav-item">
-                    <!-- Nouveau lien vers le fichier Twig -->
-                    <a class="nav-link" href="/kind/offer">Les offres</a>
+                    <a class="nav-link btn btn-primary rounded-pill text-light" href="/kind/offer">Nos offres</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+<style>
+    /* Styles pour la barre de navigation */
+    .nav-link {
+        transition: background-color 0.3s, color 0.3s; /* Transition douce pour le changement de couleur */
+    }
 
+    .nav-link:hover {
+        background-color: rgba(255, 255, 255, 0.1); /* Effet de survol */
+        color: white; /* Couleur du texte au survol */
+    }
+
+    .btn-outline-light {
+        border: 1px solid white; /* Bordure blanche pour le bouton de connexion */
+        color: white; /* Texte blanc */
+    }
+
+    .btn-outline-light:hover {
+        background-color: white; /* Fond blanc au survol */
+        color: #28a745; /* Couleur verte pour le texte au survol */
+    }
+
+    .btn-primary {
+        background-color: #007bff; /* Couleur de fond du bouton Nos offres */
+        border-color: #007bff; /* Bordure du bouton */
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3; /* Couleur de fond au survol */
+        border-color: #0056b3; /* Bordure au survol */
+    }
+</style>
 
 <main class="d-flex flex-column align-items-center justify-content-center" style="height: 80vh;">
     {% block body %}{% endblock %}
