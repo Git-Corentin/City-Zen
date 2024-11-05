@@ -26,8 +26,10 @@ security:
                 path: app_logout
                 target: app_homepage
     role_hierarchy:
-        ROLE_ADMIN: ROLE_USER
-        ROLE_SUPER_ADMIN: [ ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH ]
+        ROLE_USER: []
+        ROLE_PREMIUM: [ROLE_USER]
+        ROLE_ADMIN: [ROLE_PREMIUM]
+        ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_PREMIUM, ROLE_USER]
 
 
 

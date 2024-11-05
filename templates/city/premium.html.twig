@@ -1,0 +1,9 @@
+{% extends 'city/show.html.twig' %}
+
+
+{% block body %}
+    {% if is_granted('ROLE_PREMIUM') %}
+        <p>Bienvenue, utilisateur premium !</p>
+    {% endif %}
+
+{% endblock %}
