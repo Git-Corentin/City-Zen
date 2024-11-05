@@ -1,5 +1,6 @@
 let cities = [];
 let selectedIndex = -1; // Pour suivre la suggestion actuellement sélectionnée
+let limitedSuggestions = []; // Déclarer ici pour une portée globale
 
 // Charger les villes à partir du fichier JSON
 fetch('homepage/cities.json') // Chemin vers le fichier JSON
@@ -45,7 +46,7 @@ inputField.addEventListener("input", function() {
     }
 
     const filteredCities = cities.filter(city => city.searchName.includes(query));
-    const limitedSuggestions = filteredCities.slice(0, maxSuggestions);
+    limitedSuggestions = filteredCities.slice(0, maxSuggestions); // Mettre à jour limitedSuggestions globalement
 
     limitedSuggestions.forEach((city, index) => {
         const suggestion = document.createElement("div");
