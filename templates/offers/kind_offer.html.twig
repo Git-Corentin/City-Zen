@@ -1,72 +1,142 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Recherche de villes{% endblock %}
+{% block title %}Offres{% endblock %}
+
 {% block stylesheets %}
     <style>
         .document-container {
-            text-align: center;
-            margin-top: 20px;
+            text-align: center; /* Centrer les cartes */
+            margin-top: 30px;
         }
+
         .card {
+            display: inline-block; /* Changer le display */
             width: 20rem;
-            min-height: 25rem; /* Assurez-vous que la carte est suffisamment haute */
+            min-height: 26rem;
+            transition: box-shadow 0.4s ease; /* Garder l'animation de la boîte */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 15px; /* Ajout d'une marge pour espacer les cartes */
+            vertical-align: top; /* Aligner en haut pour éviter des décalages */
         }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
         .card-body {
-            min-height: 10rem; /* Hauteur minimum pour contenir les éléments */
+            text-align: center;
+            padding: 20px;
         }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .card-text {
+            min-height: 6rem; /* Hauteur minimale pour aligner les boutons "Prix" */
+        }
+
         .price-info {
-            display: none;
+            max-height: 0;
             opacity: 0;
-            transition: opacity 0.5s ease-in-out;
+            overflow: hidden;
+            transition: max-height 0.5s ease, opacity 0.5s ease;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            text-align: center;
         }
+
+        /* Affichage de la section de prix */
         .price-info.show {
-            display: block;
+            max-height: 200px; /* Ajustez cette valeur en fonction du contenu */
             opacity: 1;
         }
+
+        .btn-price-toggle {
+            margin-top: 15px;
+        }
+
+        .btn-view-offers {
+            display: inline-block;
+            margin-top: 10px;
+            color: #fff;
+            background-color: #28a745;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-view-offers:hover {
+            background-color: #218838;
+        }
     </style>
+
 {% endblock %}
 
-
 {% block body %}
-    <div class="document-container d-flex justify-content-center gap-3">
+    <div class="document-container">
+        <!-- Offre Entreprise -->
         <div class="card">
-            <img src="{{ asset('homepage/entreprise.jpg') }}" class="card-img-top" alt="...">
+            <img src="{{ asset('homepage/entreprise.jpg') }}" class="card-img-top" alt="Entreprise">
             <div class="card-body">
                 <h5 class="card-title">Entreprise</h5>
-                <p class="card-text">Offre pour les entreprises qui souhaitent souscrire à un abonnement pour leurs employés</p>
-                <a href="#" class="btn btn-primary" onclick="showPrice(this)">Prix</a>
+                <p class="card-text">Offre pour les entreprises qui souhaitent souscrire à un abonnement pour leurs employés.</p>
+                <a href="#" class="btn btn-primary btn-price-toggle" onclick="togglePrice(this)">Voir plus</a>
             </div>
             <div class="price-info mt-3">
                 <p>À partir de 100€/an par employé</p>
-                <a href="#" class="btn btn-success p-2 text-light btn-opacity-50">Voir les offres</a>
-                <p> </p>
+                <a href="#" class="btn-view-offers">Voir les offres</a>
             </div>
         </div>
+
+        <!-- Offre Particulier -->
         <div class="card">
-            <img src="{{ asset('homepage/particulier.jpg') }}" class="card-img-top" alt="..." style="filter:grayscale(100%)">
+            <img src="{{ asset('homepage/particulier.jpg') }}" class="card-img-top" alt="Particulier" style="filter: grayscale(100%)">
             <div class="card-body">
                 <h5 class="card-title">Particulier</h5>
-                <p class="card-text">Offre pour les particuliers qui souhaitent automatiser leurs démarches pour l'expatriation </p>
-                <a href="#" class="btn btn-secondary btn-gradient" onclick="">Prix</a>
+                <p class="card-text">Offre pour les particuliers qui souhaitent automatiser leurs démarches pour l'expatriation.</p>
+                <a href="#" class="btn btn-secondary btn-price-toggle">Voir plus</a>
+            </div>
+            <div class="price-info mt-3">
+                <p>À partir de 100€/an par employé</p>
+                <a href="#" class="btn-view-offers">Voir les offres</a>
             </div>
         </div>
+
+        <!-- Offre Étudiant -->
         <div class="card">
-            <img src="{{ asset('homepage/étudiant.jpg.avif') }}" class="card-img-top" alt="..." style="filter:grayscale(100%)">
+            <img src="{{ asset('homepage/étudiant.jpg.avif') }}" class="card-img-top" alt="Étudiant" style="filter: grayscale(100%)">
             <div class="card-body">
                 <h5 class="card-title">Étudiant</h5>
-                <p class="card-text">Offre spéciale pour les étudiants travaillant à l'étranger</p>
-                <a href="#" class="btn btn-secondary" onclick="">Prix</a>
+                <p class="card-text">Offre spéciale pour les étudiants travaillant à l'étranger.</p>
+                <a href="#" class="btn btn-secondary btn-price-toggle">Voir plus</a>
+            </div>
+            <div class="price-info mt-3">
+                <p>À partir de 100€/an par employé</p>
+                <a href="#" class="btn-view-offers">Voir les offres</a>
             </div>
         </div>
     </div>
-
 {% endblock %}
 
 {% block javascripts %}
     <script>
-        function showPrice(button) {
-            const priceInfo = button.parentElement.nextElementSibling;
+        function togglePrice(button) {
+            const card = button.closest('.card');
+            const priceInfo = card.querySelector('.price-info');
             priceInfo.classList.toggle('show');
         }
+
+
+
+
     </script>
 {% endblock %}
