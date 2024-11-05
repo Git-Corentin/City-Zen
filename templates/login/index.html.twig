@@ -41,7 +41,7 @@
         <div class="input-group mb-3">
             <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
             <div class="form-floating">
-                <input type="text" name="username" class="form-control" id="floatingInput" placeholder="Identifiant" required>
+                <input type="text" name="_username" value="{{ last_username }}" class="form-control" id="floatingInput" placeholder="Identifiant" required>
                 <label for="floatingInput">Identifiant</label>
             </div>
         </div>
@@ -50,7 +50,7 @@
         <div class="input-group mb-3">
             <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
             <div class="form-floating">
-                <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Mot de passe" required>
+                <input type="password" name="_password" class="form-control" id="floatingPassword" placeholder="Mot de passe" required>
                 <label for="floatingPassword">Mot de passe</label>
             </div>
         </div>
