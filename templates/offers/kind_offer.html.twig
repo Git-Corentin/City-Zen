@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recherche de villes{% endblock %}
+{% block stylesheets %}
+    <style>
+        .document-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .card {
+            width: 20rem;
+            min-height: 25rem; /* Assurez-vous que la carte est suffisamment haute */
+        }
+        .card-body {
+            min-height: 10rem; /* Hauteur minimum pour contenir les éléments */
+        }
+        .price-info {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .price-info.show {
+            display: block;
+            opacity: 1;
+        }
+    </style>
+{% endblock %}
+
+
+{% block body %}
+    <div class="document-container d-flex justify-content-center gap-3">
+        <div class="card">
+            <img src="{{ asset('homepage/entreprise.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Entreprise</h5>
+                <p class="card-text">Offre pour les entreprises qui souhaitent souscrire à un abonnement pour leurs employés</p>
+                <a href="#" class="btn btn-primary" onclick="showPrice(this)">Prix</a>
+            </div>
+            <div class="price-info mt-3">
+                <p>À partir de 100€/an par employé</p>
+                <a href="#" class="btn btn-success p-2 text-light btn-opacity-50">Voir les offres</a>
+                <p> </p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ asset('homepage/particulier.jpg') }}" class="card-img-top" alt="..." style="filter:grayscale(100%)">
+            <div class="card-body">
+                <h5 class="card-title">Particulier</h5>
+                <p class="card-text">Offre pour les particuliers qui souhaitent automatiser leurs démarches pour l'expatriation </p>
+                <a href="#" class="btn btn-secondary btn-gradient" onclick="">Prix</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ asset('homepage/étudiant.jpg.avif') }}" class="card-img-top" alt="..." style="filter:grayscale(100%)">
+            <div class="card-body">
+                <h5 class="card-title">Étudiant</h5>
+                <p class="card-text">Offre spéciale pour les étudiants travaillant à l'étranger</p>
+                <a href="#" class="btn btn-secondary" onclick="">Prix</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        function showPrice(button) {
+            const priceInfo = button.parentElement.nextElementSibling;
+            priceInfo.classList.toggle('show');
+        }
+    </script>
+{% endblock %}
