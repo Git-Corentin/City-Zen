@@ -9,6 +9,11 @@
         <div class="search-wrapper">
             <input type="text" id="citySearch" placeholder="Rechercher une ville" autocomplete="off">
             <div id="suggestions" class="suggestions"></div>
+            {% if app.user %}
+                <img src="{{ asset('homepage/comingsoon.png') }}" alt="Document flou" class="document-image" id="documentImage">
+            {% else %}
+                <img src="{{ asset('homepage/comingsoon.png') }}" alt="Document flou" class="document-image-flou" id="documentImage">
+            {% endif %}
         </div>
     </div>
     <style>
@@ -74,6 +79,33 @@
 
         .suggestions div:hover {
             background-color: #f1f1f1;
+        }
+
+        /* Image du document floue par défaut */
+        .document-image {
+            width: 50%;
+            height: 50%;
+            max-width: 300px;
+        }
+
+        /* Image du document floue par défaut */
+        .document-image-flou {
+            width: 50%;
+            height: 50%;
+            max-width: 300px;
+            filter: blur(12px); /* Flou initial */
+            transition: filter 2s ease;
+        }
+
+        /* Superposition du flou */
+        .blur-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.7);
+            pointer-events: none;
         }
     </style>
 {% endblock %}
