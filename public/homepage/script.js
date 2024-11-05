@@ -9,7 +9,7 @@ const countrySelect = document.getElementById("countrySelect");
 
 // Fonction pour charger les villes en fonction du pays
 function loadCities(countryCode) {
-    fetch(`homepage/${countryCode === 'fr' ? 'french_cities' : 'australian_cities'}.json`)
+    fetch(`homepage/json_files/${countryCode === 'fr' ? 'french_cities' : 'australian_cities'}.json`)
         .then(response => response.json())
         .then(data => {
             if (countryCode === 'fr') {
@@ -45,7 +45,7 @@ countrySelect.addEventListener("change", () => {
 });
 
 function getCityUrl(cityName, latitude, longitude) {
-    return `/city/${cityName.replace(/\s+/g, '-').toLowerCase()}/${latitude}/${longitude}`;
+    return `/city/${countrySelect.value}/${cityName.replace(/\s+/g, '-').toLowerCase()}/${latitude}/${longitude}`;
 }
 
 inputField.addEventListener("input", function() {

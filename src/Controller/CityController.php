@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Attribute\Route;
 class CityController extends AbstractController
 {
 
-    #[Route('/city/{name}/{latitude}/{longitude}', name: 'app_city_show')]
+    #[Route('/city/{country}/{name}/{latitude}/{longitude}', name: 'app_city_show')]
     public function show(ManagerRegistry $doctrine, $name, $latitude, $longitude): Response {
 
         return $this->render('city/show.html.twig', [
