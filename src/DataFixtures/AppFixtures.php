@@ -33,6 +33,8 @@ class AppFixtures extends Fixture
             $roles[] = $role;
             $user->setRoles($roles);
 
+
+
             $manager->persist($user);
         }
         $manager->flush();
@@ -69,5 +71,11 @@ class AppFixtures extends Fixture
             '123456',
             'ROLE_USER'
         ];
+        yield [
+            'Falbala',
+            '123456',
+            'ROLE_PREMIUM'
+        ];
+
     }
 }
