@@ -76,6 +76,11 @@ class AppFixtures extends Fixture
             '123456',
             'ROLE_PREMIUM'
         ];
+        yield [
+          'rh@totalenergies.fr',
+          '123456',
+          'ROLE_USER'
+        ];
 
     }
 }
