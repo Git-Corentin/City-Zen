@@ -13,11 +13,17 @@ class CityController extends AbstractController
     #[Route('/city/{country}/{name}/{latitude}/{longitude}', name: 'app_city_show')]
     public function show(ManagerRegistry $doctrine, $name, $latitude, $longitude, $country): Response {
         $country = $this->findCountry(strtoupper($country));
+        $data_currencies = json_decode(file_get_contents('json_files/country-by-currency-code.json'), true);
+        dump($data_currencies);
+        $list_currencies = array_unique(array_column($data_currencies, 'currency_code'));
+        dump($list_currencies);
         return $this->render('city/show.html.twig', [
             'controller_name' => 'CityController',
             'country' => $country,
             'flag' => $this->findSomeData($country, 'json_files/country-by-flag.json', 'flag_base64'),
             'currency' => $this->findSomeData($country, 'json_files/country-by-currency-name.json', 'currency_name'),
+            'currency_code' => $this->findSomeData($country, 'json_files/country-by-currency-code.json', 'currency_code'),
+            'currency_codes' => $list_currencies,
             'capital' => $this->findSomeData($country, 'json_files/country-by-capital-city.json', 'city'),
             'continent' => $this->findSomeData($country, 'json_files/country-by-continent.json', 'continent'),
             'government' => $this->findSomeData($country, 'json_files/country-by-government-type.json', 'government'),

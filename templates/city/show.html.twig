@@ -8,7 +8,7 @@
     <img src="{{ flag }}" alt="Drapeau de {{ name }}" height="100px" border="1px">
     Capitale : {{ capital }}
     <br>
-    Monnaie : {{ currency }}
+    Monnaie : {{ currency }} ({{ currency_code }})
     <br>
     Type de gouvernement : {{ government }}
     <br>
@@ -30,7 +30,27 @@
     <br>
     Indicatif téléphonique : {{ phone_code }}
 
+    <h3>Comparer les devises</h3>
+    <form id="currency-comparator">
+        <label for="currency1">Devise 1 :</label>
+        <select id="currency1" name="currency1">
+            <option value="EUR" selected>EUR</option>
+            {% for code in currency_codes %}
+                <option value="{{ code }}" {% if code == currency_code %}selected{% endif %}>{{ code }}</option>
+            {% endfor %}
+        </select>
 
+        <label for="currency2">Devise 2 :</label>
+        <select id="currency2" name="currency2">
+            {% for code in currency_codes %}
+                <option value="{{ code }}" {% if code == currency_code %}selected{% endif %}>{{ code }}</option>
+            {% endfor %}
+        </select>
+
+        <button type="button" onclick="compareCurrencies()">Comparer</button>
+    </form>
+
+    <div id="comparisonResult">Sélectionnez deux devises pour voir la comparaison.</div>
 
     <div class="container">
         <div id="weather">Chargement de la météo...</div>
@@ -198,6 +218,38 @@
         }
 
         document.addEventListener("DOMContentLoaded", initMap);
+    </script>
+
+    <script>
+        async function compareCurrencies() {
+            const currency1 = document.getElementById("currency1").value;
+            const currency2 = document.getElementById("currency2").value;
+
+            if (currency1 === currency2) {
+                document.getElementById("comparisonResult").innerHTML = "Les deux devises sont identiques.";
+                return;
+            }
+
+            // Effectuez ici une requête API pour obtenir le taux de change
+            try {
+                const apiKey = "YOUR_API_KEY"; // Remplacez par votre clé API
+                const url = `https://api.exchangerate-api.com/v4/latest/${currency1}`;
+
+                const response = await fetch(url);
+                const data = await response.json();
+
+                if (data.rates[currency2]) {
+                    const rate = data.rates[currency2];
+                    document.getElementById("comparisonResult").innerHTML = `
+                        <p>1 ${currency1} = ${rate} ${currency2}</p>
+                    `;
+                } else {
+                    document.getElementById("comparisonResult").innerHTML = "Taux de change non disponible pour cette paire de devises.";
+                }
+            } catch (error) {
+                document.getElementById("comparisonResult").innerHTML = "Erreur lors de la récupération des données.";
+            }
+        }
     </script>
 
 {% endblock %}
