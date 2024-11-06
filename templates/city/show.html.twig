@@ -3,35 +3,38 @@
 {% block title %}{{ name }}{% endblock %}
 
 {% block body %}
-    <h1>Bienvenue à {{ name }}</h1>
-    <h3>Informations sur le pays : {{ country }} ({{ continent }})</h3>
-    <img src="{{ flag }}" alt="Drapeau de {{ name }}" height="100px" border="1px">
-    Capitale : {{ capital }}
-    <br>
-    Monnaie : {{ currency }} ({{ currency_code }})
-    <br>
-    Type de gouvernement : {{ government }}
-    <br>
-    Population : {{ population }}
-    <br>
-    Densité : {{ density }}
-    <br>
-    Langues : {{ languages }}
-    <br>
-    Espérance de vie : {{ life_expectancy }}
-    <br>
-    Plat national : {{ national_dish }}
-    <br>
-    Religion : {{ religion }}
-    <br>
-    Surface : {{ surface }}
-    <br>
-    Température annuelle moyenne : {{ annual_temperature }}
-    <br>
-    Indicatif téléphonique : {{ phone_code }}
+    <div class="city-info-page">
+        <h1>Bienvenue à {{ name }}</h1>
+        <h3>Informations sur le pays : {{ country }} ({{ continent }})</h3>
+        <img src="{{ flag }}" alt="Drapeau de {{ name }}" height="100px" border="1px">
+        Capitale : {{ capital }}
+        <br>
+        Monnaie : {{ currency }} ({{ currency_code }})
+        <br>
+        Type de gouvernement : {{ government }}
+        <br>
+        Population : {{ population }}
+        <br>
+        Densité : {{ density }}
+        <br>
+        Langues : {{ languages }}
+        <br>
+        Espérance de vie : {{ life_expectancy }}
+        <br>
+        Plat national : {{ national_dish }}
+        <br>
+        Religion : {{ religion }}
+        <br>
+        Surface : {{ surface }}
+        <br>
+        Température annuelle moyenne : {{ annual_temperature }}
+        <br>
+        Indicatif téléphonique : {{ phone_code }}
+    </div>
+
 
     <h3>Comparer les devises</h3>
-    <form id="currency-comparator">
+    <form id="currency-co   mparator">
         <label for="currency1">Devise 1 :</label>
         <select id="currency1" name="currency1">
             <option value="EUR" selected>EUR</option>
