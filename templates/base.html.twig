@@ -21,7 +21,11 @@
         /* Espacement du body pour ne pas être recouvert par la navbar fixe */
         body {
             padding-top: 80px; /* Ajuster selon la hauteur de la navbar */
-            min-height: 100vh; /* S'assurer que le body prend toute la hauteur */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centre horizontalement */
+            align-items: center;     /* Centre verticalement */
+            min-height: 100vh;
         }
 
         /* Styles pour la barre de navigation */

@@ -8,6 +8,77 @@
 {% endblock %}
 
 {% block body %}
+    <div class="accordion" id="accordionExample" style="max-width: 50%">
+        <!-- Première carte TPE -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <div style="display: flex; align-items: center; width: 100%;">
+                        <h1 style="font-size: 48px; margin-right: 20px; color: #218838; flex-grow: 1;">TPE</h1>
+                        <img src="{{ asset('homepage/maison.webp') }}" alt="Image" style="width: 48px; height: 48px;">
+                    </div>
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Cette offre convient aux <strong> très petites entreprises </strong> qui souhaitent expatrier leurs membres. Nous proposons donc une offre par employé.
+                    <!-- Boutons et prix -->
+                    <div class="mt-3" style="width: 100%; text-align: right;">
+                        <button class="btn btn-primary m-1" style="width: 10%;">1 employé</button>
+                        <label for="price1" class="form-label">Prix: <span id="price1">€100</span></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Deuxième carte PME -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <div style="display: flex; align-items: center; width: 100%;">
+                        <h1 style="font-size: 48px; margin-right: 20px; color: #c5a023; flex-grow: 1;">PME</h1>
+                        <img src="{{ asset('homepage/maison.webp') }}" alt="Image" style="width: 48px; height: 48px;">
+                        <img src="{{ asset('homepage/maison.webp') }}" alt="Image" style="width: 48px; height: 48px;">
+                    </div>
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body" style="font-size: 15px">
+                    Cette offre convient aux <strong> moyennes et petites entreprises </strong> qui souhaitent expatrier leurs membres. Nous proposons donc une offre par dizaine d'employés.
+                    <!-- Boutons et prix -->
+                    <div class="mt-3" style="width: 100%; text-align: right;">
+                        <button class="btn btn-primary m-1" style="width: 10%;">10 employés</button>
+                        <label for="price5" class="form-label" style="text-align:right">Prix: <span id="price5">€900</span></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Troisième carte ETI & GE -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <div style="display: flex; align-items: center; width: 100%;">
+                        <h1 style="font-size: 48px; margin-right: 20px; color: #B0413E; flex-grow: 1;">ETI & GE</h1>
+                        <img src="{{ asset('homepage/maison.webp') }}" alt="Image" style="width: 48px; height: 48px;">
+                        <img src="{{ asset('homepage/maison.webp') }}" alt="Image" style="width: 48px; height: 48px;">
+                        <img src="{{ asset('homepage/maison.webp') }}" alt="Image" style="width: 48px; height: 48px;">
+                    </div>
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Cette offre convient aux <strong> entreprises de taille intermédiaire et aux grandes entreprises </strong> qui souhaitent expatrier leurs membres. Nous proposons donc une offre par centaine d'employés.
+                    <!-- Boutons et prix -->
+                    <div class="mt-3" style="width: 100%; text-align: right;">
+                        <button class="btn btn-primary m-1" style="width: 10%;">100 employés</button>
+                        <label for="price9" class="form-label">Prix: <span id="price9">€8000</span></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <a href="{{ path('app_premium') }}" class="btn-view-offers">Simuler le paiement</a>
 {% endblock %}
 
