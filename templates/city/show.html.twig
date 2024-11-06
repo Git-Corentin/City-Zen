@@ -4,7 +4,34 @@
 
 {% block body %}
     <h1>Bienvenue à {{ name }}</h1>
-    {{ currency }}
+    <h3>Informations sur le pays : {{ country }} ({{ continent }})</h3>
+    <img src="{{ flag }}" alt="Drapeau de {{ name }}" height="100px">
+    Monnaie : {{ currency }}
+    <br>
+    Capitale : {{ capital }}
+    <br>
+    Type de gouvernement : {{ government }}
+    <br>
+    Population : {{ population }}
+    <br>
+    Densité : {{ density }}
+    <br>
+    Langues : {{ languages }}
+    <br>
+    Espérance de vie : {{ life_expectancy }}
+    <br>
+    Plat national : {{ national_dish }}
+    <br>
+    Religion : {{ religion }}
+    <br>
+    Surface : {{ surface }}
+    <br>
+    Température annuelle moyenne : {{ annual_temperature }}
+    <br>
+    Indicatif téléphonique : {{ phone_code }}
+
+
+
     <div class="container">
         <div id="weather">Chargement de la météo...</div>
         <div id="map"></div>
