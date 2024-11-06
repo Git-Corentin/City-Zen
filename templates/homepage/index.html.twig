@@ -160,7 +160,9 @@
             </div>
         </div>
     </div>
-
+    {% if is_granted("ROLE_PREMIUM") %}
+        <img src="{{ asset('homepage/premium.webp') }}" alt="Premium" style="width: 100px; height: 100px;">
+    {% endif %}
 {% endblock %}
 
 {% block javascripts %}

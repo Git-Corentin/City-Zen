@@ -3,6 +3,7 @@
 {% block title %}{{ name }}{% endblock %}
 
 {% block body %}
+
     <div class="city-info-page">
         <h1>Bienvenue à {{ name }}</h1>
         <h3>Informations sur le pays : {{ country }} ({{ continent }})</h3>
@@ -32,9 +33,13 @@
         Indicatif téléphonique : {{ phone_code }}
     </div>
 
-
+    {% if is_granted("ROLE_PREMIUM") and app.user %}
+        <div class="container my-4">
+            <a href="{{ path('app_order_new') }}" class="btn btn-primary">Obtenir une étude personnalisée sur cette ville</a>
+        </div>
+    {% endif %}
     <h3>Comparer les devises</h3>
-    <form id="currency-co   mparator">
+    <form id="currency-comparator">
         <label for="currency1">Devise 1 :</label>
         <select id="currency1" name="currency1">
             <option value="EUR" selected>EUR</option>
