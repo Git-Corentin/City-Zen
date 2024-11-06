@@ -25,6 +25,7 @@ final class OrderController extends AbstractController
     #[Route('/new', name: 'app_order_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
+        $term = null;
         $order = new Order();
         $form = $this->createForm(OrderType::class, $order);
         $form->handleRequest($request);
@@ -33,7 +34,16 @@ final class OrderController extends AbstractController
             $entityManager->persist($order);
             $entityManager->flush();
 
-            return $this->redirectToRoute('app_order_index', [], Response::HTTP_SEE_OTHER);
+            if ($order->getTerm() <= 2) {
+                $term = true;
+            } else {
+                $term = false;
+            }
+
+            return $this->redirectToRoute('app_order_result', [
+                'id' => $order->getId(),
+                'term' => $term,
+                ], Response::HTTP_SEE_OTHER);
         }
 
         return $this->render('order/new.html.twig', [
@@ -78,4 +88,13 @@ final class OrderController extends AbstractController
 
         return $this->redirectToRoute('app_order_index', [], Response::HTTP_SEE_OTHER);
     }
+// Modifiez cette route en ajoutant "/{id}" pour inclure l'ID dans l'URL
+    #[Route('/result/{id}', name: 'app_order_result', methods: ['GET'])]
+    public function result(Order $order): Response
+    {
+        return $this->render('order/result.html.twig', [
+            'order' => $order,
+        ]);
+    }
+
 }

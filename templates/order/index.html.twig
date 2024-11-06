@@ -17,6 +17,7 @@
                 <th>Vaccins</th>
                 <th>Voiture</th>
                 <th>Passeport</th>
+                <th>Term</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -32,6 +33,7 @@
                 <td>{{ order.vaccins ? 'Yes' : 'No' }}</td>
                 <td>{{ order.voiture ? 'Yes' : 'No' }}</td>
                 <td>{{ order.passeport ? 'Yes' : 'No' }}</td>
+                <td>{{ order.term }}</td>
                 <td>
                     <a href="{{ path('app_order_show', {'id': order.id}) }}">show</a>
                     <a href="{{ path('app_order_edit', {'id': order.id}) }}">edit</a>

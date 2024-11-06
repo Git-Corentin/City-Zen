@@ -19,6 +19,7 @@ class OrderType extends AbstractType
             ])
             ->add('enfants')
             ->add('animal')
+            ->add('term')
             ->add('vaccins')
             ->add('voiture')
             ->add('passeport')

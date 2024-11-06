@@ -39,6 +39,9 @@ class Order
     #[ORM\Column]
     private ?bool $passeport = null;
 
+    #[ORM\Column]
+    private ?int $term = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -136,6 +139,18 @@ class Order
     public function setPasseport(bool $passeport): static
     {
         $this->passeport = $passeport;
+
+        return $this;
+    }
+
+    public function getTerm(): ?int
+    {
+        return $this->term;
+    }
+
+    public function setTerm(int $term): static
+    {
+        $this->term = $term;
 
         return $this;
     }
