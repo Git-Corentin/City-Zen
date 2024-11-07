@@ -54,7 +54,7 @@
     }
 
     #citySearch {
-        width: 300px;
+        width: 60vw;
         padding: 10px;
         font-size: 16px;
         border: 2px solid #007BFF;
@@ -70,7 +70,7 @@
     }
 
     .suggestions {
-        width: 300px;
+        width: 60vw;
         border: 1px solid #007BFF;
         border-radius: 5px;
         background-color: white;
@@ -152,6 +152,7 @@
         margin-top: 40px;
     }
 
+
 </style>
 {% endblock %}
 
@@ -181,7 +182,9 @@
                     <option value="au">Australie</option>
                 </select>
             </div>
+
             <input type="text" id="citySearch" placeholder="Rechercher une ville" autocomplete="off">
+
             <div id="suggestions" class="suggestions"></div>
             <div style="position: relative; display: inline-block;">
                 {% if app.user %}
