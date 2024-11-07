@@ -71,28 +71,42 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
-
-        .filter-container label {
-            margin: 5px;
+            gap: 10px;
         }
 
         .filter-buttons {
-            margin: 10px;
+            display: flex;
+            gap: 8px;
         }
 
         .filter-buttons button {
-            padding: 10px 20px;
-            margin: 5px;
+            padding: 8px 15px;
+            font-size: 14px;
             color: #fff;
             background-color: #007bff;
             border: none;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
+            transition: background-color 0.3s;
         }
 
         .filter-buttons button:hover {
             background-color: #0056b3;
+        }
+
+        .filter-checkboxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 5px;
+            max-width: 600px;
+            margin-top: 10px;
+        }
+
+        .filter-checkboxes label {
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
     </style>
 {% endblock %}
@@ -153,47 +167,48 @@
 
         <!-- Onglet Carte -->
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
         <div class="tab-pane fade" id="carte" role="tabpanel" aria-labelledby="map-tab">
             <div class="filter-container">
                 <div class="filter-buttons">
                     <button onclick="checkAll()">Tout cocher</button>
                     <button onclick="uncheckAll()">Tout décocher</button>
+                    <button onclick="updatePOIFilters()">Mettre à jour les filtres</button>
                 </div>
-                <label><input type="checkbox" class="poi-filter" value="restaurant" checked> Restaurants</label> <label><input
-                            type="checkbox" class="poi-filter" value="cafe" checked> Cafés</label> <label><input
-                            type="checkbox" class="poi-filter" value="bar" checked> Bars</label> <label><input
-                            type="checkbox" class="poi-filter" value="pub" checked> Pubs</label> <label><input
-                            type="checkbox" class="poi-filter" value="fast_food" checked> Restauration rapide</label>
-                <label><input type="checkbox" class="poi-filter" value="bank" checked> Banques</label> <label><input
-                            type="checkbox" class="poi-filter" value="atm" checked> Distributeurs automatiques de
-                    billets</label> <label><input type="checkbox" class="poi-filter" value="pharmacy" checked>
-                    Pharmacies</label> <label><input type="checkbox" class="poi-filter" value="hospital" checked>
-                    Hôpitaux</label> <label><input type="checkbox" class="poi-filter" value="clinic" checked> Cliniques</label>
-                <label><input type="checkbox" class="poi-filter" value="school" checked> Écoles</label> <label><input
-                            type="checkbox" class="poi-filter" value="university" checked> Universités</label>
-                <label><input type="checkbox" class="poi-filter" value="library" checked> Bibliothèques</label>
-                <label><input type="checkbox" class="poi-filter" value="cinema" checked> Cinémas</label> <label><input
-                            type="checkbox" class="poi-filter" value="theatre" checked> Théâtres</label> <label><input
-                            type="checkbox" class="poi-filter" value="museum" checked> Musées</label> <label><input
-                            type="checkbox" class="poi-filter" value="parking" checked> Parkings</label> <label><input
-                            type="checkbox" class="poi-filter" value="fuel" checked> Stations-service</label>
-                <label><input type="checkbox" class="poi-filter" value="police" checked> Postes de police</label>
-                <label><input type="checkbox" class="poi-filter" value="fire_station" checked> Casernes de
-                    pompiers</label> <label><input type="checkbox" class="poi-filter" value="post_office" checked>
-                    Bureaux de poste</label> <label><input type="checkbox" class="poi-filter" value="courthouse"
-                                                           checked> Tribunaux</label> <label><input type="checkbox"
-                                                                                                    class="poi-filter"
-                                                                                                    value="place_of_worship"
-                                                                                                    checked> Lieux de
-                    culte</label> <label><input type="checkbox" class="poi-filter" value="marketplace" checked> Marchés</label>
-                <label><input type="checkbox" class="poi-filter" value="supermarket" checked> Supermarchés</label>
-                <label><input type="checkbox" class="poi-filter" value="bicycle_rental" checked> Locations de
-                    vélos</label> <label><input type="checkbox" class="poi-filter" value="taxi" checked> Stations de
-                    taxis</label>
-                <button onclick="updatePOIFilters()">Mettre à jour les filtres</button>
+                <div class="filter-checkboxes">
+                    <label><input type="checkbox" class="poi-filter" value="restaurant" checked> Restaurants</label>
+                    <label><input type="checkbox" class="poi-filter" value="cafe" checked> Cafés</label>
+                    <label><input type="checkbox" class="poi-filter" value="bar" checked> Bars</label>
+                    <label><input type="checkbox" class="poi-filter" value="pub" checked> Pubs</label>
+                    <label><input type="checkbox" class="poi-filter" value="fast_food" checked> Restauration rapide</label>
+                    <label><input type="checkbox" class="poi-filter" value="bank" checked> Banques</label>
+                    <label><input type="checkbox" class="poi-filter" value="atm" checked> DAB</label>
+                    <label><input type="checkbox" class="poi-filter" value="pharmacy" checked> Pharmacies</label>
+                    <label><input type="checkbox" class="poi-filter" value="hospital" checked> Hôpitaux</label>
+                    <label><input type="checkbox" class="poi-filter" value="clinic" checked> Cliniques</label>
+                    <label><input type="checkbox" class="poi-filter" value="school" checked> Écoles</label>
+                    <label><input type="checkbox" class="poi-filter" value="university" checked> Universités</label>
+                    <label><input type="checkbox" class="poi-filter" value="library" checked> Bibliothèques</label>
+                    <label><input type="checkbox" class="poi-filter" value="cinema" checked> Cinémas</label>
+                    <label><input type="checkbox" class="poi-filter" value="theatre" checked> Théâtres</label>
+                    <label><input type="checkbox" class="poi-filter" value="museum" checked> Musées</label>
+                    <label><input type="checkbox" class="poi-filter" value="parking" checked> Parkings</label>
+                    <label><input type="checkbox" class="poi-filter" value="fuel" checked> Stations-service</label>
+                    <label><input type="checkbox" class="poi-filter" value="police" checked> Police</label>
+                    <label><input type="checkbox" class="poi-filter" value="fire_station" checked> Pompiers</label>
+                    <label><input type="checkbox" class="poi-filter" value="post_office" checked> Poste</label>
+                    <label><input type="checkbox" class="poi-filter" value="courthouse" checked> Tribunaux</label>
+                    <label><input type="checkbox" class="poi-filter" value="place_of_worship" checked> Culte</label>
+                    <label><input type="checkbox" class="poi-filter" value="marketplace" checked> Marchés</label>
+                    <label><input type="checkbox" class="poi-filter" value="supermarket" checked> Supermarchés</label>
+                    <label><input type="checkbox" class="poi-filter" value="bicycle_rental" checked> Vélos</label>
+                    <label><input type="checkbox" class="poi-filter" value="taxi" checked> Taxis</label>
+                </div>
             </div>
             <div id="map"></div>
         </div>
+
 
         <!-- Onglet Conversion de Devises -->
         <div class="tab-pane fade" id="currency" role="tabpanel" aria-labelledby="currency-tab">
@@ -284,7 +299,7 @@
 
         let map;
         let currentMarkers = [];
-        let poiFilters = ["restaurant", "school", "cinema"];
+        let poiFilters = ["restaurant", "cafe", "bar", "pub", "fast_food", "bank", "atm", "pharmacy", "hospital", "clinic", "school", "university", "library", "cinema", "theatre", "museum", "parking", "fuel", "police", "fire_station", "post_office", "courthouse", "place_of_worship", "marketplace", "supermarket", "bicycle_rental", "taxi"];
 
         function initMap() {
             if (map) {
@@ -297,11 +312,11 @@
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(map);
 
-            L.marker([latitude, longitude]).addTo(map)
+            L.marker([latitude, longitude] ).addTo(map)
                 .bindPopup(`<b>${cityName}</b><br>Latitude: ${latitude}, Longitude: ${longitude}`)
                 .openPopup();
             // Rechercher et afficher des POI autour des coordonnées
-            rechercherPOI(latitude, longitude);
+            updatePOIFilters();
         }
 
         function rechercherPOI(lat, lon) {
@@ -314,15 +329,18 @@
 
                     data.elements.forEach(poi => {
                         if (poiFilters.includes(poi.tags.amenity)) {
-                            const icon = L.icon({
-                                iconUrl: getIconUrl(poi.tags.amenity),
+                            const icon = L.divIcon({
+                                html: getIconHtml(poi.tags.amenity),
+                                className: 'custom-div-icon',
                                 iconSize: [25, 25]
                             })
+
+
                             const popupContent = `Nom: ${poi.tags.name || 'N/A'}<br>
                                                   Type: ${poi.tags.amenity || 'N/A'}<br>
                                                   Adresse: ${poi.tags['addr:street'] || 'N/A'} ${poi.tags['addr:housenumber'] || ''}<br>
                                                   Ville: ${poi.tags['addr:city'] || 'N/A'}`;
-                            const marker = L.marker([poi.lat, poi.lon]).addTo(map)
+                            const marker = L.marker([poi.lat, poi.lon], {icon: icon}).addTo(map)
                                 .bindPopup(popupContent);
                             currentMarkers.push(marker);
                         }
@@ -331,64 +349,64 @@
                 .catch(error => console.error('Erreur lors de la récupération des POI:', error));
         }
 
-        function getIconUrl(amenity) {
+        function getIconHtml(amenity) {
             switch (amenity) {
                 case 'restaurant':
-                    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/utensils.svg'; // Restaurant icon
+                    return '<i class="fas fa-utensils"></i>';
                 case 'cafe':
-                    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/coffee.svg'; // Cafe icon
+                    return '<i class="fas fa-coffee"></i>';
                 case 'bar':
-                    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/glass-whiskey.svg'; // Bar icon
+                    return '<i class="fas fa-glass-whiskey"></i>';
                 case 'pub':
-                    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/beer.svg'; // Pub icon
+                    return '<i class="fas fa-beer"></i>';
                 case 'fast_food':
-                    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/hamburger.svg'; // Fast Food icon
+                    return '<i class="fas fa-hamburger"></i>';
                 case 'bank':
-                    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/university.svg'; // Bank icon
+                    return '<i class="fas fa-university"></i>';
                 case 'atm':
-                    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/money-bill-wave.svg'; // ATM icon
+                    return '<i class="fas fa-money-bill-wave"></i>';
                 case 'pharmacy':
-                    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/first-aid.svg'; // Pharmacy icon
+                    return '<i class="fas fa-first-aid"></i>';
                 case 'hospital':
-                    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/hospital.svg'; // Hospital icon
+                    return '<i class="fas fa-hospital"></i>';
                 case 'clinic':
-                    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/stethoscope.svg'; // Clinic icon
+                    return '<i class="fas fa-stethoscope"></i>';
                 case 'school':
-                    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/school.svg'; // School icon
+                    return '<i class="fas fa-school"></i>';
                 case 'university':
-                    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/graduation-cap.svg'; // University icon
+                    return '<i class="fas fa-graduation-cap"></i>';
                 case 'library':
-                    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/book.svg'; // Library icon
+                    return '<i class="fas fa-book"></i>';
                 case 'cinema':
-                    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/film.svg'; // Cinema icon
+                    return '<i class="fas fa-film"></i>';
                 case 'theatre':
-                    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/theater-masks.svg'; // Theatre icon
+                    return '<i class="fas fa-theater-masks"></i>';
                 case 'museum':
-                    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/landmark.svg'; // Museum icon
+                    return '<i class="fas fa-landmark"></i>';
                 case 'parking':
-                    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/parking.svg'; // Parking icon
+                    return '<i class="fas fa-parking"></i>';
                 case 'fuel':
-                    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/gas-pump.svg'; // Fuel icon
+                    return '<i class="fas fa-gas-pump"></i>';
                 case 'police':
-                    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/badge.svg'; // Police icon
+                    return '<i class="fas fa-badge"></i>';
                 case 'fire_station':
-                    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/fire.svg'; // Fire Station icon
+                    return '<i class="fas fa-fire"></i>';
                 case 'post_office':
-                    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/envelope.svg'; // Post Office icon
+                    return '<i class="fas fa-envelope"></i>';
                 case 'courthouse':
-                    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/gavel.svg'; // Courthouse icon
+                    return '<i class="fas fa-gavel"></i>';
                 case 'place_of_worship':
-                    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/praying-hands.svg'; // Place of Worship icon
+                    return '<i class="fas fa-praying-hands"></i>';
                 case 'marketplace':
-                    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/store.svg'; // Marketplace icon
+                    return '<i class="fas fa-store"></i>';
                 case 'supermarket':
-                    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/cart-arrow-down.svg'; // Supermarket icon
+                    return '<i class="fas fa-cart-arrow-down"></i>';
                 case 'bicycle_rental':
-                    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/bicycle.svg'; // Bicycle Rental icon
+                    return '<i class="fas fa-bicycle"></i>';
                 case 'taxi':
-                    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/taxi.svg'; // Taxi icon
+                    return '<i class="fas fa-taxi"></i>';
                 default:
-                    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/map-marker-alt.svg'; // Default icon
+                    return '<i class="fas fa-map-marker-alt"></i>';
             }
         }
 
@@ -400,10 +418,12 @@
 
         function checkAll() {
             document.querySelectorAll('.poi-filter').forEach(checkbox => checkbox.checked = true);
+            updatePOIFilters()
         }
 
         function uncheckAll() {
             document.querySelectorAll('.poi-filter').forEach(checkbox => checkbox.checked = false);
+            updatePOIFilters()
         }
 
         $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
