@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amarante&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Tenor+Sans&display=swap" rel="stylesheet">
     <style>
         /* Réinitialisation des marges et padding sur html, body */
         html, body {
@@ -25,7 +28,7 @@
             padding-top: 80px; /* Ajuster selon la hauteur de la navbar */
             display: flex;
             flex-direction: column;
-
+            font-family: "Tenor Sans", sans-serif;
 
             min-height: 100vh;
 
@@ -34,7 +37,15 @@
             font-family: "Amarante", serif;
             font-weight: 400;
             font-style: normal;
-            color: #fbfb16;
+            color: #010535;
+            font-size: 2em;
+        }
+        .tenor-sans-regular {
+            font-family: "Tenor Sans", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: #010535;
+            font-size: 1.5em;
         }
 
 
@@ -53,7 +64,6 @@
         /* Ajouter des styles pour les liens de la navar */
         .nav-link {
             transition: background-color 0.3s, color 0.3s;
-            color: #dada4e;
             font-weight: bold;
         }
 
@@ -103,18 +113,18 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#" >Destination</a>
+                    <a class="nav-link" aria-current="page" href="#" style="color: #dada4e;" >Destination</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#" style="color: #dada4e;">Contact</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-item">
                     {% if app.user %}
-                        <a class="nav-link" href="/logout">Déconnexion</a>
+                        <a class="nav-link" href="/logout" style="color: #dada4e;">Déconnexion</a>
                     {% else %}
-                        <a class="nav-link" href="/login" class="btn btn-outline-light me-2">Se connecter</a>
+                        <a class="nav-link" href="/login" class="btn btn-outline-light me-2" style="color: #dada4e;">Se connecter</a>
                     {% endif %}
                 </li>
                 <li class="nav-item">
