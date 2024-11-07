@@ -5,7 +5,6 @@
 {% block body %}
     <style>
         body {
-            font-family: Arial, sans-serif;
 
             padding: 20px;
         }
@@ -18,11 +17,13 @@
         }
 
         .img-left {
-            margin-left: 50px;
+            margin-left: 40px;
+            margin-right: 10px;
         }
 
         .img-right {
-            margin-right: 50px;
+            margin-left: 10px;
+            margin-right: 40px;
         }
 
         h2 {
@@ -74,64 +75,70 @@
 
     <div class="checkbox-group">
 
-        <label><input type="checkbox" id="furnitures" name="furnitures" value="validated"> Fournitures</label>
+        <h4>Attractions touristiques</h4>
+        <label><input type="checkbox" name="attractions"> Opéra de Sydney</label><br>
+        <label><input type="checkbox" name="attractions"> Sydney Harbour Bridge</label><br>
+        <label><input type="checkbox" name="attractions"> Bondi Beach</label><br>
+        <label><input type="checkbox" name="attractions"> Royal Botanic Gardens</label><br>
+        <label><input type="checkbox" name="attractions"> Darling Harbour</label><br>
 
-        <div id="furnitures-group" style="margin-left: 20px;">
-            <label><input type="checkbox" class="furnitures-checkbox"> Vêtements pour climat à 20°C</label>
-            <label><input type="checkbox" class="furnitures-checkbox"> Prises de type I</label>
-        </div>
+        <h4>Culture et loisirs</h4>
+        <label><input type="checkbox" name="culture"> Festivals culturels</label><br>
+        <label><input type="checkbox" name="culture"> Musées et galeries d'art</label><br>
+        <label><input type="checkbox" name="culture"> Représentations théâtrales</label><br>
 
-        <label><input type="checkbox" name="tourist_attractions" value="validated"> Attractions touristiques</label>
-        <label><input type="checkbox" name="culture" value="validated"> Culture et loisirs</label>
-        <label><input type="checkbox" name="quality_of_life" value="validated"> Qualité de vie</label>
+        <h4>Événements annuels</h4>
+        <label><input type="checkbox" name="evenements"> Sydney Festival</label><br>
+        <label><input type="checkbox" name="evenements"> Mardi Gras</label><br>
+        <label><input type="checkbox" name="evenements"> Vivid Sydney</label><br>
 
-        <label>
-            <input type="checkbox" id="vaccines" name="vaccines" value="validated"> Vaccins nécessaires
-        </label>
+        <h4>Sports</h4>
+        <label><input type="checkbox" name="sports"> Rugby</label><br>
+        <label><input type="checkbox" name="sports"> Football australien</label><br>
+        <label><input type="checkbox" name="sports"> Cricket</label><br>
 
-        <div id="vaccines-group" style="margin-left: 20px;">
-            <label><input type="checkbox" class="vaccines-checkbox"> Encéphalite japonaise</label>
-            <label><input type="checkbox" class="vaccines-checkbox"> Fièvre jaune</label>
-        </div>
 
-        <label><input type="checkbox" name="vehicles" value="validated"> Informations sur les véhicules</label>
-        <label><input type="checkbox" name="schooling" value="validated"> Scolarisation des enfants</label>
-        <label><input type="checkbox" name="equipment" value="validated"> Équipements spécifiques à emmener</label>
+        <h4>Climat</h4>
+        <label><input type="checkbox" name="climat"> Vêtements légers pour été</label><br>
+        <label><input type="checkbox" name="climat"> Vêtements modérés pour hiver</label><br>
+        <label><input type="checkbox" name="climat"> Poncho</label><br>
+
+
+        <h4>Informations pratiques</h4>
+        <label><input type="checkbox" name="infos_pratiques"> Régler ses appareils avec un fuseau de +1Oh</label><br>
+        <label><input type="checkbox" name="infos_pratiques"> Pratiquer l'anglais</label><br>
+        <label><input type="checkbox" name="infos_pratiques"> Convertir euros en dollars</label><br>
+        <label><input type="checkbox" name="infos_pratiques"> Prises électriques : Type I</label><br>
+
+        <h4>Logement</h4>
+        <label><input type="checkbox" name="logement">Trouver un logement </label><br>
+
+
+        <h4>Transport</h4>
+        <label><input type="checkbox" name="transport"> City Circle</label><br>
+        <label><input type="checkbox" name="transport"> Trip Planner</label><br>
+
+        <h4>Éducation</h4>
+        <label><input type="checkbox" name="education"> Écoles bilingues</label><br>
+        <label><input type="checkbox" name="education"> S'inscrire pour la <strong>School certificate</strong></label><br>
+
+        <h4>Santé</h4>
+        <label><input type="checkbox" name="sante"> Créer son compte sur Médicare</label><br>
+
+        <h4>Visa</h4>
+        <label><input type="checkbox" name="visa"> Visa TSS (subclass 482)</label><br>
+        <label><input type="checkbox" name="visa"> Visa temporaire</label><br>
+
+        <h4>Vaccins</h4>
+        <label><input type="checkbox" name="vaccins"> Vaccination contre l'Encéphalite japonaise</label><br>
+        <label><input type="checkbox" name="vaccins"> Vaccination contre la fièvre jaune</label><br>
+
     </div>
 
-
+    <br><br><br>
     <a href="{{ path('app_order_result', {'id': order.id}) }}">Retour à la page d'informations</a>
 {% endblock %}
 {% block javascripts %}
-    <script>
-        // Sélectionner toutes les checkboxes internes liées aux vaccins
-        const vaccineCheckboxes = document.querySelectorAll(".vaccines-checkbox");
-        const vaccineMainCheckbox = document.getElementById("vaccines");
 
-        // Fonction pour vérifier si toutes les checkboxes sont cochées
-        function checkVaccines() {
-            // Vérifie si toutes les checkboxes internes sont cochées
-            const allChecked = Array.from(vaccineCheckboxes).every(checkbox => checkbox.checked);
-
-            // Si toutes les checkboxes internes sont cochées, grise la checkbox principale
-            if (allChecked) {
-                vaccineMainCheckbox.disabled = false; // Active la checkbox principale
-                vaccineMainCheckbox.style.backgroundColor = "#d3d3d3"; // Couleur de fond grisée
-                vaccineMainCheckbox.style.borderColor = "#d3d3d3"; // Bordure grisée
-            } else {
-                vaccineMainCheckbox.disabled = true; // Grise la checkbox principale
-                vaccineMainCheckbox.style.backgroundColor = "#f1f1f1"; // Couleur de fond plus claire
-                vaccineMainCheckbox.style.borderColor = "#f1f1f1"; // Bordure plus claire
-            }
-        }
-
-        // Ajouter des écouteurs d'événements sur les checkboxes internes
-        vaccineCheckboxes.forEach(checkbox => {
-            checkbox.addEventListener("change", checkVaccines);
-        });
-
-        // Vérifie l'état au chargement de la page
-        window.addEventListener("load", checkVaccines);
-    </script>
 {% endblock %}
 
