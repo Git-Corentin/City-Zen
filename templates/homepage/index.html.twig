@@ -75,13 +75,13 @@
         border-radius: 5px;
         background-color: white;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        position: absolute;
+        position: relative;
         z-index: 10;
         max-height: 200px;
         overflow-y: auto;
         display: none;
         box-sizing: border-box;
-        margin-top: 100px;
+        margin-top: 5px;
     }
 
     .suggestions div {
@@ -133,14 +133,46 @@
         pointer-events: none;
     }
 
+    .intro-box {
+        background-color: #f9f9f9; /* Couleur de fond douce */
+        border: 1px solid #ddd; /* Bordure subtile */
+        padding: 20px; /* Espacement interne */
+        border-radius: 10px; /* Bords arrondis */
+        max-width: 60vw; /* Largeur maximale du cadre */
+        margin: 40px auto; /* Centrer le cadre */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère pour ajouter de la profondeur */
+    }
+
+    .intro-box p {
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    .intro_logo {
+        margin-top: 40px;
+    }
+
 </style>
 {% endblock %}
 
 
 {% block body %}
-    <center><p><span class="amarante" style="font-size:2em">CityZen</span><span class="tenor-sans-regular"> est un outil pour faciliter votre expatriation. <br>Il s'adresse aux personnes qui souhaitent s'installer dans un nouveau pays et qui cherchent à trouver toutes les informations nécessaires pour leur nouvelle vie.</span></p></center>
+
+    <center>
+        <div class="intro_logo">
+            <img src="{{  asset('homepage/logo_bleu.png') }}" alt="Logo" style="height: 200px;">
+            {% if is_granted("ROLE_PREMIUM") %}
+                <img src="{{ asset('homepage/premium.webp') }}" alt="Premium" style="width: 100px; height: 100px;">
+            {% endif %}
+        </div>
+
+        <div class="intro-box">
+            <p><span class="amarante" style="font-size:2em">CityZen</span><span class="tenor-sans-regular"> est un outil pour faciliter votre expatriation. <br>Il s'adresse aux personnes qui souhaitent s'installer dans un nouveau pays et qui cherchent à trouver toutes les informations nécessaires pour leur nouvelle vie.</span></p>
+        </div>
+
+    </center>
     <div class="container">
-        <h1 class="text-center">City-Zen</h1>
+
         <div class="search-wrapper">
             <div class="country-select">
                 <img id="flagIcon" class="country-flag" src="https://flagcdn.com/w320/fr.png" alt="Drapeau">
@@ -161,9 +193,7 @@
             </div>
         </div>
     </div>
-    {% if is_granted("ROLE_PREMIUM") %}
-        <img src="{{ asset('homepage/premium.webp') }}" alt="Premium" style="width: 100px; height: 100px;">
-    {% endif %}
+
 {% endblock %}
 
 {% block javascripts %}
