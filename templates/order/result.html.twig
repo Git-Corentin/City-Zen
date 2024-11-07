@@ -8,10 +8,27 @@
             }
 
             h2 {
+                border: 2px solid #333; /* Couleur et épaisseur de la bordure */
+                border-radius: 10px; /* Rayon des coins arrondis */
+                display: inline-block; /* Pour ajuster la bordure autour du texte seulement */
                 padding-top: 3pt;
                 padding-left: 5pt;
                 text-indent: 0pt;
                 text-align: justify;
+            }
+
+            h1 {
+                position: relative;
+            }
+
+            h1::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 2px; /* Épaisseur du soulignement */
+                background-color: #333; /* Couleur du soulignement */
             }
 
             p {
@@ -287,7 +304,7 @@
             facture des frais de stationnement journaliers. Dans la rue, le stationnement peut être gratuit ou payant.
             Vous pouvez également utiliser les parkings sécurisés de la ville.</p>
     {% else %}
-        Vous avez mentionné ne pas vouloir de voiture. Les transports en commun devront donc être privilégiés.
+        <p>Vous avez mentionné ne pas vouloir de voiture. Les transports en commun devront donc être privilégiés.</p>
         <h2>Transport en commun</h2>
         <p>Le train est un moyen efficace de se déplacer dans Sydney. Prenez le City Circle pour rejoindre les ferries
             de Circular Quay, le quartier des commerces autour des gares Town Hall Station et Central Station. Utilisez
