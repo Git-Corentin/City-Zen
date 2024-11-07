@@ -97,4 +97,12 @@ final class OrderController extends AbstractController
         ]);
     }
 
+    // Modifiez cette route en ajoutant "/{id}" pour inclure l'ID dans l'URL
+    #[Route('/result/checklist/{id}', name: 'app_order_checklist', methods: ['GET'])]
+    public function check(Order $order): Response
+    {
+        return $this->render('order/checklist.html.twig', [
+            'order' => $order,
+        ]);
+    }
 }

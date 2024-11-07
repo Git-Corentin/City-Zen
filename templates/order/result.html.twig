@@ -1,5 +1,10 @@
 {% extends 'base.html.twig' %}
 
+{% block checklist_nav_item %}
+    <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="{{ path('app_order_checklist', {'id': order.id}) }}" style="color: #dada4e;">Checklist</a>
+    </li>
+{% endblock %}
 {% block body %}
     <head><title>Commande</title>
         <style>

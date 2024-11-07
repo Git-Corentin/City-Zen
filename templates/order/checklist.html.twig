@@ -1,0 +1,137 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Your checklist{% endblock %}
+
+{% block body %}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+
+            padding: 20px;
+        }
+        .header {
+            text-align: left;
+        }
+        .header img {
+            text-align: center;
+            max-width: 150px;
+        }
+
+        .img-left {
+            margin-left: 50px;
+        }
+
+        .img-right {
+            margin-right: 50px;
+        }
+
+        h2 {
+            color: white;
+            border: 2px solid #333;
+            border-radius: 10px;
+            display: inline-block;
+            background-color: #010535;
+            padding: 10px 0; /* Ajuste le padding si nécessaire */
+            margin: 0; /* Supprime les marges par défaut autour du h2 */
+            text-align: center; /* Centre le texte et les images */
+            vertical-align: middle; /* Aligne verticalement le texte et les images */
+        }
+
+        h2 img {
+            vertical-align: middle; /* Assure que les images s'alignent correctement avec le texte */
+        }
+
+        h3 {
+            margin-left: 180px;
+        }
+
+        .checkbox-group {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .submit-button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+
+
+<div class="header">
+    <!-- Logo de l'entreprise --><br><br>
+    <h2><img src="{{ asset('homepage/logo_colonne_jaune.png') }}" alt="colonne" style="height: 48px;" class="img-right">Checklist des informations<img src="{{ asset('homepage/logo_colonne_jaune.png') }}" alt="colonne" style="height: 48px;" class="img-left"></h2><br>
+    <h3>Destination: <strong>Sydney</strong></h3>
+</div>
+
+    <div class="checkbox-group">
+
+        <label><input type="checkbox" id="furnitures" name="furnitures" value="validated"> Fournitures</label>
+
+        <div id="furnitures-group" style="margin-left: 20px;">
+            <label><input type="checkbox" class="furnitures-checkbox"> Vêtements pour climat à 20°C</label>
+            <label><input type="checkbox" class="furnitures-checkbox"> Prises de type I</label>
+        </div>
+
+        <label><input type="checkbox" name="tourist_attractions" value="validated"> Attractions touristiques</label>
+        <label><input type="checkbox" name="culture" value="validated"> Culture et loisirs</label>
+        <label><input type="checkbox" name="quality_of_life" value="validated"> Qualité de vie</label>
+
+        <label>
+            <input type="checkbox" id="vaccines" name="vaccines" value="validated"> Vaccins nécessaires
+        </label>
+
+        <div id="vaccines-group" style="margin-left: 20px;">
+            <label><input type="checkbox" class="vaccines-checkbox"> Encéphalite japonaise</label>
+            <label><input type="checkbox" class="vaccines-checkbox"> Fièvre jaune</label>
+        </div>
+
+        <label><input type="checkbox" name="vehicles" value="validated"> Informations sur les véhicules</label>
+        <label><input type="checkbox" name="schooling" value="validated"> Scolarisation des enfants</label>
+        <label><input type="checkbox" name="equipment" value="validated"> Équipements spécifiques à emmener</label>
+    </div>
+
+
+    <a href="{{ path('app_order_result', {'id': order.id}) }}">Retour à la page d'informations</a>
+{% endblock %}
+{% block javascripts %}
+    <script>
+        // Sélectionner toutes les checkboxes internes liées aux vaccins
+        const vaccineCheckboxes = document.querySelectorAll(".vaccines-checkbox");
+        const vaccineMainCheckbox = document.getElementById("vaccines");
+
+        // Fonction pour vérifier si toutes les checkboxes sont cochées
+        function checkVaccines() {
+            // Vérifie si toutes les checkboxes internes sont cochées
+            const allChecked = Array.from(vaccineCheckboxes).every(checkbox => checkbox.checked);
+
+            // Si toutes les checkboxes internes sont cochées, grise la checkbox principale
+            if (allChecked) {
+                vaccineMainCheckbox.disabled = false; // Active la checkbox principale
+                vaccineMainCheckbox.style.backgroundColor = "#d3d3d3"; // Couleur de fond grisée
+                vaccineMainCheckbox.style.borderColor = "#d3d3d3"; // Bordure grisée
+            } else {
+                vaccineMainCheckbox.disabled = true; // Grise la checkbox principale
+                vaccineMainCheckbox.style.backgroundColor = "#f1f1f1"; // Couleur de fond plus claire
+                vaccineMainCheckbox.style.borderColor = "#f1f1f1"; // Bordure plus claire
+            }
+        }
+
+        // Ajouter des écouteurs d'événements sur les checkboxes internes
+        vaccineCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener("change", checkVaccines);
+        });
+
+        // Vérifie l'état au chargement de la page
+        window.addEventListener("load", checkVaccines);
+    </script>
+{% endblock %}
+
