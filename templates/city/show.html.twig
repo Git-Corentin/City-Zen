@@ -69,17 +69,31 @@
         .filter-container {
             margin: 20px;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
+            align-items: flex-start;
+            gap: 15px; /* Espace entre les filtres et les boutons */
         }
 
-        .filter-buttons {
+        .filter-checkboxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 5px;
+            max-width: 90%;
+        }
+
+        .filter-checkboxes label {
+            font-size: 14px;
             display: flex;
-            gap: 8px;
+            align-items: center;
+            gap: 5px;
         }
 
-        .filter-buttons button {
+        .filter-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 8px; /* Espace entre les boutons */
+        }
+
+        .filter-actions button {
             padding: 8px 15px;
             font-size: 14px;
             color: #fff;
@@ -90,24 +104,10 @@
             transition: background-color 0.3s;
         }
 
-        .filter-buttons button:hover {
+        .filter-actions button:hover {
             background-color: #0056b3;
         }
 
-        .filter-checkboxes {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 5px;
-            max-width: 600px;
-            margin-top: 10px;
-        }
-
-        .filter-checkboxes label {
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
     </style>
 {% endblock %}
 
@@ -115,12 +115,16 @@
     <div class="city-info-page">
         <h1>Bienvenue à {{ name }}</h1>
     </div>
-
+    {% if is_granted("ROLE_PREMIUM") and app.user %}
+        <div class="container my-4">
+            <a href="{{ path('app_order_new') }}" class="btn btn-primary">Obtenir une étude personnalisée sur cette ville</a>
+        </div>
+    {% endif %}
     <!-- Navigation des onglets -->
     <ul class="nav nav-tabs" id="cityTab" role="tablist">
         <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="info-tab" data-bs-toggle="tab" data-bs-target="#info" type="button"
-                    role="tab" aria-controls="info" aria-selected="true">Informations
+            <button class="nav-link active" id="map-tab" data-bs-toggle="tab" data-bs-target="#carte" type="button" role="tab"
+                    aria-controls="carte" aria-selected="true">Carte
             </button>
         </li>
         <li class="nav-item" role="presentation">
@@ -129,49 +133,27 @@
             </button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="map-tab" data-bs-toggle="tab" data-bs-target="#carte" type="button" role="tab"
-                    aria-controls="carte" aria-selected="false">Carte
+            <button class="nav-link" id="currency-tab" data-bs-toggle="tab" data-bs-target="#currency" type="button"
+                    role="tab" aria-controls="currency" aria-selected="false">Conversion de Devises
             </button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="currency-tab" data-bs-toggle="tab" data-bs-target="#currency" type="button"
-                    role="tab" aria-controls="currency" aria-selected="false">Conversion de Devises
+            <button class="nav-link" id="info-tab" data-bs-toggle="tab" data-bs-target="#info" type="button"
+                    role="tab" aria-controls="info" aria-selected="false">Informations sur le pays
             </button>
         </li>
     </ul>
 
     <!-- Contenu des onglets -->
     <div class="tab-content" id="cityTabContent">
-        <!-- Informations sur la ville -->
-        <div class="tab-pane fade show active" id="info" role="tabpanel" aria-labelledby="info-tab">
-            <h3>Informations sur le pays : {{ country }} ({{ continent }})</h3>
-            <img src="{{ flag }}" alt="Drapeau de {{ name }}" height="100px" border="1px">
-            <p>Capitale : {{ capital }}</p>
-            <p>Monnaie : {{ currency }} ({{ currency_code }})</p>
-            <p>Type de gouvernement : {{ government }}</p>
-            <p>Population : {{ population }}</p>
-            <p>Densité : {{ density }}</p>
-            <p>Langues : {{ languages }}</p>
-            <p>Espérance de vie : {{ life_expectancy }}</p>
-            <p>Plat national : {{ national_dish }}</p>
-            <p>Religion : {{ religion }}</p>
-            <p>Surface : {{ surface }}</p>
-            <p>Température annuelle moyenne : {{ annual_temperature }}</p>
-            <p>Indicatif téléphonique : {{ phone_code }}</p>
-        </div>
-
-        <!-- Onglet Météo -->
-        <div class="tab-pane fade" id="weather" role="tabpanel" aria-labelledby="weather-tab">
-            <div id="weather-content">Chargement de la météo...</div>
-        </div>
 
         <!-- Onglet Carte -->
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-        <div class="tab-pane fade" id="carte" role="tabpanel" aria-labelledby="map-tab">
+        <div class="tab-pane fade show active" id="carte" role="tabpanel" aria-labelledby="map-tab">
             <div class="filter-container">
-                <div class="filter-buttons">
+                <div class="filter-actions">
                     <button onclick="checkAll()">Tout cocher</button>
                     <button onclick="uncheckAll()">Tout décocher</button>
                 </div>
@@ -208,6 +190,10 @@
             <div id="map"></div>
         </div>
 
+        <!-- Onglet Météo -->
+        <div class="tab-pane fade" id="weather" role="tabpanel" aria-labelledby="weather-tab">
+            <div id="weather-content">Chargement de la météo...</div>
+        </div>
 
         <!-- Onglet Conversion de Devises -->
         <div class="tab-pane fade" id="currency" role="tabpanel" aria-labelledby="currency-tab">
@@ -232,7 +218,27 @@
             </form>
             <div id="comparisonResult">Sélectionnez deux devises pour voir la comparaison.</div>
         </div>
+
+        <!-- Informations sur le pays -->
+        <div class="tab-pane fade" id="info" role="tabpanel" aria-labelledby="info-tab">
+            <h3>Informations sur le pays : {{ country }} ({{ continent }})</h3>
+            <img src="{{ flag }}" alt="Drapeau de {{ name }}" height="100px" border="1px">
+            <p>Capitale : {{ capital }}</p>
+            <p>Monnaie : {{ currency }} ({{ currency_code }})</p>
+            <p>Type de gouvernement : {{ government }}</p>
+            <p>Population : {{ population }}</p>
+            <p>Densité : {{ density }}</p>
+            <p>Langues : {{ languages }}</p>
+            <p>Espérance de vie : {{ life_expectancy }}</p>
+            <p>Plat national : {{ national_dish }}</p>
+            <p>Religion : {{ religion }}</p>
+            <p>Surface : {{ surface }}</p>
+            <p>Température annuelle moyenne : {{ annual_temperature }}</p>
+            <p>Indicatif téléphonique : {{ phone_code }}</p>
+        </div>
     </div>
+
+
 
 
 {% endblock %}
@@ -424,17 +430,10 @@
             document.querySelectorAll('.poi-filter').forEach(checkbox => checkbox.checked = false);
             updatePOIFilters()
         }
+        initMap()
 
-        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-            if (e.target.id === 'map-tab') {
-                initMap();
-            }
-        });
 
-        // Pour initialiser la carte la première fois que l'onglet est cliqué
-        $('#map-tab').on('click', function () {
-            initMap();
-        });
+
 
 
         async function compareCurrencies() {

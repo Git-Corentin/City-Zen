@@ -1,54 +1,588 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<head><title>Commande</title>
-<style>
-        body{padding-top: 65px}
-        h2 {padding-top: 3pt;padding-left: 5pt;text-indent: 0pt;text-align: justify;}
-        p {padding-top: 6pt;padding-left: 5pt;text-indent: 0pt;line-height: 114%;text-align: justify;}
-        li {display: block; }
-        #l1 {padding-left: 0pt; }
-        #l1> li>*:first-child:before {content: "• "; color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 14pt; }
-    </style></head><body>
-    <h1>Visa</h1>
-<h2>TSS (subclass 482)</h2><p>Avec le <i>Temporary Skill Shortage </i>visa (TSS), vous êtes sponsorisé par une entreprise australienne. C’est le visa le plus couramment utilisé pour s’expatrier professionnellement en Australie. Ce visa se divise en 2 catégories : <b>Short-term stream </b>et <b>Medium-term stream</b>. Vous devez :</p><ul id="l1"><li data-list-text="•"><p style="padding-top: 6pt;padding-left: 41pt;text-indent: -14pt;line-height: 114%;text-align: justify;">Justifier d’une <b>expérience professionnelle d’au moins 2 ans </b>dans votre domaine d’embauche.</p></li><li data-list-text="•"><p style="padding-left: 41pt;text-indent: -14pt;line-height: 14pt;text-align: justify;">Votre poste doit être listé dans les listes d’emplois STSOL* ou la MLTSSL**.</p></li><li data-list-text="•"><p style="padding-top: 2pt;padding-left: 41pt;text-indent: -14pt;line-height: 114%;text-align: left;">Pour faire votre demande de TSS short term, vous devrez prouver un <b>bon niveau d’anglais</b>. En effet, une note globale de 5 à un test de langue (<b>IELTS </b>ou équivalent) est nécessaire. Vous devrez obtenir une note de 4,5 (pour le short-term stream) et 5 (pour le medium-term stream) dans chaque matière. <i>NB: Vous n’aurez pas à passer de test pour prouver votre niveau d’anglais si vous possédez un passeport du Canada, Nouvelle Zélande, République d’Ireland, Royaume-Uni, Etats-Unis.</i></p></li><li data-list-text="•"><p style="padding-top: 6pt;padding-left: 41pt;text-indent: -14pt;text-align: left;">L’applicant doit prouver son intention de <b>s’installer de manière provisoire </b>en Australie.</p></li><li data-list-text="•"><p style="padding-top: 2pt;padding-left: 41pt;text-indent: -14pt;line-height: 114%;text-align: justify;">Vous devez travailler en Australie <b>uniquement dans la profession </b>pour laquelle vous avez été nommé et uniquement pour l’entreprise de nomination ou dans certaines circonstances, une entité associée à l’entreprise.</p>
+    <head><title>Commande</title>
+        <style>
+            body {
+                padding-top: 65px
+            }
 
-        {% if order.term <= 2 %}
+            h2 {
+                padding-top: 3pt;
+                padding-left: 5pt;
+                text-indent: 0pt;
+                text-align: justify;
+            }
+
+            p {
+                padding-top: 6pt;
+                padding-left: 5pt;
+                text-indent: 0pt;
+                line-height: 114%;
+                text-align: justify;
+            }
+
+            li {
+                display: block;
+            }
+
+            #l1 {
+                padding-left: 0pt;
+            }
+
+            #l1 > li > *:first-child:before {
+                content: "• ";
+                color: black;
+                font-family: Arial, sans-serif;
+                font-style: normal;
+                font-weight: normal;
+                text-decoration: none;
+                font-size: 14pt;
+            }
+        </style>
+    </head>
+
+    <body>
+
+    <h1>Présentation générale</h1>
+    <p>Sydney, capitale de la Nouvelle-Galles du Sud, est la plus grande ville d'Australie et l'une des villes les plus
+        emblématiques au monde. Elle est connue pour son port magnifique, l'Opéra de Sydney, et le Sydney Harbour
+        Bridge. Sydney est un centre mondial de finance, d'arts, de culture, et de tourisme, offrant une qualité de vie
+        élevée à ses résidents.</p>
+
+    <h2>Attractions touristiques</h2>
+    <ul>
+        <li><b>Opéra de Sydney :</b> Un chef-d'œuvre architectural et l'un des monuments les plus célèbres au monde.
+        </li>
+        <li><b>Sydney Harbour Bridge :</b> Ce pont iconique offre des vues impressionnantes de la ville et de son port.
+        </li>
+        <li><b>Bondi Beach :</b> Plage populaire pour le surf et les bains de soleil, célèbre pour son atmosphère
+            détendue.
+        </li>
+        <li><b>Royal Botanic Gardens :</b> Un jardin botanique situé près du port, parfait pour les promenades.</li>
+        <li><b>Darling Harbour :</b> Quartier animé avec des restaurants, musées, et l'aquarium de Sydney.</li>
+    </ul>
+
+    <h2>Culture et loisirs</h2>
+    <p>La scène culturelle de Sydney est riche et diversifiée. La ville accueille de nombreux festivals, des galeries
+        d'art, et des représentations théâtrales. Le musée d'Art Contemporain et la Galerie d'Art de Nouvelle-Galles du
+        Sud sont des incontournables pour les amateurs d'art.</p>
+    <h3>Événements annuels</h3>
+    <ul>
+        <li><b>Sydney Festival :</b> Festival culturel annuel qui propose des spectacles de musique, de théâtre, et de danse.</li>
+        <li><b>Mardi Gras :</b> L'un des plus grands événements LGBT+ au monde, célébré avec des défilés et des concerts.</li>
+        <li><b>Vivid Sydney :</b> Festival de lumière et de musique qui transforme la ville en un spectacle lumineux chaque année.</li>
+    </ul>
+    <h3>Sports</h3>
+    <p>Sydney est passionnée de sport, avec des installations pour le rugby, le football australien, le cricket, et plus. Les Jeux olympiques de 2000 ont laissé un héritage sportif important, et la ville continue d'accueillir des compétitions sportives internationales.</p>
+
+    <h2>Qualité de vie</h2>
+    <p>Sydney est l’une des villes les plus emblématiques et cosmopolites au monde. Elle offre une qualité de vie
+        élevée, avec un cadre de vie agréable, des plages magnifiques, des parcs bien entretenus et une grande diversité
+        culturelle. Cependant, cela s’accompagne d’un coût de la vie relativement élevé, faisant de Sydney l’une des
+        villes les plus chères d’Australie et même du monde.</p>
+
+    <h2>Économie</h2>
+    <p>Sydney est le centre économique de l'Australie, avec des secteurs clés dans la finance, les technologies de
+        l'information, le commerce et le tourisme. La ville accueille le siège de nombreuses multinationales et banques
+        majeures. En tant que moteur économique du pays, Sydney joue un rôle crucial dans le développement commercial et
+        les échanges internationaux.</p>
+
+    <h2>Climat</h2>
+    <p>Sydney bénéficie d'un climat tempéré avec des étés chauds et des hivers doux. La température moyenne varie de
+        18°C en hiver à 27°C en été. Les précipitations sont modérées tout au long de l'année, avec des pics en
+        automne.</p>
+
+    <h2>Comparaison avec d'autres villes</h2>
+    <p>Vivre à Sydney est généralement plus coûteux qu'à Melbourne ou Brisbane, mais similaire à d’autres grandes
+        métropoles mondiales comme Londres et New York. Le salaire moyen élevé en Australie permet de compenser ces
+        coûts, mais il est essentiel de planifier son budget en fonction des prix locaux.</p>
+
+    <h2>Informations pratiques</h2>
+    <ul>
+        <li><b>Fuseau horaire :</b> UTC+10 (AEST), UTC+11 en été.</li>
+        <li><b>Langue :</b> Anglais</li>
+        <li><b>Monnaie :</b> Dollar australien (AUD)</li>
+        <li><b>Indicatif téléphonique :</b> +61</li>
+        <li><b>Électricité :</b> 230V, 50Hz, prises de type I</li>
+        <li><b>Les voitures roulent à gauche !</b></li>
+    </ul>
+
+    <h1>Vivre à Sydney</h1>
+    <h2>Coût de la Vie à Sydney</h2>
+    <p>Vivre à Sydney est réputé pour être l'une des expériences les plus coûteuses d'Australie et même à l’échelle
+        mondiale. Voici une estimation des coûts pour différents aspects de la vie quotidienne :</p>
+
+    <h3>Logement</h3>
+    <p>Les loyers à Sydney peuvent être élevés, en particulier dans les quartiers proches du centre-ville ou de la côte.
+        En moyenne :</p>
+    <ul>
+        <li><b>Appartement 1 chambre dans le centre-ville :</b> entre 2 500 et 3 500 AUD par mois.</li>
+        <li><b>Appartement 1 chambre en périphérie :</b> entre 1 800 et 2 500 AUD par mois.</li>
+        <li><b>Appartement 3 chambres dans le centre-ville :</b> entre 4 500 et 6 000 AUD par mois.</li>
+    </ul>
+    <p>Les quartiers populaires comme Bondi, Surry Hills, et Newtown offrent des logements attractifs mais souvent plus
+        coûteux. Les coûts de location varient selon la proximité des plages, des transports en commun et des
+        commodités.</p>
+
+    <h3>Alimentation</h3>
+    <p>Le budget alimentaire dépend du mode de vie et des habitudes de consommation. Manger au restaurant coûte
+        relativement cher, tandis que cuisiner soi-même est plus économique.</p>
+    <ul>
+        <li><b>Repas dans un restaurant de quartier :</b> environ 20-25 AUD par personne.</li>
+        <li><b>Repas dans un restaurant de gamme moyenne :</b> autour de 50-80 AUD pour deux personnes.</li>
+        <li><b>Courses alimentaires pour une semaine :</b> environ 150-250 AUD par personne.</li>
+    </ul>
+
+    <h3>Transports</h3>
+    <p>Sydney dispose d'un bon réseau de transports publics, incluant bus, trains et ferries. L'Opal Card est utilisée
+        pour les trajets quotidiens et permet de bénéficier de plafonds hebdomadaires sur les coûts de transport :</p>
+    <ul>
+        <li><b>Carte Opal quotidienne (plafond) :</b> 16,80 AUD maximum.</li>
+        <li><b>Carte Opal hebdomadaire (plafond) :</b> 50 AUD maximum.</li>
+        <li><b>Abonnement à vélo en libre-service :</b> environ 10-20 AUD par jour.</li>
+    </ul>
+
+    <h3>Santé</h3>
+    <p>Les résidents ayant accès à <b>Medicare</b>, le système de santé australien, bénéficient d’une couverture
+        partielle ou totale pour les soins médicaux, ce qui réduit significativement les coûts de santé. Pour les
+        expatriés ou les touristes, souscrire une assurance santé privée est recommandé :</p>
+    <ul>
+        <li><b>Consultation chez le généraliste :</b> entre 50 et 80 AUD (remboursable pour les résidents couverts par
+            Medicare).
+        </li>
+        <li><b>Consultation chez un spécialiste :</b> environ 200-300 AUD.</li>
+        <li><b>Assurance santé privée pour un adulte :</b> 100-200 AUD par mois.</li>
+    </ul>
+
+    <h3>Loisirs</h3>
+    <p>Sydney offre une grande variété d’activités de loisirs, avec des coûts pouvant varier selon le type de sortie
+        :</p>
+    <ul>
+        <li><b>Abonnement mensuel à une salle de sport :</b> entre 60 et 100 AUD.</li>
+        <li><b>Billet de cinéma :</b> environ 20 AUD.</li>
+        <li><b>Sortie dans un bar :</b> une bière coûte environ 10 AUD et un cocktail 18-25 AUD.</li>
+    </ul>
+
+    <h3>Dépenses Mensuelles Estimées</h3>
+    <p>Pour une personne vivant de manière autonome à Sydney, les dépenses mensuelles moyennes se situent entre :</p>
+    <ul>
+        <li><b>Étudiant :</b> entre 2 000 et 2 500 AUD.</li>
+        <li><b>Jeune actif :</b> entre 3 000 et 4 500 AUD.</li>
+        <li><b>Famille de quatre personnes :</b> entre 6 000 et 8 000 AUD.</li>
+    </ul>
+
+    <p>Bien que les prix puissent paraître élevés, Sydney offre une qualité de vie exceptionnelle, avec des
+        infrastructures modernes, des espaces verts et de nombreuses plages, ce qui en fait une ville attractive pour
+        les résidents malgré le coût de la vie élevé.</p>
+
+    <h1>Visa</h1>
+    <h2>TSS (subclass 482)</h2>
+    <p>Avec le <i>Temporary Skill Shortage </i>visa (TSS), vous êtes sponsorisé par une entreprise australienne. C’est
+        le visa le plus couramment utilisé pour s’expatrier professionnellement en Australie. Ce visa se divise en 2
+        catégories : <b>Short-term stream </b>et <b>Medium-term stream</b>. Vous devez :</p>
+    <ul id="l1">
+        <li data-list-text="•"><p
+                    style="padding-top: 6pt;padding-left: 41pt;text-indent: -14pt;line-height: 114%;text-align: justify;">
+                Justifier d’une <b>expérience professionnelle d’au moins 2 ans </b>dans votre domaine d’embauche.</p>
+        </li>
+        <li data-list-text="•"><p style="padding-left: 41pt;text-indent: -14pt;line-height: 14pt;text-align: justify;">
+                Votre poste doit être listé dans les listes d’emplois STSOL* ou la MLTSSL**.</p></li>
+        <li data-list-text="•"><p
+                    style="padding-top: 2pt;padding-left: 41pt;text-indent: -14pt;line-height: 114%;text-align: left;">
+                Pour faire votre demande de TSS short term, vous devrez prouver un <b>bon niveau d’anglais</b>. En
+                effet, une note globale de 5 à un test de langue (<b>IELTS </b>ou équivalent) est nécessaire. Vous
+                devrez obtenir une note de 4,5 (pour le short-term stream) et 5 (pour le medium-term stream) dans chaque
+                matière. <i>NB: Vous n’aurez pas à passer de test pour prouver votre niveau d’anglais si vous possédez
+                    un passeport du Canada, Nouvelle Zélande, République d’Ireland, Royaume-Uni, Etats-Unis.</i></p>
+        </li>
+        <li data-list-text="•"><p style="padding-top: 6pt;padding-left: 41pt;text-indent: -14pt;text-align: left;">
+                L’applicant doit prouver son intention de <b>s’installer de manière provisoire </b>en Australie.</p>
+        </li>
+        <li data-list-text="•"><p
+                    style="padding-top: 2pt;padding-left: 41pt;text-indent: -14pt;line-height: 114%;text-align: justify;">
+                Vous devez travailler en Australie <b>uniquement dans la profession </b>pour laquelle vous avez été
+                nommé et uniquement pour l’entreprise de nomination ou dans certaines circonstances, une entité associée
+                à l’entreprise.</p>
+
+            {% if order.term <= 2 %}
             <! Visa short-term>
-            <p>Ce visa <b>short-term stream </b>est :</p></li><li data-list-text="•"><b style="padding-top: 9pt;padding-left: 41pt;text-indent: -14pt;text-align: left;">Durée : <span class="p">Jusqu’à 2 ans.</span></b></li><li data-list-text="•"><b style="padding-top: 9pt;padding-left: 41pt;text-indent: -14pt;line-height: 114%;text-align: left;">Voie vers la Résidence Permanente : <span class="p">Ce visa n’offre pas d’ouverture vers un visa de résidence permanente.</span></b></li><li data-list-text="•"><b style="padding-top: 6pt;padding-left: 41pt;text-indent: -14pt;text-align: left;">Soins : <span class="p">vous pourrez bénéficier du système de santé australien Medicare sous ce visa.</span></b></li><li data-list-text="•"><b style="padding-top: 9pt;padding-left: 41pt;text-indent: -14pt;line-height: 114%;text-align: justify;">Coût : 1 495 $AU <span class="p">(juillet 2024) pour le demandeur + frais pour chacun des autres membres de la famille.</span></b>
-        {% else %}
+            <p>Ce visa <b>short-term stream </b>est :</p></li>
+        <li data-list-text="•"><b style="padding-top: 9pt;padding-left: 41pt;text-indent: -14pt;text-align: left;">Durée
+                : <span class="p">Jusqu’à 2 ans.</span></b></li>
+        <li data-list-text="•"><b
+                    style="padding-top: 9pt;padding-left: 41pt;text-indent: -14pt;line-height: 114%;text-align: left;">Voie
+                vers la Résidence Permanente : <span class="p">Ce visa n’offre pas d’ouverture vers un visa de résidence permanente.</span></b>
+        </li>
+        <li data-list-text="•"><b style="padding-top: 6pt;padding-left: 41pt;text-indent: -14pt;text-align: left;">Soins
+                :
+                <span class="p">vous pourrez bénéficier du système de santé australien Medicare sous ce visa.</span></b>
+        </li>
+        <li data-list-text="•"><b
+                    style="padding-top: 9pt;padding-left: 41pt;text-indent: -14pt;line-height: 114%;text-align: justify;">Coût
+                : 1 495 $AU <span class="p">(juillet 2024) pour le demandeur + frais pour chacun des autres membres de la famille.</span></b>
+            {% else %}
             <! Visa medium-term>
-            <p>Ce visa <b>medium-term stream </b>est :</p></li><li data-list-text="•"><b style="padding-top: 13pt;padding-left: 41pt;text-indent: -14pt;text-align: left;">Durée : <span class="p">Jusqu’à 4 ans.</span></b></li><li data-list-text="•"><b style="padding-top: 2pt;padding-left: 41pt;text-indent: -14pt;text-align: left;">Éligibilité : <span class="p">Professions inscrites sur la liste des professions à moyen et long terme</span></b><b style="padding-top: 2pt;padding-left: 41pt;text-indent: 0pt;text-align: left;">MLTSSL** <span class="p">ou la </span>ROL***<span class="p">.</span></b></li><li data-list-text="•"><b style="padding-top: 2pt;padding-left: 41pt;text-indent: -14pt;line-height: 114%;text-align: left;">Voie vers la Résidence Permanente : <span class="p">Éligible à la résidence permanente par le biais du Programme de Nomination des Employeurs (ENS) Subclasse 186 ou du Programme de Migration Régionale Sponsorisée (RSMS) Subclasse 187 après trois ans.</span></b></li><li data-list-text="•"><b style="padding-left: 41pt;text-indent: -14pt;line-height: 14pt;text-align: left;">Soins : <span class="p">vous pourrez bénéficier du système de santé australien Medicare sous ce visa.</span></b></li><li data-list-text="•"><b style="padding-top: 8pt;padding-left: 41pt;text-indent: -14pt;line-height: 114%;text-align: left;">Coût <span class="p">: </span>3 115 $AU <span class="p">(juillet 2024) pour l’applicant principal et tout applicant de plus de 18 ans.</span></b></li>
+            <p>Ce visa <b>medium-term stream </b>est :</p></li>
+        <li data-list-text="•"><b style="padding-top: 13pt;padding-left: 41pt;text-indent: -14pt;text-align: left;">Durée
+                : <span class="p">Jusqu’à 4 ans.</span></b></li>
+        <li data-list-text="•"><b style="padding-top: 2pt;padding-left: 41pt;text-indent: -14pt;text-align: left;">Éligibilité
+                : <span class="p">Professions inscrites sur la liste des professions à moyen et long terme</span></b><b
+                    style="padding-top: 2pt;padding-left: 41pt;text-indent: 0pt;text-align: left;">MLTSSL** <span
+                        class="p">ou la </span>ROL***<span class="p">.</span></b></li>
+        <li data-list-text="•"><b
+                    style="padding-top: 2pt;padding-left: 41pt;text-indent: -14pt;line-height: 114%;text-align: left;">Voie
+                vers la Résidence Permanente : <span class="p">Éligible à la résidence permanente par le biais du Programme de Nomination des Employeurs (ENS) Subclasse 186 ou du Programme de Migration Régionale Sponsorisée (RSMS) Subclasse 187 après trois ans.</span></b>
+        </li>
+        <li data-list-text="•"><b style="padding-left: 41pt;text-indent: -14pt;line-height: 14pt;text-align: left;">Soins
+                :
+                <span class="p">vous pourrez bénéficier du système de santé australien Medicare sous ce visa.</span></b>
+        </li>
+        <li data-list-text="•"><b
+                    style="padding-top: 8pt;padding-left: 41pt;text-indent: -14pt;line-height: 114%;text-align: left;">Coût
+                <span class="p">: </span>3 115 $AU <span class="p">(juillet 2024) pour l’applicant principal et tout applicant de plus de 18 ans.</span></b>
+        </li>
         {% endif %}
-</ul><p class="s1" style="padding-left: 5pt;text-indent: 0pt;text-align: left;">* STSOL : Short-term Skilled Occupation List (liste des professions qualifiées à court terme)</p><p class="s1" style="padding-left: 5pt;text-indent: 0pt;text-align: left;">** MLTSSL : Medium and Long-term Strategic Skills List (liste des compétences stratégiques à moyen et long terme)<span class="p">.</span></p><p style="padding-left: 5pt;text-indent: 0pt;text-align: left;">*** <i>ROL : Regional Occupation List (liste des professions régionnal)</i></p>
-<p style="text-indent: 0pt;text-align: left;"><br/></p><p>À vérifier sur ce <a href="https://immi.homeaffairs.gov.au/visas/working-in-australia/skill-occupation-list">site.</a></p></body></html>
+    </ul>
+    <p class="s1" style="padding-left: 5pt;text-indent: 0pt;text-align: left;">* STSOL : Short-term Skilled Occupation
+        List (liste des professions qualifiées à court terme)</p>
+    <p class="s1" style="padding-left: 5pt;text-indent: 0pt;text-align: left;">** MLTSSL : Medium and Long-term
+        Strategic Skills List (liste des compétences stratégiques à moyen et long terme)<span class="p">.</span></p>
+    <p style="padding-left: 5pt;text-indent: 0pt;text-align: left;">*** <i>ROL : Regional Occupation List (liste des
+            professions régionnal)</i></p>
+    <p style="text-indent: 0pt;text-align: left;"><br/></p>
+    <p>À vérifier sur ce <a href="https://immi.homeaffairs.gov.au/visas/working-in-australia/skill-occupation-list">site.</a>
+    </p></body></html>
 
     <h1>Vaccins</h1>
 
     {% if not order.vaccins or order.enfants > 0 %}
         <h2>Encéphalite japonaise</h2>
-        <p>Vaccination recommandée uniquement pour îles du détroit de Torres (Outer Torres strait islands) pendant la période de transmission (habituellement de décembre à mai. Mais la circulation pouvant rester active sur une période plus étendue en 2022</p>
-        <p><li data-list-text="•"><b style="padding-top: 9pt;padding-left: 41pt;text-indent: -14pt;text-align: left;">Schéma vaccinal (à partir de l'âge de 2 mois) : </b>2 injections espacées de 7 (adulte) à 28 jours.</li>
-            <li data-list-text="•"><b style="padding-top: 9pt;padding-left: 41pt;text-indent: -14pt;text-align: left;">Rappel (adulte) :</b> 12 à 24 mois plus tard. </li>
-            <li data-list-text="•"><b style="padding-top: 9pt;padding-left: 41pt;text-indent: -14pt;text-align: left;">Validité administrative :</b> à vie.</li>
+        <p>Vaccination recommandée uniquement pour îles du détroit de Torres (Outer Torres strait islands) pendant la
+            période de transmission (habituellement de décembre à mai. Mais la circulation pouvant rester active sur une
+            période plus étendue en 2022</p>
+        <p>
+            <li data-list-text="•"><b style="padding-top: 9pt;padding-left: 41pt;text-indent: -14pt;text-align: left;">Schéma
+                    vaccinal (à partir de l'âge de 2 mois) : </b>2 injections espacées de 7 (adulte) à 28 jours.
+            </li>
+            <li data-list-text="•"><b style="padding-top: 9pt;padding-left: 41pt;text-indent: -14pt;text-align: left;">Rappel
+                    (adulte) :</b> 12 à 24 mois plus tard.
+            </li>
+            <li data-list-text="•"><b style="padding-top: 9pt;padding-left: 41pt;text-indent: -14pt;text-align: left;">Validité
+                    administrative :</b> à vie.
+            </li>
         </p>
     {% endif %}
-    <p><b>NB :</b> Un certificat de vaccination contre la fièvre jaune est exigé des voyageurs âgés d’un an et plus en provenance d’un pays où il y a un risque de transmission de la fièvre jaune (à l’exception des îles Galapagos, Equateur), y compris les voyageurs restés plus de 12 heures en transit dans un aéroport de ce pays.</b></p>
+    <p><b>NB :</b> Un certificat de vaccination contre la fièvre jaune est exigé des voyageurs âgés d’un an et plus en
+        provenance d’un pays où il y a un risque de transmission de la fièvre jaune (à l’exception des îles Galapagos,
+        Equateur), y compris les voyageurs restés plus de 12 heures en transit dans un aéroport de ce pays.</b></p>
 
     <h1>Transport</h1>
     {% if order.voiture %}
         <h2>Voiture</h2>
-        <p>La conduite à Sydney est simple et sûre, mais il sera peut-être plus facile d'utiliser les taxis, le covoiturage et les transports en commun pour vous déplacer en ville. Vous pouvez également réserver de magnifiques excursions à l'extérieur de Sydney et vous faire conduire.</p>
-        <p>Toutefois si vous louez une voiture à l'aéroport ou en ville, vérifiez auprès de votre hôtel si ce dernier facture des frais de stationnement journaliers. Dans la rue, le stationnement peut être gratuit ou payant. Vous pouvez également utiliser les parkings sécurisés de la ville.</p>
+        <p>La conduite à Sydney est simple et sûre, mais il sera peut-être plus facile d'utiliser les taxis, le
+            covoiturage et les transports en commun pour vous déplacer en ville. Vous pouvez également réserver de
+            magnifiques excursions à l'extérieur de Sydney et vous faire conduire.</p>
+        <p>Toutefois, si vous louez une voiture à l'aéroport ou en ville, vérifiez auprès de votre hôtel si ce dernier
+            facture des frais de stationnement journaliers. Dans la rue, le stationnement peut être gratuit ou payant.
+            Vous pouvez également utiliser les parkings sécurisés de la ville.</p>
     {% else %}
+        Vous avez mentionné ne pas vouloir de voiture. Les transports en commun devront donc être privilégiés.
         <h2>Transport en commun</h2>
-        <p>Le train est un moyen efficace de se déplacer dans Sydney. Prenez le City Circle pour rejoindre les ferries de Circular Quay, le quartier des commerces autour des gares Town Hall Station et Central Station. Utilisez l'outil Trip Planner pour planifier votre itinéraire.</p>
+        <p>Le train est un moyen efficace de se déplacer dans Sydney. Prenez le City Circle pour rejoindre les ferries
+            de Circular Quay, le quartier des commerces autour des gares Town Hall Station et Central Station. Utilisez
+            l'outil Trip Planner pour planifier votre itinéraire.</p>
         <p>De minuit à 4h30 du matin, les bus NightRide remplacent les trains.</p>
     {% endif %}
 
+    <h1>Éducation</h1>
+
+    <h2>Éducation pour les enfants</h2>
+    <p>À Sydney, les options d’éducation pour les jeunes enfants incluent les crèches, jardins d’enfants, et écoles
+        maternelles. La plupart des établissements accueillent des enfants dès l’âge de 3 ans. Les établissements
+        proposent des programmes d’apprentissage de la motricité, de développement social et de pré-lecture, conçus pour
+        faciliter la transition vers l'école primaire.</p>
+
+    <h3>Écoles primaires</h3>
+    <p>Le système scolaire public de la Nouvelle-Galles du Sud gère les écoles primaires accueillant les enfants de 5 à
+        12 ans. Le programme couvre des matières comme la lecture, l’écriture, les mathématiques, les sciences, et les
+        arts. De nombreuses écoles proposent également des activités parascolaires, des programmes d’anglais intensif
+        pour les non-natifs, et un soutien spécialisé pour les enfants ayant des besoins spécifiques.</p>
+
+    <ul>
+        <li><strong>Programme éducatif :</strong> Le cursus inclut des compétences fondamentales en lecture, écriture et
+            mathématiques, ainsi que des leçons de science, histoire, géographie, et éducation physique.
+        </li>
+        <li><strong>Options bilingues :</strong> Certaines écoles proposent des programmes bilingues, permettant aux
+            enfants d’apprendre en anglais et dans une langue étrangère (ex : mandarin, japonais, français).
+        </li>
+        <li><strong>Supports pour enfants étrangers :</strong> Des cours de soutien en anglais sont disponibles pour
+            aider les nouveaux arrivants à s'intégrer.
+        </li>
+    </ul>
+
+    <h2>Éducation pour les adolescents</h2>
+    <h3>Écoles secondaires (high schools)</h3>
+    <p>Pour les adolescents, le système d'éducation secondaire comprend les classes de la 7ème à la 12ème année, avec un
+        tronc commun incluant les mathématiques, les sciences, la littérature, les sciences humaines, l’éducation
+        physique et des matières artistiques.</p>
+
+    <ul>
+        <li><strong>Certificat d’études :</strong> À la fin de la 10e année, les étudiants obtiennent le "School
+            Certificate" et peuvent choisir d’intégrer le monde du travail ou poursuivre vers le HSC (Higher School
+            Certificate).
+        </li>
+        <li><strong>HSC (Higher School Certificate) :</strong> À la fin de la 12e année, les étudiants passent le HSC,
+            un examen permettant l’accès à l’université. Il inclut des épreuves de mathématiques, sciences, lettres,
+            langues étrangères, et matières artistiques.
+        </li>
+        <li><strong>Écoles privées et internationales :</strong> Outre les écoles publiques, Sydney propose de
+            nombreuses écoles privées, dont certaines offrent le baccalauréat international (IB) ou le programme
+            éducatif de Cambridge.
+        </li>
+        <li><strong>Activités extrascolaires :</strong> Les lycées australiens proposent une large gamme d’activités,
+            comme le sport, le théâtre, la musique et les clubs de science et de robotique.
+        </li>
+    </ul>
+
+    <h2>Études supérieures et universités</h2>
+    <h3>Universités et instituts techniques</h3>
+    <p>Sydney est réputée pour la qualité de ses universités, dont l'Université de Sydney et l'Université de
+        Nouvelle-Galles du Sud (UNSW), offrant des diplômes de licence, master, et doctorat. Les établissements
+        proposent également des diplômes professionnels en technologie, sciences appliquées, commerce, ingénierie, et
+        sciences sociales.</p>
+
+    <ul>
+        <li><strong>Programmes et spécialités :</strong> Les universités de Sydney proposent des filières dans des
+            domaines tels que la médecine, le droit, l'ingénierie, les sciences de l’environnement, et les arts
+            créatifs.
+        </li>
+        <li><strong>Accès à la recherche :</strong> Les étudiants en master et doctorat ont accès à des centres de
+            recherche de renommée mondiale, avec des possibilités de collaborations internationales.
+        </li>
+        <li><strong>Logement et services :</strong> Les universités offrent des résidences étudiantes, des services de
+            tutorat, des clubs sportifs et culturels, et des associations étudiantes pour favoriser l’intégration et
+            l’épanouissement des étudiants internationaux.
+        </li>
+    </ul>
+
+    <h3>Formations professionnelles (TAFE)</h3>
+    <p>Les instituts TAFE (Technical and Further Education) de Sydney sont spécialisés dans les formations techniques et
+        professionnelles dans divers secteurs : hôtellerie, soins infirmiers, technologie de l'information, et gestion
+        des entreprises. Les diplômes TAFE sont reconnus pour leur formation pratique orientée vers le marché de
+        l'emploi.</p>
+
+    <ul>
+        <li><strong>Diplômes :</strong> Les programmes incluent des certificats, diplômes et diplômes avancés dans des
+            domaines comme la santé, la gestion de projets, le développement web, et l’électrotechnique.
+        </li>
+        <li><strong>Alternance et apprentissages :</strong> Les TAFE proposent des parcours en alternance, permettant de
+            combiner études et expérience professionnelle en entreprise.
+        </li>
+    </ul>
+
+    <h3>Services pour étudiants internationaux</h3>
+    <p>Les universités et instituts offrent des services d’accompagnement pour les étudiants étrangers, incluant
+        orientation professionnelle, aide au logement, tutorat en anglais, et des bureaux d’accueil pour faciliter
+        l’adaptation culturelle. Les services de santé mentale et les clubs internationaux permettent aux étudiants de
+        profiter pleinement de leur séjour à Sydney.</p>
+
+    <p>Pour plus d'informations, visitez les sites des universités de <a href="https://www.sydney.edu.au">Sydney</a> et
+        de <a href="https://www.unsw.edu.au">UNSW</a>.</p>
+
+    <h1>Santé</h1>
+
+    <h2>Système de santé</h2>
+    <p>Le système de santé australien est un modèle hybride qui combine soins publics et privés. Le programme national
+        d’assurance santé, Medicare, couvre une grande partie des frais médicaux pour les résidents australiens et les
+        citoyens de certains pays disposant d’accords de réciprocité. Les citoyens peuvent également souscrire à une
+        assurance privée pour des soins supplémentaires ou des services non couverts par Medicare, tels que les soins
+        dentaires ou optiques.</p>
+
+    <ul>
+        <li><strong>Hôpitaux publics :</strong> Sydney dispose d’un réseau d’hôpitaux publics bien équipé, incluant des
+            établissements renommés comme le Royal Prince Alfred Hospital, le Westmead Hospital et le St Vincent's
+            Hospital. Ces hôpitaux offrent une gamme complète de services, y compris les urgences, la chirurgie et les
+            soins spécialisés.
+        </li>
+        <li><strong>Hôpitaux privés :</strong> De nombreux hôpitaux privés, comme le Sydney Adventist Hospital et le
+            Mater Hospital, permettent un accès rapide à des soins spécialisés, souvent moyennant des frais
+            supplémentaires ou une assurance santé privée.
+        </li>
+    </ul>
+
+    <h3>Soins pour les enfants et adolescents</h3>
+    <p>Sydney dispose de nombreux services de santé pour les jeunes, notamment des cliniques pédiatriques, des services
+        de vaccination et des centres de santé scolaire. Les hôpitaux pour enfants, tels que le Sydney Children's
+        Hospital, proposent des soins pédiatriques de pointe dans des domaines comme la neurologie, la chirurgie et la
+        médecine de l'adolescence.</p>
+
+    <ul>
+        <li><strong>Vaccinations :</strong> Les enfants australiens bénéficient d’un calendrier de vaccination gratuit
+            pour les protéger contre les maladies courantes telles que la rougeole, la varicelle et la coqueluche.
+        </li>
+        <li><strong>Soins psychologiques :</strong> Les écoles et centres de santé proposent un soutien en santé mentale
+            pour les adolescents, incluant des services de counselling et de prévention des comportements à risque.
+        </li>
+    </ul>
+
+    <h3>Santé pour les adultes et personnes âgées</h3>
+    <p>Les adultes ont accès aux soins de médecine générale, aux spécialistes et aux services hospitaliers. Des
+        programmes de prévention des maladies chroniques (diabète, maladies cardiaques) sont également disponibles. Les
+        personnes âgées bénéficient de services spécialisés, y compris des soins à domicile, des soins palliatifs et des
+        cliniques de gériatrie.</p>
+
+    <ul>
+        <li><strong>Programmes de prévention :</strong> Les cliniques de Sydney proposent des bilans de santé réguliers
+            et des dépistages pour les maladies courantes, y compris les cancers, afin de favoriser la détection
+            précoce.
+        </li>
+        <li><strong>Soins à domicile :</strong> Des services de soins à domicile pour les personnes âgées sont
+            disponibles pour aider aux tâches quotidiennes et assurer le suivi médical.
+        </li>
+    </ul>
+
+    <h3>Santé mentale et bien-être</h3>
+    <p>Sydney dispose de nombreux centres de santé mentale offrant des services de prévention, de conseil et de
+        traitement pour les troubles mentaux. Ces services sont accessibles dans les hôpitaux, cliniques privées et
+        centres communautaires, avec un soutien spécifique pour les jeunes, les personnes âgées et les expatriés.</p>
+
+    <ul>
+        <li><strong>Services d’urgence en santé mentale :</strong> Les hôpitaux et services d’intervention sont
+            accessibles 24h/24 en cas de crise.
+        </li>
+        <li><strong>Programmes de soutien :</strong> Des programmes gratuits ou subventionnés pour la gestion du stress,
+            de l'anxiété et de la dépression sont disponibles à travers Medicare et des organisations privées.
+        </li>
+    </ul>
+
+    <h1>Hébergement à Sydney</h1>
+    <p>Sydney offre un large éventail d’options d’hébergement, adaptées aux besoins variés de ses résidents. Que vous soyez étudiant, jeune actif ou en famille, vous trouverez des solutions allant des appartements modernes en centre-ville aux maisons familiales en périphérie.</p>
+
+    <h2>Types de Logements</h2>
+    <ul>
+        <li><b>Appartements en Centre-Ville :</b> Idéals pour ceux qui souhaitent profiter d'une vie urbaine avec un accès facile aux bureaux, aux commerces et aux restaurants. Les quartiers comme Sydney CBD, Surry Hills, et Darlinghurst sont populaires parmi les jeunes professionnels pour leur proximité aux bureaux et au divertissement.</li>
+        <li><b>Maisons en Banlieue :</b> Les quartiers périphériques, tels que Bondi, Manly, et Balmain, offrent des maisons avec des espaces extérieurs, souvent idéales pour les familles. Ces zones sont également proches des plages et des espaces verts, offrant un cadre de vie agréable pour ceux qui recherchent un équilibre entre vie urbaine et nature.</li>
+        <li><b>Colocations :</b> Fréquentes parmi les étudiants et les jeunes actifs, les colocations permettent de réduire les frais tout en partageant un espace de vie. Des quartiers comme Newtown, Glebe, et Redfern, proches des universités et des lieux de vie nocturne, sont particulièrement prisés pour la colocation.</li>
+        <li><b>Résidences Étudiantes :</b> Plusieurs universités proposent des résidences sur ou près de leurs campus, offrant des chambres et des appartements spécialement conçus pour les étudiants. Des résidences privées et des auberges de jeunesse long terme sont aussi disponibles dans les quartiers universitaires.</li>
+    </ul>
+
+    <h2>Options de Location</h2>
+    <p>À Sydney, les locations se font généralement sous la forme de baux à long terme (6 à 12 mois). Cependant, pour ceux qui recherchent une flexibilité, il est aussi possible de trouver des options de location courte durée via des plateformes comme Airbnb, ou des contrats de sous-location pour des périodes de 1 à 3 mois.</p>
+
+    <h2>Commodités et Infrastructures</h2>
+    <ul>
+        <li><b>Transports en commun :</b> La plupart des quartiers de Sydney sont bien desservis par les transports en commun (trains, bus, et ferries), facilitant l’accès aux différentes parties de la ville.</li>
+        <li><b>Proximité des services :</b> Les quartiers résidentiels incluent généralement des centres commerciaux, des écoles, des installations sportives et des espaces verts à proximité, ce qui rend le quotidien confortable et pratique.</li>
+        <li><b>Sécurité :</b> Sydney est globalement une ville sûre, avec des quartiers résidentiels bien surveillés et une police de quartier proactive, ce qui assure une tranquillité d’esprit aux résidents.</li>
+    </ul>
+
+    <h2>Conseils pour Trouver un Logement</h2>
+    <p>Pour trouver un logement à Sydney, il est recommandé de consulter les sites immobiliers spécialisés comme Domain et RealEstate.com.au, ou de passer par des agences locales. Les logements en centre-ville et près des plages sont très prisés, donc préparer rapidement un dossier de location complet et visiter plusieurs propriétés sont des étapes essentielles pour maximiser ses chances de trouver un hébergement idéal.</p>
+
+    <p>Pour une arrivée réussie à Sydney, il est conseillé de débuter les recherches avant de s’installer, surtout pour les périodes de pointe (janvier pour les étudiants, et décembre pour les expatriés et travailleurs temporaires).</p>
+
+    <h1>Se Nourrir à Sydney</h1>
+    <p>Sydney est une ville cosmopolite, et sa scène gastronomique reflète cette diversité. Des restaurants haut de gamme aux options de street food abordables, la ville propose une large variété de plats internationaux tout en mettant en avant des spécialités australiennes et des influences locales. La culture culinaire à Sydney est un mélange riche de produits frais et d'innovations culinaires.</p>
+
+    <h2>Plats Typiques et Cuisine Australienne</h2>
+    <ul>
+        <li><b>Meat Pies :</b> Un incontournable de la cuisine australienne, ces pâtés à la viande sont populaires comme en-cas ou repas rapide. Ils sont souvent remplis de viande hachée, de sauce et d'autres ingrédients comme des légumes ou du fromage.</li>
+        <li><b>Vegemite :</b> Cette pâte à tartiner salée, à base de levure, est un symbole de la culture australienne. Elle est généralement étalée sur du pain grillé avec du beurre et parfois des tranches d’avocat ou des œufs brouillés.</li>
+        <li><b>Fish and Chips :</b> Bien qu’influencée par la culture britannique, cette spécialité reste un plat classique dans les fish and chips shops et les restaurants en bord de mer de Sydney.</li>
+        <li><b>Pavlova :</b> Ce dessert meringué avec des fruits frais est une spécialité australienne, souvent servi lors de fêtes ou de réunions familiales. Il est léger, sucré et très apprécié lors des repas de fin d’année.</li>
+        <li><b>Barbecues :</b> Le barbecue (ou "barbie") est un élément essentiel de la culture australienne. Qu'il s'agisse de saucisses, de côtes de porc, ou de steaks, les Australiens aiment organiser des barbecues en famille ou entre amis, surtout durant les mois d'été.</li>
+    </ul>
+
+    <h2>Restaurants à Sydney</h2>
+    <p>Sydney est réputée pour sa diversité gastronomique, offrant des options de restauration pour tous les goûts et tous les budgets. Que vous recherchiez des expériences culinaires haut de gamme ou des plats plus accessibles, vous trouverez facilement un endroit où manger.</p>
+
+    <h3>Restaurants Haut de Gamme</h3>
+    <p>Pour ceux qui cherchent à vivre une expérience gastronomique unique, Sydney propose plusieurs restaurants étoilés Michelin et établissements renommés, notamment dans des zones comme Circular Quay, Darling Harbour et The Rocks. Ces restaurants mettent en avant des produits frais et des cuisines du monde entier, avec une attention particulière à la présentation et à l'innovation culinaire.</p>
+
+    <h3>Restaurants Ethniques et Street Food</h3>
+    <p>Sydney est également un paradis pour les amateurs de cuisine du monde entier. Vous y trouverez des restaurants proposant de la cuisine asiatique (chinoise, thaïlandaise, japonaise, vietnamienne), méditerranéenne, indienne, mais aussi du fast food moderne et des food trucks. Les quartiers de Haymarket, Newtown et Surry Hills sont particulièrement populaires pour la street food et les restaurants informels, offrant une grande variété de plats à emporter ou à déguster sur place.</p>
+
+    <h3>Cafés et Brunchs</h3>
+    <p>Les Australiens sont célèbres pour leur culture du café, et Sydney regorge de cafés où l’on sert des cafés de spécialité, des pâtisseries et des options pour le brunch. Des quartiers comme Bondi, Paddington et Balmain sont connus pour leurs cafés tendance où vous pouvez savourer des plats comme des avo-toast, des bols de smoothie, des œufs bénédictine, ou des pancakes gourmands.</p>
+
+    <h2>Marchés et Alimentation de Rue</h2>
+    <p>Les marchés alimentaires à Sydney sont un excellent moyen de découvrir des produits frais et locaux tout en profitant d'une ambiance conviviale. Des marchés comme le <b>Paddington Markets</b>, le <b>Carriageworks Farmers Market</b>, et le <b>Bondi Farmers Market</b> offrent des produits frais, des fromages, des viandes, des fruits et légumes locaux, ainsi que des repas préparés sur place.</p>
+
+    <h2>Alimentation Bio et Durable</h2>
+    <p>Sydney met également un accent croissant sur l'alimentation durable et bio, avec de nombreux restaurants et magasins qui privilégient les produits locaux, de saison, et biologiques. De plus en plus de Sydneysiders optent pour des choix alimentaires végétariens, végétaliens, ou sans gluten, et ces options sont largement disponibles dans les restaurants et cafés de la ville.</p>
+
+    <h2>Conseils pour Se Nourrir à Sydney</h2>
+    <ul>
+        <li><b>Apprécier les fruits de mer :</b> Sydney étant une ville portuaire, les fruits de mer sont frais et délicieux. Profitez des nombreux restaurants de fruits de mer ou des étals de poisson dans les marchés locaux.</li>
+        <li><b>Explorer les food trucks :</b> Ces camions de nourriture offrent souvent une gamme de plats internationaux à des prix abordables. Ils sont très populaires dans les quartiers animés de la ville.</li>
+        <li><b>Se rendre au marché :</b> Pour ceux qui aiment cuisiner, les marchés offrent des ingrédients frais et une variété de produits locaux, souvent cultivés dans les régions avoisinantes.</li>
+    </ul>
+
+    <h1>Sécurité</h1>
+
+    <h2>Sécurité publique</h2>
+    <p>Sydney est réputée pour être une ville sûre, avec une police efficace et des taux de criminalité relativement
+        bas. La New South Wales Police Force est responsable de la sécurité publique dans l’ensemble de l’état, y
+        compris Sydney. Des patrouilles de police sont régulièrement effectuées dans les quartiers pour prévenir les
+        délits et assurer la tranquillité des résidents et des visiteurs.</p>
+
+    <ul>
+        <li><strong>Patrouilles de quartier :</strong> La police effectue des rondes régulières, particulièrement dans
+            les zones résidentielles et touristiques, pour maintenir la sécurité publique.
+        </li>
+        <li><strong>Applications de sécurité :</strong> Les citoyens peuvent utiliser des applications mobiles de la
+            police pour signaler des incidents et recevoir des alertes en temps réel.
+        </li>
+    </ul>
+
+    <h3>Sécurité routière</h3>
+    <p>La sécurité routière est une priorité, et des règles strictes sont appliquées pour réduire les accidents. Le port
+        de la ceinture de sécurité est obligatoire, et la vitesse est limitée en fonction des zones (écoles, zones
+        résidentielles, etc.). La conduite sous influence d’alcool ou de drogue est strictement sanctionnée, et des
+        contrôles aléatoires sont effectués régulièrement.</p>
+
+    <ul>
+        <li><strong>Zones scolaires :</strong> Les zones autour des écoles imposent des limites de vitesse réduites
+            pendant les heures d’école pour protéger les enfants.
+        </li>
+        <li><strong>Contrôles d’alcoolémie :</strong> Des contrôles d’alcoolémie et de dépistage de drogue sont
+            fréquents pour prévenir les accidents liés à la conduite en état d'ébriété.
+        </li>
+    </ul>
+
+    <h3>Préparation aux situations d’urgence</h3>
+    <p>La ville de Sydney est équipée pour répondre aux situations d'urgence, incluant les incendies, les inondations et
+        autres catastrophes naturelles. Le State Emergency Service (SES) et les services de pompiers (NSW Fire and
+        Rescue) sont formés pour intervenir rapidement en cas de besoin.</p>
+
+    <ul>
+        <li><strong>Plan de gestion des catastrophes :</strong> Sydney dispose d’un plan d’évacuation et de gestion des
+            crises en cas de catastrophe naturelle, avec des centres de secours et de coordination.
+        </li>
+        <li><strong>Alertes en temps réel :</strong> Les résidents peuvent s'inscrire pour recevoir des alertes
+            météorologiques et de sécurité via SMS, applications et réseaux sociaux.
+        </li>
+    </ul>
+
+    <h3>Sécurité des plages et des zones de loisirs</h3>
+    <p>Avec ses nombreuses plages, Sydney met en place des dispositifs de sécurité importants pour les baigneurs et les
+        sportifs. Les plages principales sont surveillées par des sauveteurs et disposent de drapeaux indiquant les
+        zones sûres pour nager.</p>
+
+    <ul>
+        <li><strong>Sauveteurs :</strong> Des sauveteurs professionnels surveillent les plages de Bondi, Manly et
+            autres, prêtant attention aux baigneurs et assurant la sécurité des nageurs.
+        </li>
+        <li><strong>Avertissements sur les méduses et requins :</strong> Des panneaux indiquent la présence éventuelle
+            de méduses dangereuses (comme les méduses-boîtes) ou de requins, et des filets de protection sont installés
+            pour limiter les risques.
+        </li>
+    </ul>
 
 
-<a href="{{ path('app_order_new') }}">Créer une nouvelle commande dans cette ville.</a>
+
+    <a href="{{ path('app_order_new') }}">Créer une nouvelle commande dans cette ville.</a>
 
 
 
